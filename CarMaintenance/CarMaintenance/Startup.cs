@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 
 using CarMaintenance.Models;
@@ -39,16 +40,25 @@ namespace CarMaintenance
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 6;
             });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            //avoid errors in console when duplicate users are added
+            app.Use(async (ctx, next) => {
+                await next();
+                if (ctx.Response.StatusCode == 204) {
+                    ctx.Response.ContentLength = 0;
+                }
+            });
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseMvc();
         }

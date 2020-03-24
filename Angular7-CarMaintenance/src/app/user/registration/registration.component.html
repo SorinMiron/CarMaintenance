@@ -9,7 +9,7 @@
       </div>
     </div>  
     <div class="col-md-6">
-        <form [formGroup]="service.formModel" autocomplete="off">
+        <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
         <div class="form-group required">
           <label>Username</label>
           <input type="text" class="form-control" formControlName="UserName">
