@@ -30,7 +30,7 @@ formModel={
       },
       err => {
         if(err.status == 400){
-          this.toastr.error('Incorrect usernaame or password', 'Authentication failed');
+          this.toastr.error('Incorrect username or password', 'Authentication failed');
         }
         else{
           this.toastr.error('Error on login', 'Authentication failed');
