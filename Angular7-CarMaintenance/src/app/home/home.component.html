@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand text-white">
+        Car Maintenance
+    </a>
+    <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+<div class="card m-5" style="width: 18em" *ngIf="userDetails">
+
+<ul class="list-group">
+    <li class="list-group-item">Username:<strong> {{userDetails.userName}}</strong></li>
+    <li class="list-group-item">Fullname:<strong> {{userDetails.fullName}}</strong></li>
+    <li class="list-group-item">Email:<strong> {{userDetails.email}}</strong></li>
+</ul>
+</div>

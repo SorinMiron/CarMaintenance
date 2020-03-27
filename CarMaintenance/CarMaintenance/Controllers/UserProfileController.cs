@@ -29,7 +29,7 @@ namespace CarMaintenance.Controllers
         //get /api/UserProfile
         public async Task<object> GetUserProfile()
         {
-            string userId = User.Claims.First(c => c.Type == "UserId").Value;
+            string userId = User.Claims.First(c => c.Type == "UserID").Value;
             ApplicationUser user = await _userManager.FindByIdAsync(userId);
             return new { user.FullName, user.Email, user.UserName };
         }

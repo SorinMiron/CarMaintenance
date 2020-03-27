@@ -49,7 +49,7 @@ namespace CarMaintenance
             });
             services.AddCors();
 
-            byte[] jwtKey = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JTW_Secret"]);
+            byte[] jwtKey = Encoding.UTF8.GetBytes(Configuration["ApplicationSettings:JWT_Secret"].ToString());
             //json web token(JWT) authentication
             services.AddAuthentication(x => {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
