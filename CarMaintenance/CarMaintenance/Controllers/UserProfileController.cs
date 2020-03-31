@@ -31,7 +31,9 @@ namespace CarMaintenance.Controllers
         {
             string userId = User.Claims.First(c => c.Type == "UserID").Value;
             ApplicationUser user = await _userManager.FindByIdAsync(userId);
-            return new { user.FullName, user.Email, user.UserName };
+            IList<string> roles = await _userManager.GetRolesAsync(user);
+            string role = roles.FirstOrDefault();
+            return new { user.FullName, user.Email, user.UserName, role };
         }
 
     }

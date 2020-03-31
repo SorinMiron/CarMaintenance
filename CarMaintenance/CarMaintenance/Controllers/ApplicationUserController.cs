@@ -39,6 +39,9 @@ namespace CarMaintenance.Controllers
         {
             //todo check if model is null or not
             //todo tests
+
+            //default role on login: Customer
+            applicationUserModel.Role = "Customer";
             ApplicationUser applicationUser = new ApplicationUser
             {
                 UserName = applicationUserModel.UserName,
@@ -49,6 +52,7 @@ namespace CarMaintenance.Controllers
             try
             {
                 var result = await _userManager.CreateAsync(applicationUser, applicationUserModel.Password);
+                await _userManager.AddToRoleAsync(applicationUser, applicationUserModel.Role);
                 return Ok(result);
             }
             catch (Exception ex)
@@ -67,9 +71,14 @@ namespace CarMaintenance.Controllers
             ApplicationUser user = await _userManager.FindByNameAsync(loginModel.UserName);
             if (user != null && await _userManager.CheckPasswordAsync(user, loginModel.Password))
             {
+                //Get the role
+                IList<string> role = await _userManager.GetRolesAsync(user);
+                IdentityOptions _options = new IdentityOptions();
+
                 var tokenDescriptor = new SecurityTokenDescriptor {
-                    Subject = new ClaimsIdentity(new Claim[] {
-                        new Claim("UserID", user.Id), 
+                    Subject = new ClaimsIdentity(new[] {
+                        new Claim("UserID", user.Id),
+                        new Claim(_options.ClaimsIdentity.RoleClaimType, role.FirstOrDefault())
                     }),
                     Expires = DateTime.UtcNow.AddDays(_appSettings.Token_Expiration),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.JWT_Secret)),SecurityAlgorithms.HmacSha256Signature)

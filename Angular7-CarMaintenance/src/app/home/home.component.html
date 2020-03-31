@@ -1,15 +1,17 @@
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand text-white">
-        Car Maintenance
-    </a>
+    <a class="navbar-brand text-white">JWT Auth System</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/adminpanel" *ngIf="userDetails.role == 'Admin'">Admin Panel</a>
+      </li>
+    </ul>
     <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
-</nav>
-
-<div class="card m-5" style="width: 18em" *ngIf="userDetails">
-
-<ul class="list-group">
-    <li class="list-group-item">Username:<strong> {{userDetails.userName}}</strong></li>
-    <li class="list-group-item">Fullname:<strong> {{userDetails.fullName}}</strong></li>
-    <li class="list-group-item">Email:<strong> {{userDetails.email}}</strong></li>
-</ul>
-</div>
+  </nav>
+  
+  <div class="card m-5" style="width:18rem" *ngIf="userDetails">
+    <ul class="list-group">
+      <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
+      <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+      <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+    </ul>
+  </div>
