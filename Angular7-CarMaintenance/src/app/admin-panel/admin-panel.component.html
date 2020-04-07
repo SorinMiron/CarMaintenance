@@ -1,1 +1,9 @@
-<p>admin-panel works!</p>
+<div class="card m-5" style="width:18rem" *ngIf="customers">
+    <ul class="list-group">
+
+      <li *ngFor="let customer of customers">
+      {{ customer.userName }}
+      
+    </li>
+    </ul>
+  </div>

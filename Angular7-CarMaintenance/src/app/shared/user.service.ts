@@ -54,6 +54,10 @@ export class UserService {
     return this.http.get(this.BaseURI+'/UserProfile')
   }
 
+  getCustomers(){
+    return this.http.get(this.BaseURI+'/AdminPanel/GetCustomers')
+  }
+
   roleMatch(allowedRoles): boolean {
     var isMatch = false;
     var payLoad = JSON.parse(window.atob(localStorage.getItem('token').split('.')[1]));
@@ -66,4 +70,6 @@ export class UserService {
     });
     return isMatch;
   }
+
+  
 }
