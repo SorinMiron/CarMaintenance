@@ -35,6 +35,8 @@ namespace CarMaintenance.Controllers
            IList<ApplicationUser> customers =  await _userManager.GetUsersInRoleAsync("Customer");
            List<object> customersToReturn = new List<object>();
            foreach (ApplicationUser customer in customers) {
+
+               //send the ID also delete by id if it is needed.
                customersToReturn.Add(new { customer.UserName, customer.FullName, customer.Email});
            }
            return customersToReturn;

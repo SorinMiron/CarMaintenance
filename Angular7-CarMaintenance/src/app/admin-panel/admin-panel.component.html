@@ -1,4 +1,4 @@
-<div class="card m-5" style="width:18rem" *ngIf="customers">
+<!-- <div class="card m-5" style="width:18rem" *ngIf="customers">
     <ul class="list-group">
 
       <li *ngFor="let customer of customers">
@@ -6,4 +6,18 @@
       
     </li>
     </ul>
-  </div>
+  </div> -->
+
+  <div id="dx-customers-container" class="col-md-10 offset-md-1">
+    <dx-data-grid
+    id="gridContainer"
+    [dataSource]="customers"
+    [columns]="['userName', 'fullName', 'email']"
+    [showBorders]="true"
+    [rowAlternationEnabled]="true"
+    (onRowRemoved)="onRowRemoved($event)">
+    <dxo-editing mode="row" [allowDeleting]="true">
+      <dxo-texts confirmDeleteMessage="Are you sure?"></dxo-texts>  
+  </dxo-editing>
+  </dx-data-grid>
+</div>

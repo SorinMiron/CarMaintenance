@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { DevExtremeModule } from 'devextreme-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    DevExtremeModule,
     ToastrModule.forRoot({
       progressBar: true
     }),

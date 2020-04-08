@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../shared/user.service';
 import { ToastrService } from 'ngx-toastr';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-panel',
@@ -22,5 +23,10 @@ export class AdminPanelComponent implements OnInit {
       }
     )
   }
-
+  onRowRemoving(e) {
+    console.log(e);
+    //send a request to server to delete by id
+  }
 }
+
+
