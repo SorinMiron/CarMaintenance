@@ -9,6 +9,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 
 
+
 const routes: Routes = [
   {
     path:'user', component:UserComponent, 

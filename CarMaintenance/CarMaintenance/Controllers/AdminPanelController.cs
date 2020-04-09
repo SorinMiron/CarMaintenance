@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
+using Newtonsoft.Json;
+
+using PainlessHttp.Serializer.JsonNet;
+
 
 namespace CarMaintenance.Controllers
 {
@@ -32,14 +36,27 @@ namespace CarMaintenance.Controllers
         public async Task<object> GetCustomers()
         {
             //todo add validations
+            //return bad request
            IList<ApplicationUser> customers =  await _userManager.GetUsersInRoleAsync("Customer");
-           List<object> customersToReturn = new List<object>();
-           foreach (ApplicationUser customer in customers) {
-
-               //send the ID also delete by id if it is needed.
-               customersToReturn.Add(new { customer.UserName, customer.FullName, customer.Email});
-           }
-           return customersToReturn;
+           return customers.Select(customer => new CustomerModel(customer.Id, customer.UserName, customer.FullName, customer.Email)).ToList();
         }
+
+        [HttpPost]
+        [Authorize]
+        [Route("RemoveCustomer")]
+        //post /api/AdminPanel/RemoveCustomer
+        public async Task<object> RemoveCustomer(object customerId)
+        {
+            //todo add validations
+            //return bad request
+            try {
+                ApplicationUser customer = await _userManager.FindByIdAsync(customerId.ToString());
+                return await _userManager.DeleteAsync(customer);
+            } catch (Exception ex) {
+                //handle exception
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

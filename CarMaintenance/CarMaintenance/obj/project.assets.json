@@ -2893,6 +2893,15 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "Painless.Serializer.JsonNet/0.11.1": {
+        "type": "package",
+        "compile": {
+          "lib/net451/PainlessHttp.Serializer.JsonNet.dll": {}
+        },
+        "runtime": {
+          "lib/net451/PainlessHttp.Serializer.JsonNet.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -8100,6 +8109,19 @@
         "nuget.frameworks.nuspec"
       ]
     },
+    "Painless.Serializer.JsonNet/0.11.1": {
+      "sha512": "5ehHfl98dNg/jvv9VR2kBrQb4Ay9r08BRU0EywB97Zxw/BYqqdTZ/5rsXc3/eDJkhxGhzXCf8+mrhh5KlYUkQA==",
+      "type": "package",
+      "path": "painless.serializer.jsonnet/0.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/PainlessHttp.Serializer.JsonNet.dll",
+        "lib/net451/PainlessHttp.Serializer.JsonNet.pdb",
+        "painless.serializer.jsonnet.0.11.1.nupkg.sha512",
+        "painless.serializer.jsonnet.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -12946,7 +12968,8 @@
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4",
+      "Painless.Serializer.JsonNet >= 0.11.1"
     ]
   },
   "packageFolders": {
@@ -13014,6 +13037,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.4, )"
+          },
+          "Painless.Serializer.JsonNet": {
+            "target": "Package",
+            "version": "[0.11.1, )"
           }
         },
         "imports": [
@@ -13029,5 +13056,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Painless.Serializer.JsonNet 0.11.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Painless.Serializer.JsonNet",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }

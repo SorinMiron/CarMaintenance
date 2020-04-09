@@ -2,11 +2,13 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
 
+export class UserService {
+  
   constructor(private fb:FormBuilder, private http:HttpClient) { }
   readonly  BaseURI = "http://localhost:52672/api";
   formModel = this.fb.group({
@@ -20,7 +22,7 @@ export class UserService {
 
 
   })
-
+  
   comparePasswords(fb:FormGroup){
     let confirmPasswordControl = fb.get('ConfirmPassword');
     
@@ -69,6 +71,17 @@ export class UserService {
       }
     });
     return isMatch;
+  }
+  
+  getHeaderForJson(){
+    return new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+  }
+
+  removeCustomer(customerId:string){
+    
+    return this.http.post(this.BaseURI+'/AdminPanel/RemoveCustomer', JSON.stringify(customerId) ,{headers: this.getHeaderForJson()})
   }
 
   
