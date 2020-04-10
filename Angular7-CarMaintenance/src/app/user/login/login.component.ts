@@ -3,11 +3,13 @@ import { NgForm } from '@angular/forms';
 import { UserService } from 'src/app/shared/user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NavbarComponent } from 'src/app/shared/navbar.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: []
+  styles: [],
+  providers: [NavbarComponent]
 })
 export class LoginComponent implements OnInit {
 formModel={
@@ -26,6 +28,7 @@ formModel={
     this.service.login(form.value).subscribe(
       (res:any)=>{
         localStorage.setItem('token', res.token);
+        localStorage.setItem('role', res.role);
         this.router.navigateByUrl("/home");
       },
       err => {

@@ -16,6 +16,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { DevExtremeModule } from 'devextreme-angular';
+import { NavbarComponent } from './shared/navbar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DevExtremeModule } from 'devextreme-angular';
     LoginComponent,
     HomeComponent,
     AdminPanelComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

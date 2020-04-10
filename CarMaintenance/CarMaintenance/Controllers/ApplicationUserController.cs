@@ -86,7 +86,7 @@ namespace CarMaintenance.Controllers
                 JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
                 SecurityToken securityToken = tokenHandler.CreateToken(tokenDescriptor);
                 string token = tokenHandler.WriteToken(securityToken);
-                return Ok(new { token });
+                return Ok(new { token, role });
             }
 
             return BadRequest(new { message = "Username or password is incorrect." });
