@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { HomeCarsComponent } from './cars/home-cars/home-cars.component';
 
 
 
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path:'adminpanel', component:AdminPanelComponent, canActivate:[AuthGuard], data: {permittedRoles:['Admin']}
+  },
+  {
+    path:'mycars', component:HomeCarsComponent, canActivate:[AuthGuard], data: {permittedRoles:['Customer']}
   },
   {
     path:'**', redirectTo:'/user/login', pathMatch:'full'

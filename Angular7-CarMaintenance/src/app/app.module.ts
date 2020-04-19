@@ -17,6 +17,10 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { DevExtremeModule } from 'devextreme-angular';
 import { NavbarComponent } from './shared/navbar.component';
+import { AddCarComponent } from './cars/add-car/add-car.component';
+import { ListCarsComponent } from './cars/list-cars/list-cars.component';
+import { HomeCarsComponent } from './cars/home-cars/home-cars.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,10 @@ import { NavbarComponent } from './shared/navbar.component';
     HomeComponent,
     AdminPanelComponent,
     ForbiddenComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddCarComponent,
+    ListCarsComponent,
+    HomeCarsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { NavbarComponent } from './shared/navbar.component';
     ToastrModule.forRoot({
       progressBar: true
     }),
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [UserService,{
     provide: HTTP_INTERCEPTORS,

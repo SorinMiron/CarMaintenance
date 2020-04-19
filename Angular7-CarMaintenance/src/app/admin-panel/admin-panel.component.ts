@@ -8,7 +8,7 @@ import * as $ from "jquery" ;
 @Component({
   selector: 'app-admin-panel',
   templateUrl: './admin-panel.component.html',
-  styles: []
+  styleUrls: ["./admin-panel.component.css"]
 })
 
 

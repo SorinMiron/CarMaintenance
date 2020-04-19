@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light" id="navbar">
       <div class="navbar-header">
         <a class="navbar-brand"> 
             <img src="../../assets/img/car-icon.png"  width="35" height="35" class="d-inline-block align-top">
@@ -11,8 +11,12 @@
         <li class="nav-item hoverable">
             <a class="nav-link" routerLink="/adminpanel" *ngIf="role == 'Admin'">Admin Panel</a>
         </li>
+        <li class="nav-item hoverable">
+          <a class="nav-link" routerLink="/mycars" *ngIf="role == 'Customer'">My cars</a>
+      </li>
       </ul>
       <ul class="navbar-nav ml-auto">
         <button class="btn btn-outline-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
       </ul>
+      
   </nav>

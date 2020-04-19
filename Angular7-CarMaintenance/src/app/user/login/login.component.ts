@@ -8,7 +8,7 @@ import { NavbarComponent } from 'src/app/shared/navbar.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: [],
+  styleUrls: ['../user.component.css'],
   providers: [NavbarComponent]
 })
 export class LoginComponent implements OnInit {
