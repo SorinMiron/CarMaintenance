@@ -21,7 +21,13 @@ import { AddCarComponent } from './cars/add-car/add-car.component';
 import { ListCarsComponent } from './cars/list-cars/list-cars.component';
 import { HomeCarsComponent } from './cars/home-cars/home-cars.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { CustomDatepickerComponent } from './shared/custom-datepicker/custom-datepicker.component';
+import { YearPickerComponent } from './shared/custom-datepicker/year-picker-component/year-picker-component.component';
+import { CommonModule } from '@angular/common';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +40,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     AddCarComponent,
     ListCarsComponent,
-    HomeCarsComponent
+    HomeCarsComponent,
+    CustomDatepickerComponent,
+    YearPickerComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +55,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       progressBar: true
     }),
     FormsModule,
-    NgbModule
+    NgbModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatMomentDateModule,
+    MatInputModule
   ],
   providers: [UserService,{
     provide: HTTP_INTERCEPTORS,

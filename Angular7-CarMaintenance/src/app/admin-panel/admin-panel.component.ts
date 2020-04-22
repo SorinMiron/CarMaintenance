@@ -11,7 +11,6 @@ import * as $ from "jquery" ;
   styleUrls: ["./admin-panel.component.css"]
 })
 
-
 export class AdminPanelComponent implements OnInit {
   constructor(private router: Router, private service: UserService, private toastr: ToastrService) { }
   customers;

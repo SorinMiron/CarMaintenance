@@ -1,0 +1,6 @@
+.year-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  .year-picker .mat-calendar-arrow {
+    display: none;
+  }

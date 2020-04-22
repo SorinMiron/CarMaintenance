@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal  }from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-car',
@@ -7,27 +8,47 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styles: []
 })
 export class AddCarComponent implements OnInit {
-  closeResult = '';
-  constructor(private modalService: NgbModal) { }
 
+  constructor(private fb:FormBuilder, private modalService: NgbModal) { 
+  }
+  visible = true;
+  formModel = this.fb.group({
+    // CarYear : [{year:2020, month: 6, day: 11}],
+    CarName : [],
+    CarDetails: [],
+    CarYear : [],
+    CarActualKilometers: [],
+    CarLastRevision: [],
+    CarLastPti:[],
+    CarLastVig:[]
+  })
+  
   ngOnInit(): void {
+
+  }
+  onSubmit(){
+    var body = {
+      CarName: this.formModel.value.CarName,
+      CarDetails: this.formModel.value.CarDetails,
+      CarYear: this.formModel.value.CarYear.getFullYear(),
+      CarActualKilometers: this.formModel.value.CarActualKilometers,
+      CarLastRevision: this.formModel.value.CarLastRevision,
+      CarLastPti: this.formModel.value.CarLastPti,
+      CarLastVig: this.formModel.value.CarLastVig
+    }
+    console.log(body);
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService.open(content);
   }
-  
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
+
+  numberOnly(event): boolean {
+    const charCode = (event.which) ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
     }
+    return true;
+
   }
 }
