@@ -14,20 +14,22 @@
           <div class="input-group">
             <input formControlName="CarName" mdbInput type="text" class="form-control" placeholder="Your car name">
           </div>
+          <label class="text-danger" *ngIf="formModel.get('CarName').touched && formModel.get('CarName').errors?.required">Car name is required.</label>
         </div>
 
         <div class="form-group">
           <label>Details</label>
           <div class="input-group">
-            <input formControlName="CarDetails" mdbInput type="text" class="form-control" placeholder="Your car name">
+            <input formControlName="CarDetails" mdbInput type="text" class="form-control" placeholder="HP, engine, cilinders">
           </div>
         </div>
 
         <div class="form-group">
           <label>Year</label>
           <div class="input-group">
-          <app-custom-date-picker  mode="YEAR" label="Choose car year" formControlName="CarYear" [min]="1800" [max]="2020"></app-custom-date-picker><br>
+            <app-custom-date-picker formControlName="CarYear" mode="YEAR" label="Choose car year" [max]="currentDate.year"></app-custom-date-picker><br>
           </div>
+          <label class="text-danger" *ngIf="carYearIsNotSet">Car year is required.</label>
         </div>
         
         <div class="form-group">
@@ -35,12 +37,15 @@
           <div class="input-group">
             <input formControlName="CarActualKilometers" mdbInput type="text" (keypress)="numberOnly($event)" class="form-control" placeholder="Your car kilometers">
           </div>
+          <label class="text-danger" *ngIf="formModel.get('CarActualKilometers').touched && formModel.get('CarActualKilometers').errors?.required">Car kilometers is required.</label>
+          <br>
+          <label class="text-danger" *ngIf="!CarActualKilometersIsNumerical">You can add only digits.</label>
         </div>
 
          <div class="form-group">
           <label>Last revision</label>
           <div class="input-group">
-            <input formControlName="CarLastRevision" class="form-control" placeholder="Last revision made" name="dp1" ngbDatepicker #dp1="ngbDatepicker">
+            <input formControlName="CarLastRevision" class="form-control" placeholder="Last revision made" name="dp1" ngbDatepicker #dp1="ngbDatepicker" [readonly]="true" [maxDate]="currentDate">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="dp1.toggle()" type="button">
                 <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -50,12 +55,13 @@
               </button>
             </div>
           </div>
+          <label class="text-danger" *ngIf="formModel.get('CarLastRevision').touched && formModel.get('CarLastRevision').errors?.required">Car kilometers is required.</label>
         </div> 
 
         <div class="form-group">
           <label>Last PTI(Periodical Technical Inspections)</label>
           <div class="input-group">
-            <input formControlName="CarLastPti" class="form-control" placeholder="Last PTI made" name="dp2" ngbDatepicker #dp2="ngbDatepicker">
+            <input formControlName="CarLastPti" class="form-control" placeholder="Last PTI made" name="dp2" ngbDatepicker #dp2="ngbDatepicker" [readonly]="true"  [maxDate]="currentDate">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="dp2.toggle()" type="button">
                 <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -65,12 +71,13 @@
               </button>
             </div>
           </div>
+          <label class="text-danger" *ngIf="formModel.get('CarLastPti').touched && formModel.get('CarLastPti').errors?.required">Last PTI is required.</label>
         </div> 
 
         <div class="form-group">
           <label>Last vignette</label>
           <div class="input-group">
-            <input formControlName="CarLastVig" class="form-control" placeholder="Last vignette made" name="dp3" ngbDatepicker #dp3="ngbDatepicker">
+            <input formControlName="CarLastVig" class="form-control" placeholder="Last vignette made" name="dp3" ngbDatepicker #dp3="ngbDatepicker" [readonly]="true"  [maxDate]="currentDate">
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="dp3.toggle()" type="button">
                 <svg class="bi bi-calendar" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -80,9 +87,10 @@
               </button>
             </div>
           </div>
-        </div> 
+          <label class="text-danger" *ngIf="formModel.get('CarLastVig').touched && formModel.get('CarLastVig').errors?.required">Last vignette is required.</label>
+        </div>
         <div>
-          <button type="submit" class="btn btn-outline-dark" (click)="onSubmit()">Add</button>
+          <button type="submit" class="btn btn-outline-dark" (click)="onSubmit()" style="float:right">Add</button>
           <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
         </div>
       </form>
