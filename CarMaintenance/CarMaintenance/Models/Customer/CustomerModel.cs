@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace CarMaintenance.Models
+namespace CarMaintenance.Models.Customer
 {
     public class CustomerModel
     {

@@ -7,8 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using CarMaintenance.Models;
+using CarMaintenance.Models.User;
 
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

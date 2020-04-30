@@ -6,7 +6,7 @@
     vertical-align: middle;
     position:relative;
     box-shadow: 0 0 1px rgba(0,0,0,0);
-    tranform: translateZ(0);
+    transform: translateZ(0);
     transition-duration: .3s;
     transition-property:transform;
   }

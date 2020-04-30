@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
 using System.Text;
-using System.Threading.Tasks;
 
+using CarMaintenance.Managers.Car;
 using CarMaintenance.Models;
+using CarMaintenance.Models.Car;
+using CarMaintenance.Models.User;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -15,8 +14,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 
@@ -70,6 +67,10 @@ namespace CarMaintenance
 
                 };
             });
+
+            services.AddDbContext<CarContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
+            services.AddScoped<CarManager>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

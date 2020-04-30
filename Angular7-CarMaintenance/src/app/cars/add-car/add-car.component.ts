@@ -1,6 +1,8 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { NgbModal  }from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators } from '@angular/forms';
+import { CarService } from 'src/app/shared/car.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-car',
@@ -16,7 +18,7 @@ export class AddCarComponent implements OnInit, OnChanges {
     month :  new Date().getMonth(),
     day :  new Date().getDay()
   };
-  constructor(private fb:FormBuilder, private modalService: NgbModal) { 
+  constructor(private fb:FormBuilder, private modalService: NgbModal , private carService: CarService, private toastr: ToastrService) { 
   }
   visible = true;
   formModel = this.fb.group({
@@ -54,19 +56,28 @@ export class AddCarComponent implements OnInit, OnChanges {
     return;
   }
     //validate car year > last pti/ last revision / blabla
-    var body = {
-      CarName: this.formModel.value.CarName,
-      CarDetails: this.formModel.value.CarDetails,
-      CarYear: this.formModel.value.CarYear.getFullYear(),
-      CarActualKilometers: this.formModel.value.CarActualKilometers,
-      CarLastRevision: this.formModel.value.CarLastRevision,
-      CarLastPti: this.formModel.value.CarLastPti,
-      CarLastVig: this.formModel.value.CarLastVig
+    var carDetails = {
+      Name: this.formModel.value.CarName,
+      Details: this.formModel.value.CarDetails,
+      Year: this.formModel.value.CarYear.getFullYear(),
+      ActualKilometers: this.formModel.value.CarActualKilometers,
+      LastRevision: this.formModel.value.CarLastRevision,
+      LastPti: this.formModel.value.CarLastPti,
+      LastVig: this.formModel.value.CarLastVig
     }
     this.modalService.dismissAll();
     this.formModel.reset();
-    //todo send data to server
-    console.log(body);
+    
+    this.carService.insertCar(carDetails).subscribe(
+      res => {
+        this.toastr.success("Car successfully added");
+      },
+      err =>{
+        this.toastr.error("Error on adding car")
+        console.log(err);
+      }
+    )
+
   }
 
   open(content) {
