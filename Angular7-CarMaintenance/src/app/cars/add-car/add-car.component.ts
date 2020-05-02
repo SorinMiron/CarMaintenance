@@ -1,13 +1,15 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { NgbModal  }from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CarService } from 'src/app/shared/car.service';
 import { ToastrService } from 'ngx-toastr';
+import { ListCarsComponent } from '../list-cars/list-cars.component';
 
 @Component({
   selector: 'app-add-car',
   templateUrl: './add-car.component.html',
-  styles: []
+  styles: [],
+  providers: [ListCarsComponent]
 })
 export class AddCarComponent implements OnInit, OnChanges {
 
@@ -81,6 +83,7 @@ export class AddCarComponent implements OnInit, OnChanges {
   }
 
   open(content) {
+    
     this.modalService.open(content);
     this.carYearIsNotSet = false;
   }
