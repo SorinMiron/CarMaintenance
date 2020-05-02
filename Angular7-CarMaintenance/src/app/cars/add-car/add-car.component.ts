@@ -4,6 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { CarService } from 'src/app/shared/car.service';
 import { ToastrService } from 'ngx-toastr';
 import { ListCarsComponent } from '../list-cars/list-cars.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-car',
@@ -12,7 +13,6 @@ import { ListCarsComponent } from '../list-cars/list-cars.component';
   providers: [ListCarsComponent]
 })
 export class AddCarComponent implements OnInit, OnChanges {
-
   carYearIsNotSet: boolean;
   CarActualKilometersIsNumerical: boolean = true;
   currentDate = {
@@ -20,7 +20,7 @@ export class AddCarComponent implements OnInit, OnChanges {
     month :  new Date().getMonth(),
     day :  new Date().getDay()
   };
-  constructor(private fb:FormBuilder, private modalService: NgbModal , private carService: CarService, private toastr: ToastrService) { 
+  constructor(private fb:FormBuilder, private modalService: NgbModal , private carService: CarService, private toastr: ToastrService, private listCarComponent: ListCarsComponent, private router: Router) { 
   }
   visible = true;
   formModel = this.fb.group({
@@ -73,6 +73,8 @@ export class AddCarComponent implements OnInit, OnChanges {
     this.carService.insertCar(carDetails).subscribe(
       res => {
         this.toastr.success("Car successfully added");
+        this.listCarComponent.ngOnInit();
+        this.router.navigateByUrl("/mycars");
       },
       err =>{
         this.toastr.error("Error on adding car")

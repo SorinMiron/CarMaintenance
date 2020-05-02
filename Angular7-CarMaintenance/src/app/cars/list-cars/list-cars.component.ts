@@ -1,20 +1,36 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CarService } from 'src/app/shared/car.service';
 import * as $ from "jquery" ;
 import { ToastrService } from 'ngx-toastr';
-import { DxDataGridComponent } from 'devextreme-angular';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-list-cars',
   templateUrl: './list-cars.component.html',
   styles: []
 })
-export class ListCarsComponent implements OnInit{
+export class ListCarsComponent implements OnInit, OnDestroy{
   cars;
-  constructor(private service:CarService, private toastr: ToastrService) {
-   }
+
+  mySubscription: any;
+  constructor(private service:CarService, private toastr: ToastrService, private router: Router) {
   
+this.router.routeReuseStrategy.shouldReuseRoute = function () {
+  return false;
+};
+this.mySubscription = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Trick the Router into believing it's last link wasn't previously loaded
+        this.router.navigated = false;
+      }
+    });
+  }
+
   ngOnInit(): void {
+    this.initCars();
+  }
+
+  initCars(){
     this.service.getCars().subscribe(
       res => {
          this.cars = res;
@@ -25,7 +41,6 @@ export class ListCarsComponent implements OnInit{
       }
     )
   }
-
   onRowRemoving(e) {
     let d = $.Deferred();  
     this.service.removeCar(e.key.id).subscribe(
@@ -41,4 +56,11 @@ export class ListCarsComponent implements OnInit{
     );
     e.cancel = d.promise();
   }
+
+ngOnDestroy() {
+  if (this.mySubscription) {
+    this.mySubscription.unsubscribe();
+  }
+}
+
 }

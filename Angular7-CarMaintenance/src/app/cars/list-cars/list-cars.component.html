@@ -1,13 +1,11 @@
-<div  id="dx-cars-container" class="col-md-10 offset-md-1">
+<div id="dx-cars-container" class="col-md-10 offset-md-1">
     <dx-data-grid
-    #dataGrid
     id="gridContainer"
     [dataSource]="cars"
     [columns]="['name', 'details', 'year', 'actualKilometers', 'lastRevision', 'lastPti','lastVig']"
     [showBorders]="true"
     [rowAlternationEnabled]="true"
     (onRowRemoving)="onRowRemoving($event)"
-    [errorRowEnabled] = "false"
     >
     <dxo-editing mode="row" [allowDeleting]="true">
       <dxo-texts confirmDeleteMessage="Are you sure?"></dxo-texts>  
