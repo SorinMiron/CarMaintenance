@@ -9,16 +9,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-car',
   templateUrl: './add-car.component.html',
-  styles: [],
+  styleUrls: ["./add-car.component.css"],
   providers: [ListCarsComponent]
 })
 export class AddCarComponent implements OnInit, OnChanges {
   carYearIsNotSet: boolean;
   CarActualKilometersIsNumerical: boolean = true;
   currentDate = {
-    year :  new Date().getFullYear(),
-    month :  new Date().getMonth(),
-    day :  new Date().getDay()
+    year :  new Date().getUTCFullYear(),
+    month :  new Date().getUTCMonth() + 1,
+    day :  new Date().getUTCDate()
   };
   constructor(private fb:FormBuilder, private modalService: NgbModal , private carService: CarService, private toastr: ToastrService, private listCarComponent: ListCarsComponent, private router: Router) { 
   }

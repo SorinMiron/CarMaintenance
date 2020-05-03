@@ -34,3 +34,8 @@
     opacity: 1;
     transform: translateY(-5px);
   }
+  #text{
+    display: inline-block;
+    margin-top: 4%;
+    margin-left: 4%;
+  }

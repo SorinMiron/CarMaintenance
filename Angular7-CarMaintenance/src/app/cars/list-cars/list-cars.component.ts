@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-list-cars',
   templateUrl: './list-cars.component.html',
-  styles: []
+  styleUrls: ["./list-cars.component.css"]
 })
 export class ListCarsComponent implements OnInit, OnDestroy{
   cars;
@@ -34,6 +34,11 @@ this.mySubscription = this.router.events.subscribe((event) => {
     this.service.getCars().subscribe(
       res => {
          this.cars = res;
+         this.cars.forEach((item)=>{
+           item.lastRevision = new Date(item.lastRevision);
+           item.lastPti= new Date(item.lastPti);
+           item.lastVig = new Date(item.lastVig);
+         })
       },
       err =>{
         this.toastr.error("Error on getting cars");

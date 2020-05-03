@@ -10,5 +10,13 @@
     <dxo-editing mode="row" [allowDeleting]="true">
       <dxo-texts confirmDeleteMessage="Are you sure?"></dxo-texts>  
   </dxo-editing>
+
+  <dxi-column dataField="name" dataType="string"></dxi-column>
+  <dxi-column dataField="details" dataType="string"></dxi-column>
+  <dxi-column dataField="year" dataType="number"></dxi-column>
+  <dxi-column dataField="actualKilometers" dataType="number"></dxi-column>
+  <dxi-column dataField="lastRevision" dataType="date" format="dd-MM-yyyy"></dxi-column>
+  <dxi-column dataField="lastPti" dataType="date" format="dd-MM-yyyy"></dxi-column>
+  <dxi-column dataField="lastVig" dataType="date" format="dd-MM-yyyy"></dxi-column>
   </dx-data-grid>
 </div>
