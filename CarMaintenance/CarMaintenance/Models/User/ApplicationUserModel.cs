@@ -1,4 +1,10 @@
-﻿namespace CarMaintenance.Models.User
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
+using CarMaintenance.Models.Car;
+
+
+namespace CarMaintenance.Models.User
 {
     public class ApplicationUserModel
     {

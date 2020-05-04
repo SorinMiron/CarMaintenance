@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
+using CarMaintenance.Models.User;
+
+
 namespace CarMaintenance.Models.Car
 {
     public class CarDetails 
@@ -12,7 +15,7 @@ namespace CarMaintenance.Models.Car
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
+        [Column(TypeName = "nvarchar(450)")]
         public string UserId { get; set; }
         [Required]
         public string Name { get; set; }

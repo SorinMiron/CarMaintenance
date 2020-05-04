@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CarMaintenance.Models.User;
+
+using Microsoft.EntityFrameworkCore;
 
 
 namespace CarMaintenance.Models.Car
