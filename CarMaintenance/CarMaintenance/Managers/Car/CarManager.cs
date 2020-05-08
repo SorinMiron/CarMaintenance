@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CarMaintenance.Models.Car;
+using CarMaintenance.Models.Periodicity;
 
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -19,14 +21,15 @@ namespace CarMaintenance.Managers.Car
 
         public async Task<object> InsertCar(CarDetails carDetails)
         {
-            try {
+            try
+            {
                 await _carContext.Cars.AddAsync(carDetails);
                 return await _carContext.SaveChangesAsync();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw ex;
             }
-           
         }
         public async Task<object> RemoveCar(int id)
         {
@@ -46,7 +49,8 @@ namespace CarMaintenance.Managers.Car
 
         public List<CarDetails> GetCarsByUserId(string userId)
         {
-            try {
+            try
+            {
                 return _carContext.Cars.Where(car => car.UserId == userId).ToList();
             }
             catch (Exception ex)
@@ -68,10 +72,35 @@ namespace CarMaintenance.Managers.Car
             {
                 throw ex;
             }
-
         }
 
+        public List<CarPeriodicityModel> GetCarsPeriodicityByUserId(string userId)
+        {
+            try
+            {
+                List<CarDetails> carDetails = _carContext.Cars.Include(c => c.Periodicity).Where(car => car.UserId == userId).ToList();
+                return (from carDetail in carDetails
+                        let carDetailAndYear = $"{carDetail.Name} {carDetail.Year}"
+                        select new CarPeriodicityModel(carDetail.Id, carDetailAndYear, carDetail.Periodicity.RevisionKm, carDetail.Periodicity.RevisionMonths, carDetail.Periodicity.PtiMonths, carDetail.Periodicity.VigMonths)).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
+        public async Task<Object> UpdateCarPeriodicity(string userId, CarPeriodicityModel periodicityModel)
+        {
+            try
+            {
+                _carContext.Cars.Include(c => c.Periodicity)
+                     .First(m => m.UserId == userId && m.Id == periodicityModel.CarId).Periodicity = new CarPeriodicity(periodicityModel);
+               return await _carContext.SaveChangesAsync();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
 
     }
 }

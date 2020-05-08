@@ -1,9 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-using CarMaintenance.Models.User;
-
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace CarMaintenance.Models.Car
 {

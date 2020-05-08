@@ -28,6 +28,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatInputModule } from '@angular/material/input';
+import { PeriodicityComponent } from './periodicity/periodicity.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { MatInputModule } from '@angular/material/input';
     ListCarsComponent,
     HomeCarsComponent,
     CustomDatepickerComponent,
-    YearPickerComponent
+    YearPickerComponent,
+    PeriodicityComponent
   ],
   imports: [
     BrowserModule,

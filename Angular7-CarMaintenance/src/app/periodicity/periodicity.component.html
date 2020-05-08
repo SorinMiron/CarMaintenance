@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="col-md-10 offset-md-1" id="dx-periodicity-container">
+    <dx-data-grid
+    [columns]="['carNameAndYear', 'revisionKm', 'revisionMonths', 'ptiMonths', 'vigMonths']"
+    [dataSource]="carsPeriodicity"
+    [showBorders]="true"
+    [rowAlternationEnabled]="true"
+    [errorRowEnabled]="false"
+    (onRowUpdating)="onRowUpdating($event)"
+    >
+    <dxo-editing 
+            mode="popup"
+            [allowUpdating]="true">
+            <dxo-popup
+                title="Update your periodicities"
+                [showTitle]="true"
+                [width]="500"
+                [height]="500"
+            >
+            </dxo-popup>
+            <dxo-form>
+                <dxi-item itemType="group" [colCount]="1" [colSpan]="2">
+                    <dxi-item dataField="revisionKm"></dxi-item>
+                    <dxi-item dataField="revisionMonths"></dxi-item>
+                    <dxi-item dataField="ptiMonths"></dxi-item>
+                    <dxi-item dataField="vigMonths"></dxi-item>
+                </dxi-item>
+            </dxo-form>
+        </dxo-editing>
+
+    <dxi-column dataField="carNameAndYear" caption="Car" dataType="string" [allowEditing]="false"></dxi-column>
+    <dxi-column dataField="revisionKm" dataType="number" caption="Revision periodicity(in km)">
+      <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax50000" message="Number should be an integer between 1.000 and 50.000"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="revisionMonths" dataType="number"  caption="Revision periodicity(in months)">
+      <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="ptiMonths" dataType="number" caption="PTI periodicity(in months)">
+      <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="vigMonths" dataType="number" caption="Vignette periodicity(in months)">
+      <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
+    </dxi-column>
+  </dx-data-grid>
+</div>

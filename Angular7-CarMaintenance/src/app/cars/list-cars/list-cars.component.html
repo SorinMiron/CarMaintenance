@@ -5,6 +5,7 @@
     [columns]="['name', 'details', 'year', 'actualKilometers', 'lastRevision', 'lastPti','lastVig']"
     [showBorders]="true"
     [rowAlternationEnabled]="true"
+    [errorRowEnabled]="false"
     (onRowRemoving)="onRowRemoving($event)"
     >
     <dxo-editing mode="row" [allowDeleting]="true">

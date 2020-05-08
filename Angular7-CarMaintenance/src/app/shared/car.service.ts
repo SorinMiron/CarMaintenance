@@ -21,10 +21,24 @@ export class CarService {
     return this.http.post(this.BaseURI+'/Car/RemoveCar', JSON.stringify(carId), {headers: this.getHeaderForJson()});
   }
 
+  getCarPeriodicity(){
+    return this.http.get(this.BaseURI+'/Car/GetCarsPeriodicityByUserId');
+  }
+  
   getHeaderForJson(){
     return new HttpHeaders({
       'Content-Type': 'application/json'
     });
   }
 
+  updateCarPeriodicity(resource){
+    var body = {
+      CarId: resource.carId,
+      RevisionKm: resource.revisionKm,
+      RevisionMonths: resource.revisionMonths,
+      PtiMonths: resource.ptiMonths,
+      VigMonths: resource.vigMonths
+    }
+    return this.http.post(this.BaseURI + "/Car/UpdatePeriodicity", body);
+  }
 }

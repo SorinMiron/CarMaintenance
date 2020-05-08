@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
-
-using CarMaintenance.Models.User;
-
-
+using CarMaintenance.Models.Periodicity;
 namespace CarMaintenance.Models.Car
 {
     public class CarDetails 
@@ -30,7 +24,8 @@ namespace CarMaintenance.Models.Car
         public DateTime LastPti { get; set; }
         [Required]
         public DateTime LastVig { get; set; }
-
+        public int PeriodicityId { get; set; }
+        public CarPeriodicity Periodicity { get; set; }
         public CarDetails()
         {
 
@@ -47,5 +42,10 @@ namespace CarMaintenance.Models.Car
             LastPti = new DateTime(carDetailsModel.LastPti.Year, carDetailsModel.LastPti.Month, carDetailsModel.LastPti.Day);
             LastVig = new DateTime(carDetailsModel.LastVig.Year, carDetailsModel.LastVig.Month, carDetailsModel.LastVig.Day); ;
         }
+
+        public CarDetails(string userId, CarDetailsModel carDetailsModel, CarPeriodicity periodicity) : this(userId, carDetailsModel)
+        {
+            Periodicity = periodicity;
+        } 
     }
 }

@@ -4,14 +4,16 @@ using CarMaintenance.Models.Car;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarMaintenance.Migrations.Car
 {
     [DbContext(typeof(CarContext))]
-    partial class CarContextModelSnapshot : ModelSnapshot
+    [Migration("20200508093043_addedNullableProperties")]
+    partial class addedNullableProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +40,7 @@ namespace CarMaintenance.Migrations.Car
                     b.Property<string>("Name")
                         .IsRequired();
 
-                    b.Property<int>("PeriodicityId");
+                    b.Property<int?>("PeriodicityId");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -47,8 +49,7 @@ namespace CarMaintenance.Migrations.Car
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PeriodicityId")
-                        .IsUnique();
+                    b.HasIndex("PeriodicityId");
 
                     b.ToTable("Cars");
                 });
@@ -75,9 +76,8 @@ namespace CarMaintenance.Migrations.Car
             modelBuilder.Entity("CarMaintenance.Models.Car.CarDetails", b =>
                 {
                     b.HasOne("CarMaintenance.Models.Periodicity.CarPeriodicity", "Periodicity")
-                        .WithOne()
-                        .HasForeignKey("CarMaintenance.Models.Car.CarDetails", "PeriodicityId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany()
+                        .HasForeignKey("PeriodicityId");
                 });
 #pragma warning restore 612, 618
         }

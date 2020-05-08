@@ -80,6 +80,4 @@ export class UserService {
   removeCustomer(customerId:string){
     return this.http.post(this.BaseURI+'/AdminPanel/RemoveCustomer', JSON.stringify(customerId) ,{headers: this.getHeaderForJson()})
   }
-
-  
 }

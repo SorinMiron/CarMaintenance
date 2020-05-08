@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
-
 using CarMaintenance.Managers.Car;
 using CarMaintenance.Models.Car;
-using CarMaintenance.Models.Customer;
+using CarMaintenance.Models.Periodicity;
 using CarMaintenance.Models.User;
-
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,7 +25,6 @@ namespace CarMaintenance.Controllers
             _carManager = carManager;
         }
 
-
         [HttpPost]
         [Authorize(Roles = "Customer")]
         [Route("InsertCar")]
@@ -41,7 +36,7 @@ namespace CarMaintenance.Controllers
             try
             {
                 string userId = User.Claims.First(c => c.Type == "UserID").Value;
-                return await _carManager.InsertCar(new CarDetails(userId, carDetails));
+                return await _carManager.InsertCar(new CarDetails(userId, carDetails, new CarPeriodicity()));
             }
             catch (Exception ex)
             {
@@ -49,7 +44,6 @@ namespace CarMaintenance.Controllers
                 return BadRequest(ex);
             }
         }
-
 
         [HttpGet]
         [Authorize(Roles = "Customer")]
@@ -70,7 +64,6 @@ namespace CarMaintenance.Controllers
             }
         }
 
-
         [HttpPost]
         [Authorize(Roles = "Customer")]
         [Route("RemoveCar")]
@@ -90,6 +83,45 @@ namespace CarMaintenance.Controllers
             }
         }
 
+        [HttpGet]
+        [Authorize(Roles = "Customer")]
+        [Route("GetCarsPeriodicityByUserId")]
+        //post /api/Car/GetCarsPeriodicityByUserId
+        public List<CarPeriodicityModel> GetCarsPeriodicityByUserId()
+        {
+            //todo add validations
+            //return bad request
+            try
+            {
+                string userId = User.Claims.First(c => c.Type == "UserID").Value;
+                return _carManager.GetCarsPeriodicityByUserId(userId);
+            }
+            catch (Exception ex)
+            {
+                //todo log exception
+                return null;
+            }
+        }
 
+        [HttpPost]
+        [Authorize(Roles = "Customer")]
+        [Route("UpdatePeriodicity")]
+        //post /api/Car/UpdatePeriodicity
+        public async Task<object> UpdatePeriodicity(CarPeriodicityModel carPeriodicityModel)
+        {
+            //todo add server-side validations: numerical(1.000 - 50.000 , months: 1-36)
+            //return bad request
+            try
+            { 
+                string userId = User.Claims.First(c => c.Type == "UserID").Value;
+                return await _carManager.UpdateCarPeriodicity(userId, carPeriodicityModel);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
     }
+
 }
