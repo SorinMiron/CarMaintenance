@@ -64,6 +64,7 @@ namespace CarMaintenance.Controllers
             try
             {
                 ApplicationUser customer = await _userManager.FindByIdAsync(customerId.ToString());
+                _carManager.RemoveCarsByUserId(customerId.ToString());
                 return await _userManager.DeleteAsync(customer);
             }
             catch (Exception ex)

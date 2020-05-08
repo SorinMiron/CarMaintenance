@@ -56,5 +56,22 @@ namespace CarMaintenance.Managers.Car
 
         }
 
+        public void RemoveCarsByUserId(string userId)
+        {
+            try
+            {
+                List<CarDetails> carForRemoving = _carContext.Cars.Where(car => car.UserId == userId).ToList();
+                _carContext.RemoveRange(carForRemoving);
+                _carContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
+
     }
 }
