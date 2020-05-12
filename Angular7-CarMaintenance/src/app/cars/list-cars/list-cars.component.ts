@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CarService } from 'src/app/shared/car.service';
 import * as $ from "jquery" ;
 import { ToastrService } from 'ngx-toastr';
 import { Router, NavigationEnd } from '@angular/router';
+import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
   selector: 'app-list-cars',

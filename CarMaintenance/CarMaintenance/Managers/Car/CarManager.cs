@@ -51,7 +51,7 @@ namespace CarMaintenance.Managers.Car
         {
             try
             {
-                return _carContext.Cars.Where(car => car.UserId == userId).ToList();
+                return _carContext.Cars.Include(m=>m.Periodicity).Where(car => car.UserId == userId).ToList();
             }
             catch (Exception ex)
             {

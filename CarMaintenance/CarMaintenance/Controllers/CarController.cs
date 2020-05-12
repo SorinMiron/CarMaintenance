@@ -16,12 +16,10 @@ namespace CarMaintenance.Controllers
     [ApiController]
     public class CarController : ControllerBase
     {
-        private UserManager<ApplicationUser> _userManager;
-        private CarManager _carManager;
+        private readonly CarManager _carManager;
 
-        public CarController(UserManager<ApplicationUser> userManager, CarManager carManager)
+        public CarController(CarManager carManager)
         {
-            _userManager = userManager;
             _carManager = carManager;
         }
 
@@ -79,46 +77,6 @@ namespace CarMaintenance.Controllers
             catch (Exception ex)
             {
                 //todo log exception
-                return BadRequest(ex);
-            }
-        }
-
-        [HttpGet]
-        [Authorize(Roles = "Customer")]
-        [Route("GetCarsPeriodicityByUserId")]
-        //post /api/Car/GetCarsPeriodicityByUserId
-        public List<CarPeriodicityModel> GetCarsPeriodicityByUserId()
-        {
-            //todo add validations
-            //return bad request
-            try
-            {
-                string userId = User.Claims.First(c => c.Type == "UserID").Value;
-                return _carManager.GetCarsPeriodicityByUserId(userId);
-            }
-            catch (Exception ex)
-            {
-                //todo log exception
-                return null;
-            }
-        }
-
-        [HttpPost]
-        [Authorize(Roles = "Customer")]
-        [Route("UpdatePeriodicity")]
-        //post /api/Car/UpdatePeriodicity
-        public async Task<object> UpdatePeriodicity(CarPeriodicityModel carPeriodicityModel)
-        {
-            //todo add server-side validations: numerical(1.000 - 50.000 , months: 1-36)
-            //return bad request
-            try
-            { 
-                string userId = User.Claims.First(c => c.Type == "UserID").Value;
-                return await _carManager.UpdateCarPeriodicity(userId, carPeriodicityModel);
-            }
-            catch (Exception ex)
-            {
-
                 return BadRequest(ex);
             }
         }

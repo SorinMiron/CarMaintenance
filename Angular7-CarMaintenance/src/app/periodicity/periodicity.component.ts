@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { CarService } from '../shared/car.service';
 import * as $ from "jquery" ;
+import { PeriodicityService } from '../shared/services/periodicity.service';
 @Component({
   selector: 'app-periodicity',
   templateUrl: './periodicity.component.html',
@@ -13,7 +13,7 @@ export class PeriodicityComponent implements OnInit {
 
   numericalPatternMax50000 = "^([1-8][0-9]{3}|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9]|[1-4][0-9]{4}|50000)$";
   numericalPatternMax36 = "^([1-9]|[12][0-9]|3[0-6])$";
-  constructor(private service: CarService, private toastr: ToastrService) { }
+  constructor(private service: PeriodicityService, private toastr: ToastrService) { }
   ngOnInit(): void {
     this.initCars();
   }

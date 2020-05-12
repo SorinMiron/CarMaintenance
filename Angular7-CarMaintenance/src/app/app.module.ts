@@ -9,14 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
-import { UserService } from './shared/user.service';
+import { UserService } from './shared/services/user.service';
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { DevExtremeModule } from 'devextreme-angular';
-import { NavbarComponent } from './shared/navbar.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AddCarComponent } from './cars/add-car/add-car.component';
 import { ListCarsComponent } from './cars/list-cars/list-cars.component';
 import { HomeCarsComponent } from './cars/home-cars/home-cars.component';
@@ -29,6 +29,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatInputModule } from '@angular/material/input';
 import { PeriodicityComponent } from './periodicity/periodicity.component';
+import { ServiceCalendarComponent } from './service-calendar/service-calendar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { PeriodicityComponent } from './periodicity/periodicity.component';
     HomeCarsComponent,
     CustomDatepickerComponent,
     YearPickerComponent,
-    PeriodicityComponent
+    PeriodicityComponent,
+    ServiceCalendarComponent
   ],
   imports: [
     BrowserModule,

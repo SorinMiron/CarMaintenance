@@ -9,6 +9,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { HomeCarsComponent } from './cars/home-cars/home-cars.component';
 import { PeriodicityComponent } from './periodicity/periodicity.component';
+import { ServiceCalendarComponent } from './service-calendar/service-calendar.component';
 
 
 
@@ -35,6 +36,9 @@ const routes: Routes = [
   },
   {
     path:'periodicity', component:PeriodicityComponent, canActivate:[AuthGuard], data: {permittedRoles:['Customer']}
+  },
+  {
+    path:'serviceCalendar', component:ServiceCalendarComponent, canActivate:[AuthGuard], data: {permittedRoles:['Customer']}
   },
   {
     path:'**', redirectTo:'/user/login', pathMatch:'full'

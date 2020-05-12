@@ -1,10 +1,10 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { NgbModal  }from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, Validators } from '@angular/forms';
-import { CarService } from 'src/app/shared/car.service';
 import { ToastrService } from 'ngx-toastr';
 import { ListCarsComponent } from '../list-cars/list-cars.component';
 import { Router } from '@angular/router';
+import { CarService } from 'src/app/shared/services/car.service';
 
 @Component({
   selector: 'app-add-car',

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { UserService } from '../shared/user.service';
+import { UserService } from '../shared/services/user.service';
 import { ToastrService } from 'ngx-toastr';
 import { DxDataGridComponent } from 'devextreme-angular';
 import * as $ from "jquery" ;

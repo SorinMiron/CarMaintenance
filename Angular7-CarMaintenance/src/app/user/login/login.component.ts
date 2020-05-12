@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { UserService } from 'src/app/shared/user.service';
+import { UserService } from 'src/app/shared/services/user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { NavbarComponent } from 'src/app/shared/navbar.component';
+import { NavbarComponent } from 'src/app/shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-login',

@@ -2,6 +2,7 @@
 using System.Text;
 
 using CarMaintenance.Managers.Car;
+using CarMaintenance.Managers.ServiceCalendar;
 using CarMaintenance.Models;
 using CarMaintenance.Models.Car;
 using CarMaintenance.Models.User;
@@ -70,6 +71,7 @@ namespace CarMaintenance
 
             services.AddDbContext<CarContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
             services.AddScoped<CarManager>();
+            services.AddScoped<ServiceCalendarManager>();
 
         }
 
