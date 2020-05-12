@@ -14,13 +14,14 @@ namespace CarMaintenance.Models.Periodicity
         public int? RevisionMonths { get; set; }
         public int? PtiMonths { get; set; }
         public int? VigMonths { get; set; }
+        public int? InsuranceMonths { get; set; }
 
         public CarPeriodicityModel()
         {
 
         }
 
-        public CarPeriodicityModel(int carId, string carNameAndYear, int? revisionKm, int? revisionMonths, int? ptiMonths, int? vigMonths)
+        public CarPeriodicityModel(int carId, string carNameAndYear, int? revisionKm, int? revisionMonths, int? ptiMonths, int? vigMonths, int? insuranceMonths)
         {
             CarId = carId;
             CarNameAndYear = carNameAndYear;
@@ -28,6 +29,7 @@ namespace CarMaintenance.Models.Periodicity
             RevisionMonths = revisionMonths;
             PtiMonths = ptiMonths;
             VigMonths = vigMonths;
+            InsuranceMonths = insuranceMonths;
         }
     }
 }

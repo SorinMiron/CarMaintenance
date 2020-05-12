@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="col-md-10 offset-md-1" id="dx-periodicity-container">
     <dx-data-grid
-    [columns]="['carNameAndYear', 'revisionKm', 'revisionMonths', 'ptiMonths', 'vigMonths']"
+    [columns]="['carNameAndYear', 'revisionKm', 'revisionMonths', 'ptiMonths', 'vigMonths' , 'insuranceMonths']"
     [dataSource]="carsPeriodicity"
     [showBorders]="true"
     [rowAlternationEnabled]="true"
@@ -24,6 +24,7 @@
                     <dxi-item dataField="revisionMonths"></dxi-item>
                     <dxi-item dataField="ptiMonths"></dxi-item>
                     <dxi-item dataField="vigMonths"></dxi-item>
+                    <dxi-item dataField="insuranceMonths"></dxi-item>
                 </dxi-item>
             </dxo-form>
         </dxo-editing>
@@ -39,6 +40,9 @@
       <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
     </dxi-column>
     <dxi-column dataField="vigMonths" dataType="number" caption="Vignette periodicity(in months)">
+      <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="insuranceMonths" dataType="number" caption="Insurance periodicity(in months)">
       <dxi-validation-rule type="pattern" [pattern]="numericalPatternMax36" message="Number should be an integer between 1 and 36"></dxi-validation-rule>
     </dxi-column>
   </dx-data-grid>

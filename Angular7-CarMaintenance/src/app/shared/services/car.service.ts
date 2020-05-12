@@ -21,9 +21,22 @@ export class CarService {
     return this.http.post(this.BaseURI+'/Car/RemoveCar', JSON.stringify(carId), {headers: this.getHeaderForJson()});
   }
 
+  updateCar(resource){
+      var body = {
+        CarId: resource.id,
+        ActualKilometers: resource.actualKilometers,
+        LastRevisionKm: resource.lastRevisionKm,
+        LastRevisionDate: resource.lastRevisionDate,
+        LastPti: resource.lastPti,
+        lastVig: resource.lastVig,
+        lastInsurance: resource.lastInsurance
+      }
+      return this.http.post(this.BaseURI + "/Car/UpdateCar", body);
+  }
   getHeaderForJson(){
     return new HttpHeaders({
       'Content-Type': 'application/json'
     });
   }
+
 }

@@ -19,12 +19,15 @@ namespace CarMaintenance.Models.Car
         [Required]
         public int ActualKilometers { get; set; }
         [Required]
-        public DateTime LastRevision { get; set; }
+        public int LastRevisionKm { get; set; }
+        [Required]
+        public DateTime LastRevisionDate { get; set; }
         [Required]
         public DateTime LastPti { get; set; }
         [Required]
         public DateTime LastVig { get; set; }
-        public int PeriodicityId { get; set; }
+        [Required]
+        public DateTime LastInsurance { get; set; }
         public CarPeriodicity Periodicity { get; set; }
         public CarDetails()
         {
@@ -38,9 +41,11 @@ namespace CarMaintenance.Models.Car
             Details = carDetailsModel.Details;
             Year = carDetailsModel.Year;
             ActualKilometers = carDetailsModel.ActualKilometers;
-            LastRevision = new DateTime(carDetailsModel.LastRevision.Year, carDetailsModel.LastRevision.Month, carDetailsModel.LastRevision.Day);
+            LastRevisionKm = carDetailsModel.LastRevisionKm;
+            LastRevisionDate = new DateTime(carDetailsModel.LastRevisionDate.Year, carDetailsModel.LastRevisionDate.Month, carDetailsModel.LastRevisionDate.Day);
             LastPti = new DateTime(carDetailsModel.LastPti.Year, carDetailsModel.LastPti.Month, carDetailsModel.LastPti.Day);
-            LastVig = new DateTime(carDetailsModel.LastVig.Year, carDetailsModel.LastVig.Month, carDetailsModel.LastVig.Day); ;
+            LastVig = new DateTime(carDetailsModel.LastVig.Year, carDetailsModel.LastVig.Month, carDetailsModel.LastVig.Day);
+            LastInsurance = new DateTime(carDetailsModel.LastInsurance.Year, carDetailsModel.LastInsurance.Month, carDetailsModel.LastInsurance.Day);
         }
 
         public CarDetails(string userId, CarDetailsModel carDetailsModel, CarPeriodicity periodicity) : this(userId, carDetailsModel)

@@ -19,12 +19,13 @@ namespace CarMaintenance.Managers.ServiceCalendar
                 DateTime? nextRevisionDate = null;
                 DateTime? nextPti = null;
                 DateTime? nextVig = null;
+                DateTime? nextInsurance = null;
 
                 if (carDetails.Periodicity.RevisionKm != null) {
-                    nextRevisionKm = carDetails.ActualKilometers + (int)carDetails.Periodicity.RevisionKm;
+                    nextRevisionKm = carDetails.LastRevisionKm + (int)carDetails.Periodicity.RevisionKm;
                 }
                 if (carDetails.Periodicity.RevisionMonths != null) {
-                    nextRevisionDate = carDetails.LastRevision.AddMonths((int) carDetails.Periodicity.RevisionMonths);
+                    nextRevisionDate = carDetails.LastRevisionDate.AddMonths((int) carDetails.Periodicity.RevisionMonths);
                 }
                 if (carDetails.Periodicity.PtiMonths != null)
                 {
@@ -34,8 +35,11 @@ namespace CarMaintenance.Managers.ServiceCalendar
                 {
                     nextVig = carDetails.LastVig.AddMonths((int)carDetails.Periodicity.VigMonths);
                 }
-
-                serviceCalendarModels.Add(new ServiceCalendarModel(nextRevisionKm, nextRevisionDate, nextPti, nextVig));
+                if (carDetails.Periodicity.InsuranceMonths != null)
+                {
+                    nextInsurance = carDetails.LastInsurance.AddMonths((int)carDetails.Periodicity.InsuranceMonths);
+                }
+                serviceCalendarModels.Add(new ServiceCalendarModel(nextRevisionKm, nextRevisionDate, nextPti, nextVig, nextInsurance));
             }
 
             return serviceCalendarModels;

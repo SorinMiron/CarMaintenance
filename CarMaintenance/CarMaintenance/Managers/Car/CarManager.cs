@@ -51,7 +51,7 @@ namespace CarMaintenance.Managers.Car
         {
             try
             {
-                return _carContext.Cars.Include(m=>m.Periodicity).Where(car => car.UserId == userId).ToList();
+                return _carContext.Cars.Include(m => m.Periodicity).Where(car => car.UserId == userId).ToList();
             }
             catch (Exception ex)
             {
@@ -81,7 +81,7 @@ namespace CarMaintenance.Managers.Car
                 List<CarDetails> carDetails = _carContext.Cars.Include(c => c.Periodicity).Where(car => car.UserId == userId).ToList();
                 return (from carDetail in carDetails
                         let carDetailAndYear = $"{carDetail.Name} {carDetail.Year}"
-                        select new CarPeriodicityModel(carDetail.Id, carDetailAndYear, carDetail.Periodicity.RevisionKm, carDetail.Periodicity.RevisionMonths, carDetail.Periodicity.PtiMonths, carDetail.Periodicity.VigMonths)).ToList();
+                        select new CarPeriodicityModel(carDetail.Id, carDetailAndYear, carDetail.Periodicity.RevisionKm, carDetail.Periodicity.RevisionMonths, carDetail.Periodicity.PtiMonths, carDetail.Periodicity.VigMonths, carDetail.Periodicity.InsuranceMonths)).ToList();
             }
             catch (Exception ex)
             {
@@ -95,11 +95,37 @@ namespace CarMaintenance.Managers.Car
             {
                 _carContext.Cars.Include(c => c.Periodicity)
                      .First(m => m.UserId == userId && m.Id == periodicityModel.CarId).Periodicity = new CarPeriodicity(periodicityModel);
-               return await _carContext.SaveChangesAsync();
+                return await _carContext.SaveChangesAsync();
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw ex;
             }
+        }
+        public async Task<Object> UpdateCar(string userId, CarUpdateModel carDetails)
+        {
+            try
+            {
+                CarDetails carForUpdate = _carContext.Cars.First(m => m.UserId == userId && m.Id == carDetails.CarId);
+
+                UpdatePropertiesCar(ref carForUpdate, carDetails);
+
+                return await _carContext.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private static void UpdatePropertiesCar(ref CarDetails carForUpdate, CarUpdateModel carDetails)
+        {
+            carForUpdate.ActualKilometers = carDetails.ActualKilometers;
+            carForUpdate.LastRevisionDate = carDetails.LastPti;
+            carForUpdate.LastRevisionKm = carDetails.LastRevisionKm;
+            carForUpdate.LastPti = carDetails.LastPti;
+            carForUpdate.LastVig = carDetails.LastVig;
+            carForUpdate.LastInsurance = carDetails.LastInsurance;
         }
 
     }

@@ -11,19 +11,20 @@ namespace CarMaintenance.Models.ServiceCalendar
         public DateTime? NextRevisionDate { get; set; }
         public DateTime? NextPti { get; set; }
         public DateTime? NextVig { get; set; }
-
+        public DateTime? NextInsurance { get; set; }
 
         public ServiceCalendarModel()
         {
 
         }
 
-        public ServiceCalendarModel(int? nextRevisionKm, DateTime? nextRevisionDate, DateTime? nextPti, DateTime? nextVig)
+        public ServiceCalendarModel(int? nextRevisionKm, DateTime? nextRevisionDate, DateTime? nextPti, DateTime? nextVig, DateTime? nextInsurance)
         {
             NextRevisionKm = nextRevisionKm;
             NextRevisionDate = nextRevisionDate;
             NextPti = nextPti;
             NextVig = nextVig;
+            NextInsurance = nextInsurance;
         }
     }
 

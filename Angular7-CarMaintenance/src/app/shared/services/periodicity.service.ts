@@ -18,7 +18,8 @@ export class PeriodicityService {
       RevisionKm: resource.revisionKm,
       RevisionMonths: resource.revisionMonths,
       PtiMonths: resource.ptiMonths,
-      VigMonths: resource.vigMonths
+      VigMonths: resource.vigMonths,
+      InsuranceMonths: resource.insuranceMonths
     }
     return this.http.post(this.BaseURI + "/Periodicity/UpdatePeriodicity", body);
   }

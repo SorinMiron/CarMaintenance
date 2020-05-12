@@ -15,6 +15,7 @@ import { CarService } from 'src/app/shared/services/car.service';
 export class AddCarComponent implements OnInit, OnChanges {
   carYearIsNotSet: boolean;
   CarActualKilometersIsNumerical: boolean = true;
+  CarLastRevisionKmIsNumerical: boolean = true;
   currentDate = {
     year :  new Date().getUTCFullYear(),
     month :  new Date().getUTCMonth() + 1,
@@ -30,10 +31,12 @@ export class AddCarComponent implements OnInit, OnChanges {
     CarDetails: [],
     //for CarYear validations was added manually
     CarYear : [''],
-    CarActualKilometers: ['', Validators.required],
-    CarLastRevision: ['', [Validators.required]],
+    CarActualKilometers: ['', [Validators.required]],
+    CarLastRevisionKm: ['', [Validators.required]],
+    CarLastRevisionDate: ['', [Validators.required]],
     CarLastPti: ['',[Validators.required]],
-    CarLastVig: ['', [Validators.required]]
+    CarLastVig: ['', [Validators.required]],
+    CarLastInsurance: ['', [Validators.required]]
   })
  
   ngOnInit(): void {
@@ -46,7 +49,7 @@ export class AddCarComponent implements OnInit, OnChanges {
       });
     }
   onSubmit(){
-    if(this.formModel.value.CarYear == "" || this.formModel.value.CarYear == null || !this.CarActualKilometersIsNumerical  || this.formModel.invalid){
+    if(this.formModel.value.CarYear == "" || this.formModel.value.CarYear == null || !this.CarActualKilometersIsNumerical || !this.CarLastRevisionKmIsNumerical || this.formModel.invalid){
       this.carYearIsNotSet = true;
 
       if(this.formModel.invalid){
@@ -57,15 +60,17 @@ export class AddCarComponent implements OnInit, OnChanges {
     }
     return;
   }
-    //validate car year > last pti/ last revision / blabla
+  
     var carDetails = {
       Name: this.formModel.value.CarName,
       Details: this.formModel.value.CarDetails,
       Year: this.formModel.value.CarYear.getFullYear(),
       ActualKilometers: this.formModel.value.CarActualKilometers,
-      LastRevision: this.formModel.value.CarLastRevision,
+      LastRevisionKm: this.formModel.value.CarLastRevisionKm,
+      LastRevisionDate: this.formModel.value.CarLastRevisionDate,
       LastPti: this.formModel.value.CarLastPti,
-      LastVig: this.formModel.value.CarLastVig
+      LastVig: this.formModel.value.CarLastVig,
+      LastInsurance: this.formModel.value.CarLastInsurance
     }
     this.modalService.dismissAll();
     this.formModel.reset();
@@ -83,20 +88,32 @@ export class AddCarComponent implements OnInit, OnChanges {
     )
 
   }
-
   open(content) {
     
     this.modalService.open(content);
     this.carYearIsNotSet = false;
   }
 
+  numberOnlyCarActualKilometers(event): boolean {
+    this.CarActualKilometersIsNumerical = this.numberOnly(event);
+    return this.CarActualKilometersIsNumerical;
+  }
+  numberOnlyCarLastRevisionKm(event): boolean{
+    this.CarLastRevisionKmIsNumerical =  this.numberOnly(event);
+    return this.CarLastRevisionKmIsNumerical;
+  }
+
   numberOnly(event): boolean {
     const charCode = (event.which) ? event.which : event.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-      this.CarActualKilometersIsNumerical = false;
       return false;
     }
-    this.CarActualKilometersIsNumerical = true;
     return true;
+  }
+  onFocusoutLastRevisionKm(){
+    this.CarLastRevisionKmIsNumerical = true;
+  }
+  onFocusOutActualKm(){
+    this.CarActualKilometersIsNumerical = true
   }
 }

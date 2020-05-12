@@ -12,25 +12,31 @@ namespace CarMaintenance.Models.Car
         [Required]
         public int ActualKilometers { get; set; }
         [Required]
-        public Date LastRevision { get; set; }
+        public int LastRevisionKm { get; set; }
+        [Required]
+        public Date LastRevisionDate { get; set; }
         [Required]
         public Date LastPti { get; set; }
         [Required]
         public Date LastVig { get; set; }
+        [Required]
+        public Date LastInsurance { get; set; }
         public CarDetailsModel()
         {
 
         }
 
-        public CarDetailsModel(string name, string details, int year, int actualKilometers, Date lastRevisiom, Date lastPti, Date lastVig)
+        public CarDetailsModel(string name, string details, int year, int actualKilometers, int lastRevisionKm, Date lastRevisionDate, Date lastPti, Date lastVig, Date lastInsurance)
         {
             Name = name;
             Details = details;
             Year = year;
             ActualKilometers = actualKilometers;
-            LastRevision = lastRevisiom;
+            LastRevisionKm = lastRevisionKm;
+            LastRevisionDate = lastRevisionDate;
             LastPti = lastPti;
             LastVig = lastVig;
+            LastInsurance = lastInsurance;
         }
 
     }

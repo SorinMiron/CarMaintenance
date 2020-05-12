@@ -10,8 +10,9 @@ import { CarService } from 'src/app/shared/services/car.service';
   styleUrls: ["./list-cars.component.css"]
 })
 export class ListCarsComponent implements OnInit, OnDestroy{
+  numericalPattern = "^\\d+$";
+  currentDate = new Date();
   cars;
-
   mySubscription: any;
   constructor(private service:CarService, private toastr: ToastrService, private router: Router) {
   
@@ -27,6 +28,7 @@ this.mySubscription = this.router.events.subscribe((event) => {
   }
 
   ngOnInit(): void {
+    this.currentDate.setDate(new Date().getDate()  + 1)
     this.initCars();
   }
 
@@ -38,6 +40,7 @@ this.mySubscription = this.router.events.subscribe((event) => {
            item.lastRevision = new Date(item.lastRevision);
            item.lastPti= new Date(item.lastPti);
            item.lastVig = new Date(item.lastVig);
+           item.lastInsurance = new Date(item.lastInsurance);
          })
       },
       err =>{
@@ -61,7 +64,22 @@ this.mySubscription = this.router.events.subscribe((event) => {
     );
     e.cancel = d.promise();
   }
-
+  onRowUpdating($event){
+    let d = $.Deferred();  
+    this.service.updateCar({...$event.oldData, ...$event.newData}).subscribe(
+      res => {
+        this.toastr.success("Car updated successfully");
+        d.resolve();  
+      },
+      err =>{
+        this.toastr.error("Error on updating cars");
+        console.log(err);
+        d.reject();
+      }
+    );
+    $event.cancel = d.promise();
+  }
+  
 ngOnDestroy() {
   if (this.mySubscription) {
     this.mySubscription.unsubscribe();

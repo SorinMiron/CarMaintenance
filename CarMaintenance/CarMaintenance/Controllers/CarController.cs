@@ -80,6 +80,24 @@ namespace CarMaintenance.Controllers
                 return BadRequest(ex);
             }
         }
+
+        [HttpPost]
+        [Authorize(Roles = "Customer")]
+        [Route("UpdateCar")]
+        //post /api/Car/UpdateCar
+        public async Task<object> UpdateCar(CarUpdateModel carUpdateModel)
+        {
+            try
+            {
+                string userId = User.Claims.First(c => c.Type == "UserID").Value;
+                return await _carManager.UpdateCar(userId, carUpdateModel);
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex);
+            }
+        }
     }
 
 }

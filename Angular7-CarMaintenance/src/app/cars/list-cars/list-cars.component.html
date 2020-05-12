@@ -2,22 +2,62 @@
     <dx-data-grid
     id="gridContainer"
     [dataSource]="cars"
-    [columns]="['name', 'details', 'year', 'actualKilometers', 'lastRevision', 'lastPti','lastVig']"
+    [columns]="['name', 'details', 'year', 'actualKilometers', 'lastRevisionKm','lastRevisionDate', 'lastPti','lastVig', 'lastInsurance']"
     [showBorders]="true"
     [rowAlternationEnabled]="true"
     [errorRowEnabled]="false"
     (onRowRemoving)="onRowRemoving($event)"
+    (onRowUpdating)="onRowUpdating($event)"
     >
     <dxo-editing mode="row" [allowDeleting]="true">
       <dxo-texts confirmDeleteMessage="Are you sure?"></dxo-texts>  
   </dxo-editing>
 
-  <dxi-column dataField="name" dataType="string"></dxi-column>
-  <dxi-column dataField="details" dataType="string"></dxi-column>
-  <dxi-column dataField="year" dataType="number"></dxi-column>
-  <dxi-column dataField="actualKilometers" dataType="number"></dxi-column>
-  <dxi-column dataField="lastRevision" dataType="date" format="dd-MM-yyyy"></dxi-column>
-  <dxi-column dataField="lastPti" dataType="date" format="dd-MM-yyyy"></dxi-column>
-  <dxi-column dataField="lastVig" dataType="date" format="dd-MM-yyyy"></dxi-column>
+  <dxo-editing 
+            mode="popup"
+            [allowUpdating]="true">
+            <dxo-popup
+                title="Update your car info"
+                [showTitle]="true"
+                [width]="500"
+                [height]="500"
+            >
+            </dxo-popup>
+            <dxo-form>
+                <dxi-item itemType="group" [colCount]="1" [colSpan]="2">
+                    <dxi-item dataField="actualKilometers"></dxi-item>
+                    <dxi-item dataField="lastRevisionKm"></dxi-item>
+                    <dxi-item dataField="lastRevisionDate"></dxi-item>
+                    <dxi-item dataField="lastPti"></dxi-item>
+                    <dxi-item dataField="lastVig"></dxi-item>
+                    <dxi-item dataField="lastInsurance"></dxi-item>
+                </dxi-item>
+            </dxo-form>
+        </dxo-editing>
+
+
+  <dxi-column dataField="name" dataType="string" [allowEditing]="false"></dxi-column>
+  <dxi-column dataField="details" dataType="string" [allowEditing]="false"></dxi-column>
+  <dxi-column dataField="year" dataType="number" [allowEditing]="false"></dxi-column>
+  <dxi-column dataField="actualKilometers" dataType="number">
+    <dxi-validation-rule type="pattern" [pattern]="numericalPattern" message="Number should be an integer."></dxi-validation-rule>
+    <dxi-validation-rule type="required" message="This field is required."></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="lastRevisionKm" dataType="number">
+    <dxi-validation-rule type="pattern" [pattern]="numericalPattern" message="Number should be an integer."></dxi-validation-rule>
+    <dxi-validation-rule type="required" message="This field is required."></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="lastRevisionDate" dataType="date" format="dd-MM-yyyy">
+    <dxi-validation-rule type="range" [max]="currentDate" message="Date should be in past."></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="lastPti" dataType="date" format="dd-MM-yyyy">
+    <dxi-validation-rule type="range" [max]="currentDate" message="Date should be in past."></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="lastVig" dataType="date" format="dd-MM-yyyy">
+    <dxi-validation-rule type="range" [max]="currentDate" message="Date should be in past."></dxi-validation-rule>
+  </dxi-column>
+  <dxi-column dataField="lastInsurance" dataType="date" format="dd-MM-yyyy" >
+    <dxi-validation-rule type="range" [max]="currentDate" message="Date should be in past."></dxi-validation-rule>
+  </dxi-column>
+
   </dx-data-grid>
-</div>
