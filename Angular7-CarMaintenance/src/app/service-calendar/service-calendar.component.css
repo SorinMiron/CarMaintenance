@@ -1,0 +1,19 @@
+.card{
+ flex-direction: row;
+ width: 80%;
+}
+ul{
+    flex:30%;
+    margin: 1rem;
+}
+img{
+    height: 9.6em;
+    left: 20%;
+    position: relative;
+}
+#container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+

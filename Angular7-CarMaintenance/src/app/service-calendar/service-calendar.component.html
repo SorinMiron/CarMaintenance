@@ -1,2 +1,25 @@
 <app-navbar></app-navbar>
-<p>service-calendar works!</p>
+<div id="container" >
+
+    <div  class="card m-5" *ngFor="let serviceCalendar of serviceCalendars" >
+        <ul id ="details">
+            <img src="/assets/img/transportation.svg">
+            <li class="list-group-item"><strong>Car name: </strong>{{serviceCalendar.carNameAndYear}}</li>
+            <li class="list-group-item"><strong>Actual kilometers: </strong>{{serviceCalendar.actualKilometers}}</li>
+        </ul>
+        <ul id="next">
+            <li class="list-group-item"><strong>Next revision(as km): </strong>{{serviceCalendar.nextRevisionKm}}</li>
+            <li class="list-group-item"><strong>Next revision(as date ) </strong>{{serviceCalendar.nextRevisionDate}}</li>
+            <li class="list-group-item"><strong>Next PTI: </strong>{{serviceCalendar.nextPti}}</li>
+            <li class="list-group-item"><strong>Next vignette: </strong>{{serviceCalendar.nextVig}}</li>
+            <li class="list-group-item"><strong>Next insurance: </strong>{{serviceCalendar.nextInsurance}}</li>
+        </ul>
+        <ul id="remaining">
+            <li class="list-group-item"><strong>Remaining kms until revision: </strong>{{serviceCalendar.remainingCalendar.remainingRevisionKm}}</li>
+            <li class="list-group-item"><strong>Remaining days until revision: </strong>{{serviceCalendar.remainingCalendar.remainingRevisionDate}}</li>
+            <li class="list-group-item"><strong>Remaining days of PTI: </strong>{{serviceCalendar.remainingCalendar.remainingPti}}</li>
+            <li class="list-group-item"><strong>Remaining days of vignette: </strong>{{serviceCalendar.remainingCalendar.remainingVig}}</li>
+            <li class="list-group-item"><strong>Remaining days of insurance: </strong>{{serviceCalendar.remainingCalendar.remainingInsurance}}</li>
+        </ul>
+    </div>
+</div>

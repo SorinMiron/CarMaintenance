@@ -39,7 +39,7 @@ namespace CarMaintenance.Managers.ServiceCalendar
                 {
                     nextInsurance = carDetails.LastInsurance.AddMonths((int)carDetails.Periodicity.InsuranceMonths);
                 }
-                serviceCalendarModels.Add(new ServiceCalendarModel(nextRevisionKm, nextRevisionDate, nextPti, nextVig, nextInsurance));
+                serviceCalendarModels.Add(new ServiceCalendarModel( $"{carDetails.Name} {carDetails.Year}", carDetails.ActualKilometers,nextRevisionKm, nextRevisionDate, nextPti, nextVig, nextInsurance));
             }
 
             return serviceCalendarModels;
