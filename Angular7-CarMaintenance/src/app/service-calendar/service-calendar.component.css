@@ -1,6 +1,7 @@
 .card{
  flex-direction: row;
  width: 80%;
+ background-color: #f8f9fa !important;
 }
 ul{
     flex:30%;
@@ -16,4 +17,3 @@ img{
     align-items: center;
     flex-direction: column;
 }
-

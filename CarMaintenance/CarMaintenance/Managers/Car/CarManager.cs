@@ -121,7 +121,7 @@ namespace CarMaintenance.Managers.Car
         private static void UpdatePropertiesCar(ref CarDetails carForUpdate, CarUpdateModel carDetails)
         {
             carForUpdate.ActualKilometers = carDetails.ActualKilometers;
-            carForUpdate.LastRevisionDate = carDetails.LastPti;
+            carForUpdate.LastRevisionDate = carDetails.LastRevisionDate;
             carForUpdate.LastRevisionKm = carDetails.LastRevisionKm;
             carForUpdate.LastPti = carDetails.LastPti;
             carForUpdate.LastVig = carDetails.LastVig;

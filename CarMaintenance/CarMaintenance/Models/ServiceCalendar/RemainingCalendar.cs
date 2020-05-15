@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 
 using CarMaintenance.Managers.Car;
@@ -12,18 +13,18 @@ namespace CarMaintenance.Models.ServiceCalendar
     {
 
         public int? RemainingRevisionKm { get; set; }
-        public TimeSpan? RemainingRevisionDate { get; set; }
-        public TimeSpan? RemainingPti { get; set; }
-        public TimeSpan? RemainingVig { get; set; }
-        public TimeSpan? RemainingInsurance { get; set; }
+        public int? RemainingRevisionDays { get; set; }
+        public int? RemainingPtiDays { get; set; }
+        public int? RemainingVigDays { get; set; }
+        public int? RemainingInsuranceDays { get; set; }
 
-        public RemainingCalendar(int? remainingRevisionKm, TimeSpan? remainingRevisionDate, TimeSpan? remainingPti, TimeSpan? remainingVig, TimeSpan? remainingInsurance)
+        public RemainingCalendar(int? remainingRevisionKm, int? remainingRevisionDays, int? remainingPtiDays, int? remainingVigDays, int? remainingInsuranceDays)
         {
             RemainingRevisionKm = remainingRevisionKm;
-            RemainingRevisionDate = remainingRevisionDate;
-            RemainingPti = remainingPti;
-            RemainingVig = remainingVig;
-            RemainingInsurance = remainingInsurance;
+            RemainingRevisionDays = remainingRevisionDays;
+            RemainingPtiDays = remainingPtiDays;
+            RemainingVigDays = remainingVigDays;
+            RemainingInsuranceDays = remainingInsuranceDays;
         }
 
         public RemainingCalendar(ServiceCalendarModel serviceCalendarModel)
@@ -31,11 +32,17 @@ namespace CarMaintenance.Models.ServiceCalendar
             RemainingRevisionKm = serviceCalendarModel.NextRevisionKm != null
                 ? serviceCalendarModel.NextRevisionKm - serviceCalendarModel.ActualKilometers
                 : null;
+            RemainingRevisionDays = getDaysFromDateTime(serviceCalendarModel.NextRevisionDate);
+            RemainingPtiDays = getDaysFromDateTime(serviceCalendarModel.NextPti);
+            RemainingVigDays = getDaysFromDateTime(serviceCalendarModel.NextVig);
+            RemainingInsuranceDays = getDaysFromDateTime(serviceCalendarModel.NextInsurance);
+        }
 
-            RemainingRevisionDate = serviceCalendarModel.NextRevisionDate != null ? DateTime.Now - serviceCalendarModel.NextRevisionDate : null;
-            RemainingPti = serviceCalendarModel.NextPti != null ? DateTime.Now - serviceCalendarModel.NextPti : null;
-            RemainingVig = serviceCalendarModel.NextVig != null ? DateTime.Now - serviceCalendarModel.NextVig : null;
-            RemainingInsurance = serviceCalendarModel.NextInsurance != null ? DateTime.Now - serviceCalendarModel.NextInsurance : null;
+        private int? getDaysFromDateTime(DateTime? dateTime)
+        {
+            double? daysAsDouble = (dateTime - DateTime.Now)?.TotalDays + 1;
+
+            return daysAsDouble.HasValue ? (int?)Math.Round(daysAsDouble.Value) : null;
         }
     }
 }
