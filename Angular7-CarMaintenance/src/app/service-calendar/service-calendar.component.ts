@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceCalendarService } from '../shared/services/service-calendar.service';
 import { ToastrService } from 'ngx-toastr';
 import * as moment from 'moment';
-import { Timestamp } from 'rxjs/internal/operators/timestamp';
 
 var periodicityNotSet = "Periodicity not set";
-var referenceDate = "1/1/0001 12:00:00 AM"
+
 @Component({
   selector: 'app-service-calendar',
   templateUrl: './service-calendar.component.html',
@@ -19,7 +18,7 @@ export class ServiceCalendarComponent implements OnInit {
       this.service.getCarServiceCalendar().subscribe(
         res => { 
           this.serviceCalendars = this.mapData(res);
-          
+          console.log("get data");
         },
         err => {
           this.toastr.error("Error on getting car calendars.");
@@ -39,7 +38,7 @@ export class ServiceCalendarComponent implements OnInit {
       var nextVig = this.mapDate(item.nextVig);
       var nextInsurance = this.mapDate(item.nextInsurance);
       var remainingCalendar = {}
-      var remainingRevisionKm = item.remainingCalendar.remainingRevisionKm;
+      var remainingRevisionKm = this.mapKm(item.remainingCalendar.remainingRevisionKm);
       var remainingRevisionDays = this.mapDays(item.remainingCalendar.remainingRevisionDays);
       var remainingPtiDays = this.mapDays(item.remainingCalendar.remainingPtiDays);
       var remainingVigDays = this.mapDays(item.remainingCalendar.remainingVigDays);
@@ -66,6 +65,19 @@ export class ServiceCalendarComponent implements OnInit {
   return serviceCalendars;
   }
 
+  mapKm(stringValue){
+    if (stringValue == null){
+      return periodicityNotSet;
+    }
+    if(stringValue <= 500 && stringValue >=0){
+      return stringValue + " (Soon)";
+    }
+    if(stringValue < 0 ){
+      return stringValue + " (Expired)"
+    }
+    return stringValue;
+  }
+
   mapDate(stringValue){
     if (stringValue == null){
       return periodicityNotSet;
@@ -77,9 +89,38 @@ export class ServiceCalendarComponent implements OnInit {
     if (stringValue == null){
       return periodicityNotSet;
     }
+    if(stringValue <= 30 && stringValue > 0){
+      return stringValue + " (Soon)";
+    }
+    if(stringValue == 0){
+      return stringValue + " (Today)";
+    }
+    if(stringValue < 0){
+      return stringValue + " (Expired)"
+    }
     return stringValue;
   
+  } 
+
+  getStyleByTextValue(textValue){
+    textValue = textValue.toString();
+    if(textValue.includes('(Soon)'))
+    {
+      return{
+        'color': '#ffcc00',
+        'font-weight':  'bold'
+      }
+    }
+    else if(textValue.includes('(Expired)') || textValue.includes('(Today)'))
+    {
+      return {
+        'color' : '#dd0000',
+        'font-weight':  'bold'
+      }
+    }
+      return;
   }
+ 
 }
 
 

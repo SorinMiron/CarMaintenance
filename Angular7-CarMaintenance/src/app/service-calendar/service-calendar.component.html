@@ -15,11 +15,11 @@
             <li class="list-group-item"><strong>Next insurance: </strong>{{serviceCalendar.nextInsurance}}</li>
         </ul>
         <ul id="remaining">
-            <li class="list-group-item"><strong>Remaining kms until revision: </strong>{{serviceCalendar.remainingCalendar.remainingRevisionKm}}</li>
-            <li class="list-group-item"><strong>Remaining days until revision: </strong>{{serviceCalendar.remainingCalendar.remainingRevisionDays}}</li>
-            <li class="list-group-item"><strong>Remaining days of PTI: </strong>{{serviceCalendar.remainingCalendar.remainingPtiDays}}</li>
-            <li class="list-group-item"><strong>Remaining days of vignette: </strong>{{serviceCalendar.remainingCalendar.remainingVigDays}}</li>
-            <li class="list-group-item"><strong>Remaining days of insurance: </strong>{{serviceCalendar.remainingCalendar.remainingInsuranceDays}}</li>
+            <li class="list-group-item"><strong>Remaining kms until revision: </strong> <span [ngStyle]="getStyleByTextValue(serviceCalendar.remainingCalendar.remainingRevisionKm)">{{serviceCalendar.remainingCalendar.remainingRevisionKm}}</span></li>
+            <li class="list-group-item"><strong>Remaining days until revision: </strong><span [ngStyle]="getStyleByTextValue(serviceCalendar.remainingCalendar.remainingRevisionDays)">{{serviceCalendar.remainingCalendar.remainingRevisionDays}}</span></li>
+            <li class="list-group-item"><strong>Remaining days of PTI: </strong><span [ngStyle]="getStyleByTextValue(serviceCalendar.remainingCalendar.remainingPtiDays)">{{serviceCalendar.remainingCalendar.remainingPtiDays}}</span></li>
+            <li class="list-group-item"><strong>Remaining days of vignette: </strong><span [ngStyle]="getStyleByTextValue(serviceCalendar.remainingCalendar.remainingVigDays)">{{serviceCalendar.remainingCalendar.remainingVigDays}}</span></li>
+            <li class="list-group-item"><strong>Remaining days of insurance: </strong><span [ngStyle]="getStyleByTextValue(serviceCalendar.remainingCalendar.remainingInsuranceDays)">{{serviceCalendar.remainingCalendar.remainingInsuranceDays}}</span></li>
         </ul>
     </div>
 </div>
