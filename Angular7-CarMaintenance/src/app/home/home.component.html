@@ -1,8 +1,16 @@
 <app-navbar></app-navbar>
-  <div class="card m-5" style="width:18rem" *ngIf="userDetails">
-    <ul class="list-group">
-      <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
-      <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
-      <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
-    </ul>
+  <div id="name">
+    Welcome<span *ngIf="userDetails.fullName"> {{userDetails.fullName}}</span> !
   </div>
+
+  <div id="paragraph">
+    In this application you can manage your cars.
+    <br>
+    Try to add a car and set periodicity from navbar.
+    <br>
+    You can see your upcoming service interventions in Service Calendar tab.
+    <br>
+    <span id="enjoy">Enjoy! </span>
+  </div>
+
+<div id="image"></div>

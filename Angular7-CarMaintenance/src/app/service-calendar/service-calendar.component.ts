@@ -32,7 +32,7 @@ export class ServiceCalendarComponent implements OnInit {
       var carCalendar;
       var carNameAndYear = item.carNameAndYear;
       var actualKilometers = item.actualKilometers;
-      var nextRevisionKm = item.nextRevisionKm;
+      var nextRevisionKm = this.mapKm(item.nextRevisionKm);
       var nextRevisionDate = this.mapDate(item.nextRevisionDate);
       var nextPti = this.mapDate(item.nextPti);
       var nextVig = this.mapDate(item.nextVig);

@@ -1,0 +1,43 @@
+@font-face {
+    font-family: blacksword;
+    src: url("../../assets/fonts/Blacksword.otf");
+  }
+
+div{
+    position: absolute;
+}
+#image{
+    background-image: url("../../assets/img/home.png");
+    height: calc(100vh - 61px);
+    width: 100%;
+    background-position-x: 25vh;
+    background-repeat-x: no-repeat;
+    background-position-y: -10vh;
+}
+
+#name{
+    font-size: 3vw;
+    color: white;
+    width: 50vw;
+    height: 5vh;
+    top: 30vh;
+    left: 3%;
+    font-family: blacksword;
+}
+
+#paragraph{
+    color: white;
+    line-height: 2vw;
+    z-index: 1;
+    left: 4%;
+    font-family: monospace;
+    top: 42vh;
+    font-size: 1.5vw;
+    width: 80vw;
+}
+
+#enjoy{
+    font-family: blacksword !important;
+    font-size: 3vw;
+    line-height: 15vw;
+}

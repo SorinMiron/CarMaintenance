@@ -45,7 +45,7 @@
         <div class="form-group">
           <label>Last revision as kilometers</label>
           <div class="input-group">
-            <input formControlName="CarLastRevisionKm" mdbInput type="text"  (focusout)="onFocusoutLastRevisionKm()" (keypress)="numberOnlyCarLastRevisionKm($event)" class="form-control" placeholder="Your car kilometers">
+            <input formControlName="CarLastRevisionKm" mdbInput type="text"  (focusout)="onFocusoutLastRevisionKm()" (keypress)="numberOnlyCarLastRevisionKm($event)" class="form-control" placeholder="Last revision as km">
           </div>
           <label class="text-danger" *ngIf="formModel.get('CarLastRevisionKm').touched && formModel.get('CarLastRevisionKm').errors?.required">Last revision is required.</label>
           <br>

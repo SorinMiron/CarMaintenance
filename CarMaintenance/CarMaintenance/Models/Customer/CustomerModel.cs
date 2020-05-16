@@ -24,9 +24,9 @@ namespace CarMaintenance.Models.Customer
             //todo add validations : id and username required
             Id = id;
             UserName = userName;
-            FullName = fullName ?? "No fullname";
-            Email = email ?? "No email";
-            CarList = carList ?? "No cars";
+            FullName = fullName;
+            Email = email;
+            CarList = carList;
         }
     }
 }
