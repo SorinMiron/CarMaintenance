@@ -1427,3 +1427,4 @@ SELECT @@ROWCOUNT;
 2020-05-17 18:08:53.2673|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance) in 48.9633ms 
 2020-05-17 18:08:53.2673|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance)' 
 2020-05-17 18:08:53.2801|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 61.5698ms 200 application/json; charset=utf-8 
+2020-05-17 22:27:13.8134||DEBUG|CarMaintenance.Program|Application started. 

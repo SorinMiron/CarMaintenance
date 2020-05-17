@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.6.1, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -64,11 +68,25 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[3.1.2, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.1, )"
             },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.16.1, )"
             },
             "Painless.Serializer.JsonNet": {
               "target": "Package",

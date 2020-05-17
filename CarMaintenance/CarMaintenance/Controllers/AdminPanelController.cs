@@ -48,12 +48,13 @@ namespace CarMaintenance.Controllers
                     StringBuilder carsAsString = new StringBuilder();
                     foreach (CarDetails car in cars)
                     {
-                        carsAsString.Append($"{car.Name} {car.Year} ,");
+                        carsAsString.Append($"{car.Name} {car.Year}");
+                        carsAsString.Append(", ");
                     }
-                    //remove last comma if cars were added
+                    //remove last comma and space if cars were added
                     if (carsAsString.Length != 0)
                     {
-                        carsAsString.Remove(carsAsString.Length - 1, 1);
+                        carsAsString.Remove(carsAsString.Length - 2, 2);
                     }
                     customerModels.Add(new CustomerModel(customer.Id, customer.UserName, customer.FullName, customer.Email, carsAsString.ToString()));
                 }

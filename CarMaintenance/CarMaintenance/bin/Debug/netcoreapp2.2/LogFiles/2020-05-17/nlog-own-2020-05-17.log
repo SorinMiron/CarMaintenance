@@ -69,3 +69,4 @@
 2020-05-17 18:08:31.3916||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
 2020-05-17 18:08:49.0870||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 54 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
 2020-05-17 18:08:53.2673||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 54 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
+2020-05-17 22:27:13.8134||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
