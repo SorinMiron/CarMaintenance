@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +11,8 @@ using CarMaintenance.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarMaintenance.Controllers
 {
@@ -19,13 +20,15 @@ namespace CarMaintenance.Controllers
     [ApiController]
     public class AdminPanelController : ControllerBase
     {
-        private UserManager<ApplicationUser> _userManager;
-        private CarManager _carManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly CarManager _carManager;
+        private readonly ILogger<AdminPanelController> _logger;
 
-        public AdminPanelController(UserManager<ApplicationUser> userManager, CarManager carManager)
+        public AdminPanelController(UserManager<ApplicationUser> userManager, CarManager carManager, ILogger<AdminPanelController> logger)
         {
             _userManager = userManager;
             _carManager = carManager;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -34,23 +37,34 @@ namespace CarMaintenance.Controllers
         //get /api/AdminPanel/Customers
         public async Task<object> GetCustomers()
         {
-            //todo add validations
-            //return bad request
-            IList<ApplicationUser> customers = await _userManager.GetUsersInRoleAsync("Customer");
-            List<CustomerModel> customerModels = new List<CustomerModel>();
-            foreach (ApplicationUser customer in customers) {
-                List<CarDetails> cars = _carManager.GetCarsByUserId(customer.Id);
-                StringBuilder carsAsString = new StringBuilder();
-                foreach (CarDetails car in cars) {
-                    carsAsString.Append($"{car.Name} {car.Year} ,");
+
+            try
+            {
+                IList<ApplicationUser> customers = await _userManager.GetUsersInRoleAsync("Customer");
+                List<CustomerModel> customerModels = new List<CustomerModel>();
+                foreach (ApplicationUser customer in customers)
+                {
+                    List<CarDetails> cars = _carManager.GetCarsByUserId(customer.Id);
+                    StringBuilder carsAsString = new StringBuilder();
+                    foreach (CarDetails car in cars)
+                    {
+                        carsAsString.Append($"{car.Name} {car.Year} ,");
+                    }
+                    //remove last comma if cars were added
+                    if (carsAsString.Length != 0)
+                    {
+                        carsAsString.Remove(carsAsString.Length - 1, 1);
+                    }
+                    customerModels.Add(new CustomerModel(customer.Id, customer.UserName, customer.FullName, customer.Email, carsAsString.ToString()));
                 }
-                //remove last comma if cars were added
-                if (carsAsString.Length != 0) {
-                    carsAsString.Remove(carsAsString.Length - 1, 1);
-                }
-                customerModels.Add(new CustomerModel(customer.Id, customer.UserName, customer.FullName, customer.Email, carsAsString.ToString()));
+                _logger.LogInformation("Get customers was made successfully.");
+                return customerModels;
             }
-            return customerModels;
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error on get customers.");
+                return BadRequest();
+            }
         }
 
         [HttpPost]
@@ -59,18 +73,23 @@ namespace CarMaintenance.Controllers
         //post /api/AdminPanel/RemoveCustomer
         public async Task<object> RemoveCustomer(object customerId)
         {
-            //todo add validations
-            //return bad request
             try
             {
+                if (string.IsNullOrWhiteSpace(customerId.ToString()) || string.IsNullOrEmpty(customerId.ToString()))
+                {
+                    throw new ArgumentNullException(nameof(customerId));
+                }
                 ApplicationUser customer = await _userManager.FindByIdAsync(customerId.ToString());
                 _carManager.RemoveCarsByUserId(customerId.ToString());
-                return await _userManager.DeleteAsync(customer);
+                IdentityResult result = await _userManager.DeleteAsync(customer);
+                if (!result.Succeeded) return BadRequest();
+                _logger.LogInformation($"{customer.UserName} was deleted successfully");
+                return result;
             }
             catch (Exception ex)
             {
-                //handle exception
-                return BadRequest(ex.Message);
+                _logger.LogError(ex, "Error on removing customer.");
+                return BadRequest();
             }
         }
 

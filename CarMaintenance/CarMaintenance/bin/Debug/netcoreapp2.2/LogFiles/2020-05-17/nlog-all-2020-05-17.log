@@ -1,0 +1,1102 @@
+2020-05-17 10:26:21.7080||DEBUG|CarMaintenance.Program|Application started. 
+2020-05-17 10:26:25.1634||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\miron\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2020-05-17 10:26:26.6296|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/values   
+2020-05-17 10:26:27.9365|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 10:26:28.0733|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Get", controller = "Values", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller CarMaintenance.Controllers.ValuesController (CarMaintenance). 
+2020-05-17 10:26:28.1238|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) - Validation state: Valid 
+2020-05-17 10:26:28.1314|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.9794ms. 
+2020-05-17 10:26:28.1539|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String[]'. 
+2020-05-17 10:26:28.3057|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) in 221.9347ms 
+2020-05-17 10:26:28.3057|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 10:26:28.3057|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1689.2851ms 200 application/json; charset=utf-8 
+2020-05-17 11:31:19.8232||DEBUG|CarMaintenance.Program|Application started. 
+2020-05-17 11:31:23.8478||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\miron\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2020-05-17 11:31:24.9535|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/values   
+2020-05-17 11:31:25.1698|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 11:31:25.2457|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Get", controller = "Values", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller CarMaintenance.Controllers.ValuesController (CarMaintenance). 
+2020-05-17 11:31:25.2617|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:31:25.2617|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5998ms. 
+2020-05-17 11:31:25.2783|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String[]'. 
+2020-05-17 11:31:25.4877|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) in 238.1512ms 
+2020-05-17 11:31:25.4914|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 11:31:25.4914|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 545.1086ms 200 application/json; charset=utf-8 
+2020-05-17 11:31:38.2268|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 11:31:38.2268|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:38.2428|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.9851ms 204  
+2020-05-17 11:31:38.2428|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 51 
+2020-05-17 11:31:38.2428|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:38.2770|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 11:31:38.3308|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 11:31:38.9426|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:31:39.4048|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:31:40.3689|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 11:31:40.8082|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (151ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 11:31:40.8698|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1926.3983ms. 
+2020-05-17 11:31:40.8698|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 11:31:40.8921|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 2560.5227ms 
+2020-05-17 11:31:40.8921|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 11:31:40.9046|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2657.4979ms 200 application/json; charset=utf-8 
+2020-05-17 11:31:41.0032|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 11:31:41.0032|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:41.0032|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.0562ms 204  
+2020-05-17 11:31:41.0329|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 11:31:41.0329|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:41.0636|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:31:41.0636|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 11:31:41.0789|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 11:31:41.1012|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:31:41.1012|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:31:41.1012|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:31:41.1575|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 11:31:41.1666|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 61.7621ms. 
+2020-05-17 11:31:41.1666|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 11:31:41.1666|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 91.7902ms 
+2020-05-17 11:31:41.1666|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 11:31:41.1666|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 140.3895ms 200 application/json; charset=utf-8 
+2020-05-17 11:31:49.1778|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 11:31:49.1785|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:49.1785|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7225ms 204  
+2020-05-17 11:31:49.1785|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 11:31:49.1785|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:31:49.1785|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:31:49.1785|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 11:31:49.1932|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCustomers", controller = "AdminPanel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetCustomers() on controller CarMaintenance.Controllers.AdminPanelController (CarMaintenance). 
+2020-05-17 11:31:49.1932|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:31:49.1932|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:31:49.2311|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:31:49.2827|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (31ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0 
+2020-05-17 11:31:49.3396|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Discriminator], [user].[Email], [user].[EmailConfirmed], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[TwoFactorEnabled], [user].[UserName], [user].[FullName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE ([user].[Discriminator] = N'ApplicationUser') AND ([userrole].[RoleId] = @__role_Id_0) 
+2020-05-17 11:31:49.3736|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:31:49.5604|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (107ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:31:49.6873||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. 
+2020-05-17 11:31:49.6873|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 491.0273ms. 
+2020-05-17 11:31:49.6930|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Customer.CustomerModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:31:49.6930|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) in 502.1236ms 
+2020-05-17 11:31:49.6930|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 11:31:49.6930|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 514.1233ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:05.7492|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 11:32:05.7492|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:05.7587|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 9.5733ms 204  
+2020-05-17 11:32:05.7791|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 57 
+2020-05-17 11:32:05.7791|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:05.7967|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 11:32:05.7967|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 11:32:05.7967|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:05.7967|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:05.8087|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 11:32:05.8260|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 11:32:05.8260|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.2292ms. 
+2020-05-17 11:32:05.8260|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 11:32:05.8260|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 30.5969ms 
+2020-05-17 11:32:05.8260|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 11:32:05.8260|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 50.8114ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:05.8554|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 11:32:05.8554|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:05.8554|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4633ms 204  
+2020-05-17 11:32:05.8554|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 11:32:05.8554|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:05.8554|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:32:05.8554|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 11:32:05.8554|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 11:32:05.8554|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:32:05.8554|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:05.8554|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:05.8716|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 11:32:05.8716|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.4797ms. 
+2020-05-17 11:32:05.8716|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 11:32:05.8941|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 31.0979ms 
+2020-05-17 11:32:05.8941|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 11:32:05.8941|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 35.6029ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:07.4744|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:32:07.4752|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:07.4752|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8167ms 204  
+2020-05-17 11:32:07.4752|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:32:07.4752|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:07.4752|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:32:07.4752|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:32:07.4752|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 11:32:07.4752|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:32:07.4752|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:07.4923|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:07.4923|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:32:07.4923|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.6618ms. 
+2020-05-17 11:32:07.4923|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:32:07.5192|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 32.1814ms 
+2020-05-17 11:32:07.5192|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:32:07.5192|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 40.1968ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:34.4513|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:32:34.4833|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:34.4833|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 34.1069ms 204  
+2020-05-17 11:32:36.1903|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:32:36.1903|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:36.2047|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 14.4563ms 204  
+2020-05-17 11:32:36.2187|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:32:36.2187|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:36.2187|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:32:36.2187|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:32:36.2260|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 11:32:36.2260|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:32:36.2260|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:36.2260|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:36.2260|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:32:36.3163|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 83.8987ms. 
+2020-05-17 11:32:36.3163|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:32:36.3306|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 103.6289ms 
+2020-05-17 11:32:36.3755|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:32:36.3755|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 157.4623ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:39.0892|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:32:39.0892|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:39.0892|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:32:39.0892|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:32:39.0892|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 11:32:39.0892|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:32:39.1006|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:39.1006|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:39.1320|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (29ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:32:39.1320|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 31.9151ms. 
+2020-05-17 11:32:39.1320|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:32:39.1320|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 39.4472ms 
+2020-05-17 11:32:39.1320|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:32:39.1320|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 50.268ms 200 application/json; charset=utf-8 
+2020-05-17 11:32:56.0044|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 11:32:56.0044|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:56.0060|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4971ms 204  
+2020-05-17 11:32:56.0327|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 11:32:56.0327|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:32:56.0327|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:32:56.0327|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 11:32:56.0692|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsPeriodicityByUserId", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Periodicity.CarPeriodicityModel] GetCarsPeriodicityByUserId() on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 11:32:56.0692|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:32:56.0692|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:32:56.0692|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:32:56.1865|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (91ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE [c].[UserId] = @__userId_0 
+2020-05-17 11:32:56.1865|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 121.3137ms. 
+2020-05-17 11:32:56.1865|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Periodicity.CarPeriodicityModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:32:56.2030|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) in 133.1008ms 
+2020-05-17 11:32:56.2030|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 11:32:56.2147|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 182.0342ms 200 application/json; charset=utf-8 
+2020-05-17 11:33:03.3255|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:33:03.3255|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:03.3255|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.9072ms 204  
+2020-05-17 11:33:03.3406|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:33:03.3406|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:03.3406|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:33:03.3406|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:33:03.3406|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 11:33:03.3406|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:33:03.3514|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:33:03.3514|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:33:03.3712|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (14ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:33:03.3712|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.5901ms. 
+2020-05-17 11:33:03.3712|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:33:03.3712|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 33.2051ms 
+2020-05-17 11:33:03.3712|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:33:03.3712|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 40.5676ms 200 application/json; charset=utf-8 
+2020-05-17 11:33:29.4076|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:33:29.4076|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:29.4076|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.9466ms 204  
+2020-05-17 11:33:29.4513|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 11:33:29.4513|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:29.4513|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:33:29.4513|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:33:29.4513|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 11:33:29.4513|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:33:29.4622|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:33:29.4622|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:33:29.4851|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:33:29.5101|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 47.165ms. 
+2020-05-17 11:33:29.5101|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:33:29.5101|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 58.2312ms 
+2020-05-17 11:33:29.5269|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 11:33:29.5269|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 76.7596ms 200 application/json; charset=utf-8 
+2020-05-17 11:33:30.2966|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 11:33:30.2966|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:30.2966|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7819ms 204  
+2020-05-17 11:33:30.2966|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 11:33:30.2966|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:30.3030|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:33:30.3030|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 11:33:30.3030|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsPeriodicityByUserId", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Periodicity.CarPeriodicityModel] GetCarsPeriodicityByUserId() on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 11:33:30.3030|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:33:30.3030|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:33:30.3030|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:33:30.3030|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE [c].[UserId] = @__userId_0 
+2020-05-17 11:33:30.3030|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5.4983ms. 
+2020-05-17 11:33:30.3030|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Periodicity.CarPeriodicityModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:33:30.3030|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) in 8.4826ms 
+2020-05-17 11:33:30.3030|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 11:33:30.3030|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.4713ms 200 application/json; charset=utf-8 
+2020-05-17 11:33:32.7500|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:33:32.7500|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:32.7500|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4072ms 204  
+2020-05-17 11:33:32.7500|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 11:33:32.7500|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 11:33:32.7561|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 11:33:32.7561|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:33:32.7561|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 11:33:32.7561|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 11:33:32.7561|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 11:33:32.7561|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 11:33:32.7749|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 11:33:32.7749|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.6672ms. 
+2020-05-17 11:33:32.7749|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 11:33:32.7749|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 19.9402ms 
+2020-05-17 11:33:32.7749|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 11:33:32.7749|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 25.0379ms 200 application/json; charset=utf-8 
+2020-05-17 15:37:44.2589||DEBUG|CarMaintenance.Program|Application started. 
+2020-05-17 15:37:49.4520||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\miron\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2020-05-17 15:37:50.8203|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/values   
+2020-05-17 15:37:51.1648|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 15:37:51.2065|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Get", controller = "Values", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller CarMaintenance.Controllers.ValuesController (CarMaintenance). 
+2020-05-17 15:37:51.2561|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:37:51.2561|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.9195ms. 
+2020-05-17 15:37:51.3171|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String[]'. 
+2020-05-17 15:37:51.5000|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) in 265.5256ms 
+2020-05-17 15:37:51.5000|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-17 15:37:51.5118|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 693.3715ms 200 application/json; charset=utf-8 
+2020-05-17 15:38:58.5897|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:38:58.6452|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:38:58.6693|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 79.5657ms 204  
+2020-05-17 15:38:58.6805|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:38:58.6805|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:38:58.7750|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:38:58.7750|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:38:58.7883|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 15:38:58.8088|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:38:59.6298|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:39:06.1320|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:39:08.4348|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (254ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:39:08.6434|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9013.0998ms. 
+2020-05-17 15:39:08.6434|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:39:08.7013|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 9912.3288ms 
+2020-05-17 15:39:08.7013|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:39:08.7013|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 10023.0992ms 200 application/json; charset=utf-8 
+2020-05-17 15:39:23.4319|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 15:39:23.4319|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:39:23.4319|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.378ms 204  
+2020-05-17 15:39:23.4319|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 57 
+2020-05-17 15:39:23.4319|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:39:23.4319|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:39:23.4630|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 15:39:23.5374|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:39:23.6209|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:39:23.7947|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (102ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:39:24.0536|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (85ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 15:39:24.0536||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer logged in successfully. 
+2020-05-17 15:39:24.0803|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 542.2486ms. 
+2020-05-17 15:39:24.0868|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 15:39:24.1024|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 638.73ms 
+2020-05-17 15:39:24.1024|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:39:24.1024|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 679.5424ms 200 application/json; charset=utf-8 
+2020-05-17 15:39:24.3241|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 15:39:24.3241|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:39:24.3241|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.5094ms 204  
+2020-05-17 15:39:24.3594|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 15:39:24.3594|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:39:24.3594|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:39:24.3594|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:39:24.3706|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 15:39:24.3706|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:39:24.3706|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:39:24.3846|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:39:24.4095|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:39:24.4187|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 42.6994ms. 
+2020-05-17 15:39:24.4187|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 15:39:24.4187|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 52.5243ms 
+2020-05-17 15:39:24.4187|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:39:24.4187|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 66.1252ms 200 application/json; charset=utf-8 
+2020-05-17 15:40:33.7154|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 15:40:33.7154|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:33.7324|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.0411ms 204  
+2020-05-17 15:40:33.7324|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 51 
+2020-05-17 15:40:33.7408|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:33.7408|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:40:33.7646|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 15:40:33.7895|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:40:33.7895|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:40:33.8115|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:40:33.8308|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 15:40:33.8308||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. 
+2020-05-17 15:40:33.8308|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 43.3323ms. 
+2020-05-17 15:40:33.8308|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 15:40:33.8350|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 60.7965ms 
+2020-05-17 15:40:33.8350|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:40:33.8502|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 110.056ms 200 application/json; charset=utf-8 
+2020-05-17 15:40:33.9072|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 15:40:33.9072|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:33.9072|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4507ms 204  
+2020-05-17 15:40:33.9072|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 15:40:33.9123|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:33.9123|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:40:33.9123|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:40:33.9123|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 15:40:33.9123|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:40:33.9123|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:40:33.9123|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:40:33.9281|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (8ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:40:33.9281|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.4255ms. 
+2020-05-17 15:40:33.9281|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 15:40:33.9281|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 24.8727ms 
+2020-05-17 15:40:33.9281|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:40:33.9281|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 28.8412ms 200 application/json; charset=utf-8 
+2020-05-17 15:40:35.2553|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 15:40:35.2562|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:35.2562|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.0976ms 204  
+2020-05-17 15:40:35.2562|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 15:40:35.2562|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:35.2562|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:40:35.2562|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 15:40:35.2744|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCustomers", controller = "AdminPanel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetCustomers() on controller CarMaintenance.Controllers.AdminPanelController (CarMaintenance). 
+2020-05-17 15:40:35.2744|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:40:35.2744|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:40:35.3028|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:40:35.3422|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (17ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0 
+2020-05-17 15:40:35.4183|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (23ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Discriminator], [user].[Email], [user].[EmailConfirmed], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[TwoFactorEnabled], [user].[UserName], [user].[FullName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE ([user].[Discriminator] = N'ApplicationUser') AND ([userrole].[RoleId] = @__role_Id_0) 
+2020-05-17 15:40:35.4183|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:40:35.4183|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:40:35.4286||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. 
+2020-05-17 15:40:35.4286|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 152.9734ms. 
+2020-05-17 15:40:35.4286|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Customer.CustomerModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:40:35.4286|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) in 159.6301ms 
+2020-05-17 15:40:35.4286|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 15:40:35.4286|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 174.8634ms 200 application/json; charset=utf-8 
+2020-05-17 15:40:53.4048|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Register   
+2020-05-17 15:40:53.4048|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:53.4213|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.5276ms 204  
+2020-05-17 15:40:53.4571|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Register application/json 120 
+2020-05-17 15:40:53.4571|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:40:53.4612|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.PostApplicationUser (CarMaintenance)' 
+2020-05-17 15:40:53.4612|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "PostApplicationUser", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] PostApplicationUser(CarMaintenance.Models.User.ApplicationUserModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 15:40:53.4755|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.PostApplicationUser (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:40:53.5627|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:40:53.5689|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:40:53.8134|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (124ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256), @p16='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Discriminator], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName], [FullName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16); 
+2020-05-17 15:40:53.8421|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0 
+2020-05-17 15:40:53.8966|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (40ms) [Parameters=[@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [AspNetUserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1) 
+2020-05-17 15:40:53.9052|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0 
+2020-05-17 15:40:53.9239|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:40:53.9681|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1); 
+2020-05-17 15:40:54.2218|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (252ms) [Parameters=[@p15='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p16='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTimeOffset), @p6='?' (Size = 256), @p7='?' (Size = 256), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = Boolean), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 256), @p14='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [LockoutEnabled] = @p4, [LockoutEnd] = @p5, [NormalizedEmail] = @p6, [NormalizedUserName] = @p7, [PasswordHash] = @p8, [PhoneNumber] = @p9, [PhoneNumberConfirmed] = @p10, [SecurityStamp] = @p11, [TwoFactorEnabled] = @p12, [UserName] = @p13, [FullName] = @p14
+WHERE [Id] = @p15 AND [ConcurrencyStamp] = @p16;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:40:54.2282||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer2 was created successfully. 
+2020-05-17 15:40:54.2282|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.PostApplicationUser (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 753.6174ms. 
+2020-05-17 15:40:54.2282|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Identity.IdentityResult'. 
+2020-05-17 15:40:54.2282|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.PostApplicationUser (CarMaintenance) in 769.6317ms 
+2020-05-17 15:40:54.2400|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.PostApplicationUser (CarMaintenance)' 
+2020-05-17 15:40:54.2400|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 784.1085ms 200 application/json; charset=utf-8 
+2020-05-17 15:41:00.2201|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 15:41:00.2201|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:00.2201|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.9371ms 204  
+2020-05-17 15:41:00.2248|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 59 
+2020-05-17 15:41:00.2248|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:00.2248|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:41:00.2248|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 15:41:00.2248|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:41:00.2248|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:41:00.2248|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:41:00.2651|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 15:41:00.2651||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer2 logged in successfully. 
+2020-05-17 15:41:00.2651|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 38.0164ms. 
+2020-05-17 15:41:00.2651|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 15:41:00.2651|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 40.568ms 
+2020-05-17 15:41:00.2651|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:41:00.2651|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 44.7674ms 200 application/json; charset=utf-8 
+2020-05-17 15:41:00.3154|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 15:41:00.3154|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:00.3154|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.6789ms 204  
+2020-05-17 15:41:00.3203|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 15:41:00.3203|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:00.3203|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:41:00.3203|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:41:00.3203|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 15:41:00.3203|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:41:00.3203|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:41:00.3203|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:41:00.3203|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:41:00.3349|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.442ms. 
+2020-05-17 15:41:00.3349|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 15:41:00.3349|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 20.1484ms 
+2020-05-17 15:41:00.3349|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:41:00.3349|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 25.0918ms 200 application/json; charset=utf-8 
+2020-05-17 15:41:59.6518|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:41:59.6518|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:59.6719|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 20.1644ms 204  
+2020-05-17 15:41:59.7277|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:41:59.7277|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:41:59.7711|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:41:59.7974|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:41:59.8881|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:41:59.8881|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:41:59.8881|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:41:59.8881|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:41:59.9012|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:41:59.9012|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10.028ms. 
+2020-05-17 15:41:59.9012|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:41:59.9012|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 16.5785ms 
+2020-05-17 15:41:59.9012|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:41:59.9012|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 179.8031ms 200 application/json; charset=utf-8 
+2020-05-17 15:42:00.4514|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:42:00.4514|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:00.4514|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.686ms 204  
+2020-05-17 15:42:00.4622|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:42:00.4622|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:00.4622|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:42:00.4622|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:42:00.4622|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 15:42:00.4622|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:42:00.4622|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:42:00.4622|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:42:00.6214|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (153ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:42:00.6214|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 155.3139ms. 
+2020-05-17 15:42:00.6214|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:42:00.6327|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 167.1251ms 
+2020-05-17 15:42:00.6327|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:42:00.6327|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 173.3921ms 200 application/json; charset=utf-8 
+2020-05-17 15:42:03.2217|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:42:03.2217|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:03.2248|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.1823ms 204  
+2020-05-17 15:42:03.2248|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:42:03.2248|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:03.2248|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:42:03.2248|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:42:03.2248|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsPeriodicityByUserId", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Periodicity.CarPeriodicityModel] GetCarsPeriodicityByUserId() on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 15:42:03.2248|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:42:03.2248|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:42:03.2439|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:42:03.3798|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (114ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE [c].[UserId] = @__userId_0 
+2020-05-17 15:42:03.3821|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 142.4223ms. 
+2020-05-17 15:42:03.3821|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Periodicity.CarPeriodicityModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:42:03.3821|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) in 149.9128ms 
+2020-05-17 15:42:03.3821|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:42:03.3821|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 158.1137ms 200 application/json; charset=utf-8 
+2020-05-17 15:42:04.7330|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:42:04.7330|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:04.7330|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8461ms 204  
+2020-05-17 15:42:04.7406|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:42:04.7406|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:04.7406|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:42:04.7406|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:42:04.7406|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:42:04.7406|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:42:04.7406|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:42:04.7406|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:42:04.7406|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:42:04.7575|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8.8392ms. 
+2020-05-17 15:42:04.7575|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:42:04.7575|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 13.9414ms 
+2020-05-17 15:42:04.7575|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:42:04.7575|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 22.1328ms 200 application/json; charset=utf-8 
+2020-05-17 15:42:06.1029|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 15:42:06.1029|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:06.1029|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.3672ms 204  
+2020-05-17 15:42:06.1156|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 15:42:06.1156|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:06.1156|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:42:06.1156|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:42:06.1156|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 15:42:06.1156|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:42:06.1156|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:42:06.1156|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:42:06.1424|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:42:06.1424|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15.8958ms. 
+2020-05-17 15:42:06.1424|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 15:42:06.1501|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 23.6558ms 
+2020-05-17 15:42:06.1501|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:42:06.1501|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 37.0501ms 200 application/json; charset=utf-8 
+2020-05-17 15:42:06.8227|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:42:06.8227|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:42:06.8227|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:42:06.8227|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:42:06.8227|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:42:06.8227|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:42:06.8227|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:42:06.8227|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:42:06.8445|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:42:06.8445|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 18.3561ms. 
+2020-05-17 15:42:06.8445|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:42:06.8445|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 22.376ms 
+2020-05-17 15:42:06.8445|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:42:06.8445|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 27.0604ms 200 application/json; charset=utf-8 
+2020-05-17 15:43:38.8930|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/InsertCar   
+2020-05-17 15:43:38.8930|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:43:38.9060|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 12.9944ms 204  
+2020-05-17 15:43:38.9623|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/Car/InsertCar application/json 311 
+2020-05-17 15:43:38.9623|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:43:38.9815|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:43:38.9815|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.InsertCar (CarMaintenance)' 
+2020-05-17 15:43:38.9815|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "InsertCar", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] InsertCar(CarMaintenance.Models.Car.CarDetailsModel) on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:43:38.9815|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:43:39.0271|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.InsertCar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:43:39.0386|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:43:39.1659|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (54ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CarPeriodicity] ([InsuranceMonths], [PtiMonths], [RevisionKm], [RevisionMonths], [VigMonths])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [CarPeriodicity]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2020-05-17 15:43:39.2555|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (70ms) [Parameters=[@p5='?' (DbType = Int32), @p6='?' (Size = 4000), @p7='?' (DbType = DateTime2), @p8='?' (DbType = DateTime2), @p9='?' (DbType = DateTime2), @p10='?' (DbType = Int32), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (DbType = Int32), @p14='?' (Size = 450), @p15='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Cars] ([ActualKilometers], [Details], [LastInsurance], [LastPti], [LastRevisionDate], [LastRevisionKm], [LastVig], [Name], [PeriodicityId], [UserId], [Year])
+VALUES (@p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [Cars]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2020-05-17 15:43:39.2756||INFO|CarMaintenance.Controllers.CarController|mitsubishi 
+2020-05-17 15:43:39.2756|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.InsertCar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 248.9739ms. 
+2020-05-17 15:43:39.2756|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Int32'. 
+2020-05-17 15:43:39.2756|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.InsertCar (CarMaintenance) in 288.962ms 
+2020-05-17 15:43:39.2756|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.InsertCar (CarMaintenance)' 
+2020-05-17 15:43:39.2756|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 318.1429ms 200 application/json; charset=utf-8 
+2020-05-17 15:43:39.3046|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:43:39.3046|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:43:39.3046|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.1034ms 204  
+2020-05-17 15:43:39.3046|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:43:39.3046|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:43:39.3046|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:43:39.3046|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:43:39.3046|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:43:39.3046|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:43:39.3046|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:43:39.3046|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:43:39.3237|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:43:39.3237|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.3027ms. 
+2020-05-17 15:43:39.3237|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:43:39.3415|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 26.9441ms 
+2020-05-17 15:43:39.3415|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:43:39.3415|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 32.6771ms 200 application/json; charset=utf-8 
+2020-05-17 15:43:39.4179|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:43:39.4179|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:43:39.4179|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:43:39.4179|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:43:39.4179|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:43:39.4179|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:43:39.4179|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:43:39.4179|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:43:39.4296|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:43:39.4296|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 7.0812ms. 
+2020-05-17 15:43:39.4296|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:43:39.4296|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 10.6779ms 
+2020-05-17 15:43:39.4296|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:43:39.4296|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.5222ms 200 application/json; charset=utf-8 
+2020-05-17 15:46:26.5019|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/UpdateCar   
+2020-05-17 15:46:26.5019|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:26.5019|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7016ms 204  
+2020-05-17 15:46:26.5589|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/Car/UpdateCar application/json 220 
+2020-05-17 15:46:26.5589|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:26.5589|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:46:26.5589|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.UpdateCar (CarMaintenance)' 
+2020-05-17 15:46:26.5937|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdateCar", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] UpdateCar(CarMaintenance.Models.Car.CarUpdateModel) on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:46:26.5937|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:46:26.6087|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.UpdateCar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:46:26.6087|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:46:26.6788|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (48ms) [Parameters=[@__userId_0='?' (Size = 450), @__carDetails_CarId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year]
+FROM [Cars] AS [m]
+WHERE ([m].[UserId] = @__userId_0) AND ([m].[Id] = @__carDetails_CarId_1) 
+2020-05-17 15:46:26.7086|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (22ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cars] SET [ActualKilometers] = @p0, [LastInsurance] = @p1, [LastPti] = @p2, [LastRevisionKm] = @p3, [LastVig] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:46:26.7251||INFO|CarMaintenance.Controllers.CarController|Car with following id was updated: 55 
+2020-05-17 15:46:26.7251|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.UpdateCar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 120.1604ms. 
+2020-05-17 15:46:26.7251|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Int32'. 
+2020-05-17 15:46:26.7457|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.UpdateCar (CarMaintenance) in 151.3329ms 
+2020-05-17 15:46:26.7457|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.UpdateCar (CarMaintenance)' 
+2020-05-17 15:46:26.7457|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 188.2513ms 200 application/json; charset=utf-8 
+2020-05-17 15:46:34.6996|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:46:34.6996|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:34.6996|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.3657ms 204  
+2020-05-17 15:46:34.7103|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:46:34.7103|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:34.7103|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:46:34.7103|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:46:34.7103|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsPeriodicityByUserId", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Periodicity.CarPeriodicityModel] GetCarsPeriodicityByUserId() on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 15:46:34.7103|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:46:34.7103|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:46:34.7103|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:46:34.7292|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE [c].[UserId] = @__userId_0 
+2020-05-17 15:46:34.7292|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 17.2039ms. 
+2020-05-17 15:46:34.7292|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Periodicity.CarPeriodicityModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:46:34.7422|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) in 25.898ms 
+2020-05-17 15:46:34.7422|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:46:34.7422|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 33.0191ms 200 application/json; charset=utf-8 
+2020-05-17 15:46:43.1539|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/UpdatePeriodicity   
+2020-05-17 15:46:43.1539|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:43.1539|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.2033ms 204  
+2020-05-17 15:46:43.1539|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/Periodicity/UpdatePeriodicity application/json 102 
+2020-05-17 15:46:43.1539|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:43.1539|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:46:43.1539|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance)' 
+2020-05-17 15:46:43.1697|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdatePeriodicity", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] UpdatePeriodicity(CarMaintenance.Models.Periodicity.CarPeriodicityModel) on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 15:46:43.1697|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:46:43.1809|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:46:43.1809|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:46:43.2195|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (Size = 450), @__periodicityModel_CarId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE ([c].[UserId] = @__userId_0) AND ([c].[Id] = @__periodicityModel_CarId_1) 
+2020-05-17 15:46:43.2563|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CarPeriodicity] ([InsuranceMonths], [PtiMonths], [RevisionKm], [RevisionMonths], [VigMonths])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [CarPeriodicity]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2020-05-17 15:46:43.3337|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (43ms) [Parameters=[@p6='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cars] SET [PeriodicityId] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:46:43.3558||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 55 
+2020-05-17 15:46:43.3558|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 176.0516ms. 
+2020-05-17 15:46:43.3558|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Int32'. 
+2020-05-17 15:46:43.3558|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance) in 188.8346ms 
+2020-05-17 15:46:43.3558|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance)' 
+2020-05-17 15:46:43.3558|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 201.2662ms 200 application/json; charset=utf-8 
+2020-05-17 15:46:52.1521|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:46:52.1521|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:52.1521|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.2613ms 204  
+2020-05-17 15:46:52.1630|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:46:52.1630|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:52.1630|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:46:52.1630|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:46:52.1630|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 15:46:52.1630|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:46:52.1630|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:46:52.1630|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:46:52.1630|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:46:52.1630|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.5662ms. 
+2020-05-17 15:46:52.1780|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:46:52.1780|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 14.5115ms 
+2020-05-17 15:46:52.1780|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:46:52.1780|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 18.822ms 200 application/json; charset=utf-8 
+2020-05-17 15:46:59.2411|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:46:59.2411|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:59.2563|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 15.1492ms 204  
+2020-05-17 15:46:59.2820|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Periodicity/GetCarsPeriodicityByUserId   
+2020-05-17 15:46:59.2820|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:46:59.2820|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:46:59.2820|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:46:59.2869|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsPeriodicityByUserId", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Periodicity.CarPeriodicityModel] GetCarsPeriodicityByUserId() on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 15:46:59.2869|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:46:59.2869|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:46:59.3090|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:46:59.3283|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (16ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE [c].[UserId] = @__userId_0 
+2020-05-17 15:46:59.3283|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 22.2088ms. 
+2020-05-17 15:46:59.3283|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Periodicity.CarPeriodicityModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:46:59.3429|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance) in 55.2741ms 
+2020-05-17 15:46:59.3429|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.GetCarsPeriodicityByUserId (CarMaintenance)' 
+2020-05-17 15:46:59.3429|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 62.1606ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:04.7612|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Periodicity/UpdatePeriodicity   
+2020-05-17 15:47:04.7612|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:04.7612|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 8.8637ms 204  
+2020-05-17 15:47:04.7754|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/Periodicity/UpdatePeriodicity application/json 109 
+2020-05-17 15:47:04.7754|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:04.7754|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:04.7754|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance)' 
+2020-05-17 15:47:04.7754|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "UpdatePeriodicity", controller = "Periodicity", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] UpdatePeriodicity(CarMaintenance.Models.Periodicity.CarPeriodicityModel) on controller CarMaintenance.Controllers.PeriodicityController (CarMaintenance). 
+2020-05-17 15:47:04.7754|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:04.7754|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:04.7754|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:04.7889|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450), @__periodicityModel_CarId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[ActualKilometers], [c].[Details], [c].[LastInsurance], [c].[LastPti], [c].[LastRevisionDate], [c].[LastRevisionKm], [c].[LastVig], [c].[Name], [c].[PeriodicityId], [c].[UserId], [c].[Year], [c.Periodicity].[Id], [c.Periodicity].[InsuranceMonths], [c.Periodicity].[PtiMonths], [c.Periodicity].[RevisionKm], [c.Periodicity].[RevisionMonths], [c.Periodicity].[VigMonths]
+FROM [Cars] AS [c]
+LEFT JOIN [CarPeriodicity] AS [c.Periodicity] ON [c].[PeriodicityId] = [c.Periodicity].[Id]
+WHERE ([c].[UserId] = @__userId_0) AND ([c].[Id] = @__periodicityModel_CarId_1) 
+2020-05-17 15:47:04.8165|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CarPeriodicity] ([InsuranceMonths], [PtiMonths], [RevisionKm], [RevisionMonths], [VigMonths])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [CarPeriodicity]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2020-05-17 15:47:04.8225|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (5ms) [Parameters=[@p6='?' (DbType = Int32), @p5='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Cars] SET [PeriodicityId] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:47:04.8225||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 55 
+2020-05-17 15:47:04.8225|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 51.629ms. 
+2020-05-17 15:47:04.8225|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Int32'. 
+2020-05-17 15:47:04.8341|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance) in 55.0295ms 
+2020-05-17 15:47:04.8341|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.PeriodicityController.UpdatePeriodicity (CarMaintenance)' 
+2020-05-17 15:47:04.8341|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 60.01ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:08.8330|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:47:08.8330|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:08.8348|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8104ms 204  
+2020-05-17 15:47:08.8550|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/ServiceCalendar/GetServiceCalendar   
+2020-05-17 15:47:08.8550|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:08.8550|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:08.8550|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:47:08.8550|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetServiceCalendar", controller = "ServiceCalendar", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel] GetServiceCalendar() on controller CarMaintenance.Controllers.ServiceCalendarController (CarMaintenance). 
+2020-05-17 15:47:08.8550|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:08.8550|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:08.8550|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:08.8754|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:47:08.8754|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 13.5766ms. 
+2020-05-17 15:47:08.8754|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.ServiceCalendar.ServiceCalendarModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:47:08.8823|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance) in 20.9048ms 
+2020-05-17 15:47:08.8823|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ServiceCalendarController.GetServiceCalendar (CarMaintenance)' 
+2020-05-17 15:47:08.8823|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 28.6883ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:15.1160|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:47:15.1160|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:15.1160|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 12.2577ms 204  
+2020-05-17 15:47:15.1751|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:47:15.1751|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:15.1751|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:15.1751|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:47:15.1751|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:47:15.1786|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:15.1786|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:15.1786|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:15.1786|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:47:15.1786|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 9.7707ms. 
+2020-05-17 15:47:15.1786|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:47:15.1945|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 15.9835ms 
+2020-05-17 15:47:15.1945|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:47:15.1945|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 20.8581ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:17.3589|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/RemoveCar   
+2020-05-17 15:47:17.3589|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:17.3589|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8928ms 204  
+2020-05-17 15:47:17.3589|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/Car/RemoveCar application/json 2 
+2020-05-17 15:47:17.3651|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:17.3651|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:17.3651|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.RemoveCar (CarMaintenance)' 
+2020-05-17 15:47:17.3651|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "RemoveCar", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] RemoveCar(System.Object) on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:47:17.3651|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:17.3651|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.RemoveCar (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:17.3826|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:17.5269|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (63ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ActualKilometers], [e].[Details], [e].[LastInsurance], [e].[LastPti], [e].[LastRevisionDate], [e].[LastRevisionKm], [e].[LastVig], [e].[Name], [e].[PeriodicityId], [e].[UserId], [e].[Year]
+FROM [Cars] AS [e]
+WHERE [e].[Id] = @__get_Item_0 
+2020-05-17 15:47:17.5376|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Cars]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:47:17.5376||INFO|CarMaintenance.Controllers.CarController|Car with following id was deleted: 55 
+2020-05-17 15:47:17.5376|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.RemoveCar (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 162.6446ms. 
+2020-05-17 15:47:17.5376|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Int32'. 
+2020-05-17 15:47:17.5376|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.RemoveCar (CarMaintenance) in 166.5066ms 
+2020-05-17 15:47:17.5376|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.RemoveCar (CarMaintenance)' 
+2020-05-17 15:47:17.5376|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 179.0204ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:24.0638|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:47:24.0638|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:24.0638|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8861ms 204  
+2020-05-17 15:47:24.0756|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/Car/GetCarsByUserId   
+2020-05-17 15:47:24.0756|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:24.0756|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:24.0756|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:47:24.0756|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCarsByUserId", controller = "Car", page = "", area = ""}. Executing controller action with signature System.Collections.Generic.List`1[CarMaintenance.Models.Car.CarDetails] GetCarsByUserId() on controller CarMaintenance.Controllers.CarController (CarMaintenance). 
+2020-05-17 15:47:24.0756|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:24.0838|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:24.0838|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:24.1048|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:47:24.1048|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 21.2947ms. 
+2020-05-17 15:47:24.1048|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Car.CarDetails, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:47:24.1048|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance) in 25.4094ms 
+2020-05-17 15:47:24.1048|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.CarController.GetCarsByUserId (CarMaintenance)' 
+2020-05-17 15:47:24.1192|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 43.6455ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:32.8345|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/ApplicationUser/Login   
+2020-05-17 15:47:32.8345|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:32.8345|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.4178ms 204  
+2020-05-17 15:47:32.8345|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/ApplicationUser/Login application/json 51 
+2020-05-17 15:47:32.8345|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:32.8345|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:47:32.8345|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Login", controller = "ApplicationUser", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CarMaintenance.Models.User.LoginModel) on controller CarMaintenance.Controllers.ApplicationUserController (CarMaintenance). 
+2020-05-17 15:47:32.8345|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:32.8345|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:32.8629|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (13ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Discriminator], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName], [u].[FullName]
+FROM [AspNetUsers] AS [u]
+WHERE ([u].[Discriminator] = N'ApplicationUser') AND ([u].[NormalizedUserName] = @__normalizedUserName_0) 
+2020-05-17 15:47:32.8893|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0 
+2020-05-17 15:47:32.8893||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. 
+2020-05-17 15:47:32.8893|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 42.871ms. 
+2020-05-17 15:47:32.8893|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2020-05-17 15:47:32.8893|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance) in 45.611ms 
+2020-05-17 15:47:32.8893|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ApplicationUserController.Login (CarMaintenance)' 
+2020-05-17 15:47:32.8893|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 50.0479ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:32.9395|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/UserProfile   
+2020-05-17 15:47:32.9395|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:32.9395|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.3771ms 204  
+2020-05-17 15:47:32.9576|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/UserProfile   
+2020-05-17 15:47:32.9619|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:32.9619|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:32.9619|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:47:32.9619|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetUserProfile", controller = "UserProfile", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetUserProfile() on controller CarMaintenance.Controllers.UserProfileController (CarMaintenance). 
+2020-05-17 15:47:32.9619|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:32.9619|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:32.9619|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:32.9767|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:47:32.9767|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 11.5066ms. 
+2020-05-17 15:47:32.9767|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'CarMaintenance.Models.Customer.CustomerModel'. 
+2020-05-17 15:47:32.9767|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance) in 23.9965ms 
+2020-05-17 15:47:32.9767|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.UserProfileController.GetUserProfile (CarMaintenance)' 
+2020-05-17 15:47:32.9767|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 32.6896ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:36.7886|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 15:47:36.7886|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:36.7886|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.6126ms 204  
+2020-05-17 15:47:36.7886|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/AdminPanel/GetCustomers   
+2020-05-17 15:47:36.7886|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:36.7886|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:36.7886|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 15:47:36.7886|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "GetCustomers", controller = "AdminPanel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] GetCustomers() on controller CarMaintenance.Controllers.AdminPanelController (CarMaintenance). 
+2020-05-17 15:47:36.7886|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:36.8033|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:36.8033|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:36.8033|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0 
+2020-05-17 15:47:36.8203|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (7ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [user].[Id], [user].[AccessFailedCount], [user].[ConcurrencyStamp], [user].[Discriminator], [user].[Email], [user].[EmailConfirmed], [user].[LockoutEnabled], [user].[LockoutEnd], [user].[NormalizedEmail], [user].[NormalizedUserName], [user].[PasswordHash], [user].[PhoneNumber], [user].[PhoneNumberConfirmed], [user].[SecurityStamp], [user].[TwoFactorEnabled], [user].[UserName], [user].[FullName]
+FROM [AspNetUserRoles] AS [userrole]
+INNER JOIN [AspNetUsers] AS [user] ON [userrole].[UserId] = [user].[Id]
+WHERE ([user].[Discriminator] = N'ApplicationUser') AND ([userrole].[RoleId] = @__role_Id_0) 
+2020-05-17 15:47:36.8203|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:36.8203|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:47:36.8203|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualKilometers], [m].[Details], [m].[LastInsurance], [m].[LastPti], [m].[LastRevisionDate], [m].[LastRevisionKm], [m].[LastVig], [m].[Name], [m].[PeriodicityId], [m].[UserId], [m].[Year], [m.Periodicity].[Id], [m.Periodicity].[InsuranceMonths], [m.Periodicity].[PtiMonths], [m.Periodicity].[RevisionKm], [m.Periodicity].[RevisionMonths], [m.Periodicity].[VigMonths]
+FROM [Cars] AS [m]
+LEFT JOIN [CarPeriodicity] AS [m.Periodicity] ON [m].[PeriodicityId] = [m.Periodicity].[Id]
+WHERE [m].[UserId] = @__userId_0 
+2020-05-17 15:47:36.8203||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. 
+2020-05-17 15:47:36.8203|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 29.5458ms. 
+2020-05-17 15:47:36.8358|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CarMaintenance.Models.Customer.CustomerModel, CarMaintenance, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2020-05-17 15:47:36.8358|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance) in 35.3523ms 
+2020-05-17 15:47:36.8358|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.AdminPanelController.GetCustomers (CarMaintenance)' 
+2020-05-17 15:47:36.8497|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 56.1164ms 200 application/json; charset=utf-8 
+2020-05-17 15:47:58.9885|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 OPTIONS http://localhost:52672/api/AdminPanel/RemoveCustomer   
+2020-05-17 15:47:58.9885|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:58.9978|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 9.4566ms 204  
+2020-05-17 15:47:59.0127|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:52672/api/AdminPanel/RemoveCustomer application/json 38 
+2020-05-17 15:47:59.0221|4|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|CORS policy execution successful. 
+2020-05-17 15:47:59.0221|2|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|Successfully validated the token. 
+2020-05-17 15:47:59.0221|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.AdminPanelController.RemoveCustomer (CarMaintenance)' 
+2020-05-17 15:47:59.0221|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "RemoveCustomer", controller = "AdminPanel", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Object] RemoveCustomer(System.Object) on controller CarMaintenance.Controllers.AdminPanelController (CarMaintenance). 
+2020-05-17 15:47:59.0221|1|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization was successful. 
+2020-05-17 15:47:59.0404|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.AdminPanelController.RemoveCustomer (CarMaintenance) - Validation state: Valid 
+2020-05-17 15:47:59.0404|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'AuthenticationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:59.0892|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (12ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[Discriminator], [e].[Email], [e].[EmailConfirmed], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName], [e].[FullName]
+FROM [AspNetUsers] AS [e]
+WHERE ([e].[Discriminator] = N'ApplicationUser') AND ([e].[Id] = @__get_Item_0) 
+2020-05-17 15:47:59.1235|10403|INFO|Microsoft.EntityFrameworkCore.Infrastructure|Entity Framework Core 2.2.6-servicing-10079 initialized 'CarContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2020-05-17 15:47:59.1742|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (40ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+SELECT [car].[Id], [car].[ActualKilometers], [car].[Details], [car].[LastInsurance], [car].[LastPti], [car].[LastRevisionDate], [car].[LastRevisionKm], [car].[LastVig], [car].[Name], [car].[PeriodicityId], [car].[UserId], [car].[Year]
+FROM [Cars] AS [car]
+WHERE [car].[UserId] = @__userId_0 
+2020-05-17 15:47:59.3443|20101|INFO|Microsoft.EntityFrameworkCore.Database.Command|Executed DbCommand (154ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUsers]
+WHERE [Id] = @p0 AND [ConcurrencyStamp] = @p1;
+SELECT @@ROWCOUNT; 
+2020-05-17 15:47:59.3507||INFO|CarMaintenance.Controllers.AdminPanelController|sorin_customer2 was deleted successfully 
+2020-05-17 15:47:59.3507|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.AdminPanelController.RemoveCustomer (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 311.6175ms. 
+2020-05-17 15:47:59.3507|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Identity.IdentityResult'. 
+2020-05-17 15:47:59.3507|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.AdminPanelController.RemoveCustomer (CarMaintenance) in 321.372ms 
+2020-05-17 15:47:59.3507|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.AdminPanelController.RemoveCustomer (CarMaintenance)' 
+2020-05-17 15:47:59.3507|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 343.3935ms 200 application/json; charset=utf-8 

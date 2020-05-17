@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4RNEuB/2WxtJrq6smv6d2OXL6KWUP1rE2mTD4B29cucu8gGuW81BWsWGtblKUwmc/CdRPRCA/3x8yTtClXElDA==",
+  "dgSpecHash": "bVbumjGBV/1/UHo+QmIyVXp3BsYpvboOToHkch7pkgwnXIqgeSoUugGU9tgRy4X6eB8730vH5hyYCgCW2uXn6Q==",
   "success": true,
   "projectFilePath": "D:\\Facultate\\anu3\\sem2\\IPDP\\Car Maintenance\\CarMaintenance\\CarMaintenance\\CarMaintenance.csproj",
   "expectedPackageFiles": [
@@ -188,6 +188,9 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\miron\\.nuget\\packages\\nlog\\4.6.8\\nlog.4.6.8.nupkg.sha512",
+    "C:\\Users\\miron\\.nuget\\packages\\nlog.extensions.logging\\1.6.2\\nlog.extensions.logging.1.6.2.nupkg.sha512",
+    "C:\\Users\\miron\\.nuget\\packages\\nlog.web.aspnetcore\\4.9.2\\nlog.web.aspnetcore.4.9.2.nupkg.sha512",
     "C:\\Users\\miron\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\miron\\.nuget\\packages\\painless.serializer.jsonnet\\0.11.1\\painless.serializer.jsonnet.0.11.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\remotion.linq\\2.2.0\\remotion.linq.2.2.0.nupkg.sha512",

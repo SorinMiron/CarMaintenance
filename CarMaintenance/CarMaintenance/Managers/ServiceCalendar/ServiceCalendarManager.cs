@@ -13,36 +13,56 @@ namespace CarMaintenance.Managers.ServiceCalendar
     {
         public List<ServiceCalendarModel> GetServiceCalendarModels(List<CarDetails> carsDetails)
         {
-            List<ServiceCalendarModel> serviceCalendarModels = new List<ServiceCalendarModel>();
-            foreach (CarDetails carDetails in carsDetails) {
-                int? nextRevisionKm = null;
-                DateTime? nextRevisionDate = null;
-                DateTime? nextPti = null;
-                DateTime? nextVig = null;
-                DateTime? nextInsurance = null;
+            try
+            {
 
-                if (carDetails.Periodicity.RevisionKm != null) {
-                    nextRevisionKm = carDetails.LastRevisionKm + (int)carDetails.Periodicity.RevisionKm;
-                }
-                if (carDetails.Periodicity.RevisionMonths != null) {
-                    nextRevisionDate = carDetails.LastRevisionDate.AddMonths((int) carDetails.Periodicity.RevisionMonths);
-                }
-                if (carDetails.Periodicity.PtiMonths != null)
+                List<ServiceCalendarModel> serviceCalendarModels = new List<ServiceCalendarModel>();
+                foreach (CarDetails carDetails in carsDetails)
                 {
-                    nextPti = carDetails.LastPti.AddMonths((int)carDetails.Periodicity.PtiMonths);
+                    if (carDetails.Periodicity == null) {
+                        throw new NullReferenceException(nameof(carDetails.Periodicity));
+                    }
+                    int? nextRevisionKm = null;
+                    DateTime? nextRevisionDate = null;
+                    DateTime? nextPti = null;
+                    DateTime? nextVig = null;
+                    DateTime? nextInsurance = null;
+
+                    if (carDetails.Periodicity.RevisionKm != null)
+                    {
+                        nextRevisionKm = carDetails.LastRevisionKm + (int)carDetails.Periodicity.RevisionKm;
+                    }
+
+                    if (carDetails.Periodicity.RevisionMonths != null)
+                    {
+                        nextRevisionDate = carDetails.LastRevisionDate.AddMonths((int)carDetails.Periodicity.RevisionMonths);
+                    }
+
+                    if (carDetails.Periodicity.PtiMonths != null)
+                    {
+                        nextPti = carDetails.LastPti.AddMonths((int)carDetails.Periodicity.PtiMonths);
+                    }
+
+                    if (carDetails.Periodicity.VigMonths != null)
+                    {
+                        nextVig = carDetails.LastVig.AddMonths((int)carDetails.Periodicity.VigMonths);
+                    }
+
+                    if (carDetails.Periodicity.InsuranceMonths != null)
+                    {
+                        nextInsurance = carDetails.LastInsurance.AddMonths((int)carDetails.Periodicity.InsuranceMonths);
+                    }
+
+                    serviceCalendarModels.Add(new ServiceCalendarModel($"{carDetails.Name} {carDetails.Year}", carDetails.ActualKilometers,
+                        nextRevisionKm, nextRevisionDate, nextPti, nextVig, nextInsurance));
                 }
-                if (carDetails.Periodicity.VigMonths != null)
-                {
-                    nextVig = carDetails.LastVig.AddMonths((int)carDetails.Periodicity.VigMonths);
-                }
-                if (carDetails.Periodicity.InsuranceMonths != null)
-                {
-                    nextInsurance = carDetails.LastInsurance.AddMonths((int)carDetails.Periodicity.InsuranceMonths);
-                }
-                serviceCalendarModels.Add(new ServiceCalendarModel( $"{carDetails.Name} {carDetails.Year}", carDetails.ActualKilometers,nextRevisionKm, nextRevisionDate, nextPti, nextVig, nextInsurance));
+
+                return serviceCalendarModels;
             }
-
-            return serviceCalendarModels;
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.2, )"
+            },
             "Painless.Serializer.JsonNet": {
               "target": "Package",
               "version": "[0.11.1, )"

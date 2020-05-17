@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 using CarMaintenance.Models.Customer;
@@ -7,6 +8,11 @@ using CarMaintenance.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
+using NLog;
+
+using ILogger = NLog.ILogger;
 
 
 namespace CarMaintenance.Controllers
@@ -15,10 +21,12 @@ namespace CarMaintenance.Controllers
     [ApiController]
     public class UserProfileController : ControllerBase
     {
-        private UserManager<ApplicationUser> _userManager;
-        public UserProfileController(UserManager<ApplicationUser> userManager)
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ILogger<UserProfileController> _logger;
+        public UserProfileController(UserManager<ApplicationUser> userManager, ILogger<UserProfileController> logger)
         {
             _userManager = userManager;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -26,11 +34,16 @@ namespace CarMaintenance.Controllers
         //get /api/UserProfile
         public async Task<object> GetUserProfile()
         {
-            //todo add validations
-            //return badrequest
-            string userId = User.Claims.First(c => c.Type == "UserID").Value;
-            ApplicationUser user = await _userManager.FindByIdAsync(userId);
-            return new CustomerModel(user.Id, user.UserName, user.FullName);
+            try
+            {
+                string userId = User.Claims.First(c => c.Type == "UserID").Value;
+                ApplicationUser user = await _userManager.FindByIdAsync(userId);
+                return new CustomerModel(user.Id, user.UserName, user.FullName);
+            }
+            catch (Exception ex) {
+                _logger.LogError(ex, "Error when get user profile.");
+                return BadRequest();
+            }
         }
 
     }

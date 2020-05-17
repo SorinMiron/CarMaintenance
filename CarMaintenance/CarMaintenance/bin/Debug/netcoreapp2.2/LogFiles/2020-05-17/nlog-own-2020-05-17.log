@@ -1,0 +1,17 @@
+2020-05-17 10:26:21.7080||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 11:31:19.8232||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 11:31:49.6873||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
+2020-05-17 15:37:44.2589||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 15:39:24.0536||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 15:40:33.8308||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 15:40:35.4286||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
+2020-05-17 15:40:54.2282||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer2 was created successfully. |url: http://localhost/api/ApplicationUser/Register|action: PostApplicationUser
+2020-05-17 15:41:00.2651||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer2 logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 15:43:39.2756||INFO|CarMaintenance.Controllers.CarController|mitsubishi |url: http://localhost/api/Car/InsertCar|action: InsertCar
+2020-05-17 15:46:26.7251||INFO|CarMaintenance.Controllers.CarController|Car with following id was updated: 55 |url: http://localhost/api/Car/UpdateCar|action: UpdateCar
+2020-05-17 15:46:43.3558||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 55 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
+2020-05-17 15:47:04.8225||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 55 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
+2020-05-17 15:47:17.5376||INFO|CarMaintenance.Controllers.CarController|Car with following id was deleted: 55 |url: http://localhost/api/Car/RemoveCar|action: RemoveCar
+2020-05-17 15:47:32.8893||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 15:47:36.8203||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
+2020-05-17 15:47:59.3507||INFO|CarMaintenance.Controllers.AdminPanelController|sorin_customer2 was deleted successfully |url: http://localhost/api/AdminPanel/RemoveCustomer|action: RemoveCustomer

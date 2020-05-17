@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 using CarMaintenance.Managers.Car;
 using CarMaintenance.Models.Periodicity;
-using CarMaintenance.Models.User;
-
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
 
 namespace CarMaintenance.Controllers
 {
@@ -17,10 +16,12 @@ namespace CarMaintenance.Controllers
     public class PeriodicityController : ControllerBase
     {
         private readonly CarManager _carManager;
+        private readonly ILogger<PeriodicityController> _logger;
 
-        public PeriodicityController(CarManager carManager)
+        public PeriodicityController(CarManager carManager, ILogger<PeriodicityController> logger)
         {
             _carManager = carManager;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -29,8 +30,6 @@ namespace CarMaintenance.Controllers
         //post /api/Periodicity/GetCarsPeriodicityByUserId
         public List<CarPeriodicityModel> GetCarsPeriodicityByUserId()
         {
-            //todo add validations
-            //return bad request
             try
             {
                 string userId = User.Claims.First(c => c.Type == "UserID").Value;
@@ -38,7 +37,7 @@ namespace CarMaintenance.Controllers
             }
             catch (Exception ex)
             {
-                //todo log exception
+                _logger.LogError(ex, "Error on getting cars periodicity.");
                 return null;
             }
         }
@@ -49,17 +48,18 @@ namespace CarMaintenance.Controllers
         //post /api/Periodicity/UpdatePeriodicity
         public async Task<object> UpdatePeriodicity(CarPeriodicityModel carPeriodicityModel)
         {
-            //todo add server-side validations: numerical(1.000 - 50.000 , months: 1-36)
-            //return bad request
+            _carManager.ValidateCarPeriodicityModel(carPeriodicityModel);
             try
             {
                 string userId = User.Claims.First(c => c.Type == "UserID").Value;
-                return await _carManager.UpdateCarPeriodicity(userId, carPeriodicityModel);
+                object result = await _carManager.UpdateCarPeriodicity(userId, carPeriodicityModel);
+                _logger.LogInformation($"Car with following ID was updated successfully: {carPeriodicityModel.CarId}");
+                return result;
             }
             catch (Exception ex)
             {
-
-                return BadRequest(ex);
+                _logger.LogError(ex, "Update car failed.");
+                return BadRequest();
             }
         }
     }
