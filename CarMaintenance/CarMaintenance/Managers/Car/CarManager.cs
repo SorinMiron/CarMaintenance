@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarMaintenance.Managers.Car
 {
-    public class CarManager
+    public class CarManager : ICarManager
     {
         private readonly CarContext _carContext;
         public CarManager(CarContext carContext)

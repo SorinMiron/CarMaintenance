@@ -70,8 +70,8 @@ namespace CarMaintenance
             });
 
             services.AddDbContext<CarContext>(options => options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
-            services.AddScoped<CarManager>();
-            services.AddScoped<ServiceCalendarManager>();
+            services.AddScoped<ICarManager, CarManager>();
+            services.AddScoped<IServiceCalendarManager, ServiceCalendarManager>();
 
         }
 

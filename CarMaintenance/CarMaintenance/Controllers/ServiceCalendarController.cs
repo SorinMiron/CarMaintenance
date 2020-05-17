@@ -19,11 +19,11 @@ namespace CarMaintenance.Controllers
     public class ServiceCalendarController : ControllerBase
     {
 
-        private readonly CarManager _carManager;
-        private readonly ServiceCalendarManager _serviceCalendarManager;
+        private readonly ICarManager _carManager;
+        private readonly IServiceCalendarManager _serviceCalendarManager;
         private readonly ILogger<ServiceCalendarController> _logger;
 
-        public ServiceCalendarController(CarManager carManager, ServiceCalendarManager serviceCalendarManager, ILogger<ServiceCalendarController> logger)
+        public ServiceCalendarController(ICarManager carManager, IServiceCalendarManager serviceCalendarManager, ILogger<ServiceCalendarController> logger)
         {
             _carManager = carManager;
             _serviceCalendarManager = serviceCalendarManager;

@@ -21,10 +21,10 @@ namespace CarMaintenance.Controllers
     public class AdminPanelController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly CarManager _carManager;
+        private readonly ICarManager _carManager;
         private readonly ILogger<AdminPanelController> _logger;
 
-        public AdminPanelController(UserManager<ApplicationUser> userManager, CarManager carManager, ILogger<AdminPanelController> logger)
+        public AdminPanelController(UserManager<ApplicationUser> userManager, ICarManager carManager, ILogger<AdminPanelController> logger)
         {
             _userManager = userManager;
             _carManager = carManager;

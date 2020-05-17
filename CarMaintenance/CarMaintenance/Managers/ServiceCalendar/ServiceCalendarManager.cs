@@ -9,7 +9,7 @@ using CarMaintenance.Models.ServiceCalendar;
 
 namespace CarMaintenance.Managers.ServiceCalendar
 {
-    public class ServiceCalendarManager
+    public class ServiceCalendarManager : IServiceCalendarManager
     {
         public List<ServiceCalendarModel> GetServiceCalendarModels(List<CarDetails> carsDetails)
         {

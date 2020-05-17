@@ -16,10 +16,10 @@ namespace CarMaintenance.Controllers
     [ApiController]
     public class CarController : ControllerBase
     {
-        private readonly CarManager _carManager;
+        private readonly ICarManager _carManager;
         private readonly ILogger<CarController> _logger;
 
-        public CarController(CarManager carManager, ILogger<CarController> logger)
+        public CarController(ICarManager carManager, ILogger<CarController> logger)
         {
             _carManager = carManager;
             _logger = logger;

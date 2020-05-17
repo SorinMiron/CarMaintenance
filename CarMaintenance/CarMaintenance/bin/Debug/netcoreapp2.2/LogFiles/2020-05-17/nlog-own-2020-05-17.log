@@ -15,3 +15,57 @@
 2020-05-17 15:47:32.8893||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
 2020-05-17 15:47:36.8203||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
 2020-05-17 15:47:59.3507||INFO|CarMaintenance.Controllers.AdminPanelController|sorin_customer2 was deleted successfully |url: http://localhost/api/AdminPanel/RemoveCustomer|action: RemoveCustomer
+2020-05-17 17:43:52.5400||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 17:43:56.4410||ERROR|CarMaintenance.Program|Stopped program because of exception. System.ArgumentException: Cannot instantiate implementation type 'CarMaintenance.Managers.Car.ICarManager' for service type 'CarMaintenance.Managers.Car.ICarManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.Initialize()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at CarMaintenance.Program.Main(String[] args) in D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenance\Program.cs:line 21|url: |action: 
+2020-05-17 17:48:13.6663||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 17:48:16.6070||ERROR|CarMaintenance.Program|Stopped program because of exception. System.ArgumentException: Cannot instantiate implementation type 'CarMaintenance.Managers.Car.ICarManager' for service type 'CarMaintenance.Managers.Car.ICarManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.Initialize()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at CarMaintenance.Program.Main(String[] args) in D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenance\Program.cs:line 21|url: |action: 
+2020-05-17 17:52:30.1705||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 17:52:33.6995||ERROR|CarMaintenance.Program|Stopped program because of exception. System.ArgumentException: Cannot instantiate implementation type 'CarMaintenance.Managers.Car.ICarManager' for service type 'CarMaintenance.Managers.Car.ICarManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.Initialize()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at CarMaintenance.Program.Main(String[] args) in D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenance\Program.cs:line 21|url: |action: 
+2020-05-17 18:01:36.1151||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 18:01:38.4487||ERROR|CarMaintenance.Program|Stopped program because of exception. System.ArgumentException: Cannot instantiate implementation type 'CarMaintenance.Managers.Car.ICarManager' for service type 'CarMaintenance.Managers.Car.ICarManager'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.Populate(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory..ctor(IEnumerable`1 descriptors)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CompiledServiceProviderEngine..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngineCallback callback)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.Initialize()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at CarMaintenance.Program.Main(String[] args) in D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenance\Program.cs:line 21|url: |action: 
+2020-05-17 18:05:27.0580||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-17 18:08:20.7586||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 18:08:22.8195||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
+2020-05-17 18:08:31.3916||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-17 18:08:49.0870||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 54 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
+2020-05-17 18:08:53.2673||INFO|CarMaintenance.Controllers.PeriodicityController|Car with following ID was updated successfully: 54 |url: http://localhost/api/Periodicity/UpdatePeriodicity|action: UpdatePeriodicity
