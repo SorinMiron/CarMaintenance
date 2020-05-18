@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 using CarMaintenance.Controllers;
@@ -11,6 +10,7 @@ using CarMaintenance.Models.Customer;
 using CarMaintenance.Models.Periodicity;
 using CarMaintenance.Models.User;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 using Moq;
@@ -25,6 +25,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
         private Mock<UserManager<ApplicationUser>> _userManager;
         private Mock<ICarManager> _carManager;
         private Mock<ILogger<AdminPanelController>> _logger;
+        private AdminPanelController _controller;
 
         [SetUp]
         public void SetUp()
@@ -32,6 +33,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
             _carManager = new Mock<ICarManager>();
             _userManager = GetMockUserManager();
             _logger = new Mock<ILogger<AdminPanelController>>();
+            _controller = new AdminPanelController(_userManager.Object, _carManager.Object, _logger.Object);
         }
         [Test]
         public void GetCustomers_Success()
@@ -75,9 +77,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
                 new CarDetails(userId, secondCarDetailsModel, new CarPeriodicity())
             }).Verifiable();
 
-            
-            AdminPanelController controller = new AdminPanelController(_userManager.Object, _carManager.Object, _logger.Object);
-            Task<object> result = controller.GetCustomers();
+            Task<object> result = _controller.GetCustomers();
             
             _userManager.VerifyAll();
             _carManager.VerifyAll();
@@ -95,6 +95,71 @@ namespace CarMaintenanceUnitTests.ControllerTests
             Assert.That(customerModels[0].CarList, Is.EqualTo("name1 2010, name2 2008"));
 
         }
+
+        [Test]
+        public void GetCustomers_ReturnsBadRequest()
+        {
+            _userManager.Setup(m => m.GetUsersInRoleAsync(It.IsAny<string>())).Throws(new Exception()).Verifiable();
+            
+            AdminPanelController controller = new AdminPanelController(_userManager.Object, _carManager.Object, _logger.Object);
+            Task<object> result = controller.GetCustomers();
+
+            _userManager.VerifyAll();
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<BadRequestResult>());
+        }
+
+        [Test]
+        public void RemoveCustomer_Succeeded()
+        {
+            ApplicationUser customerForRemoving = new ApplicationUser { Id = Guid.NewGuid().ToString() };
+            _userManager.Setup(m => m.FindByIdAsync(It.IsAny<string>())).Returns(Task.FromResult(customerForRemoving)).Verifiable();
+            _carManager.Setup(m=>m.RemoveCarsByUserId(It.IsAny<string>())).Verifiable();
+            _userManager.Setup(m => m.DeleteAsync(It.IsAny<ApplicationUser>())).ReturnsAsync(IdentityResult.Success).Verifiable();
+
+            Task<object> result = _controller.RemoveCustomer("customerId");
+
+            _userManager.VerifyAll();
+            _carManager.VerifyAll();
+
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<IdentityResult>());
+
+            IdentityResult identityResult = result.Result as IdentityResult;
+            Assert.That(identityResult, Is.Not.Null);
+            Assert.That(identityResult.Succeeded, Is.True);
+        }
+
+        [Test]
+        public void RemoveCustomer_NullOrWhitespaceCustomerId([Values("", null)] string customerId)
+        { 
+            Task<object> result = _controller.RemoveCustomer(customerId);
+
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<BadRequestResult>());
+
+        }
+
+        [Test]
+        public void RemoveCustomer_FailDelete()
+        {
+            ApplicationUser customerForRemoving = new ApplicationUser { Id = Guid.NewGuid().ToString() };
+            _userManager.Setup(m => m.FindByIdAsync(It.IsAny<string>())).Returns(Task.FromResult(customerForRemoving)).Verifiable();
+            _carManager.Setup(m => m.RemoveCarsByUserId(It.IsAny<string>())).Verifiable();
+            _userManager.Setup(m => m.DeleteAsync(It.IsAny<ApplicationUser>())).ReturnsAsync(IdentityResult.Failed()).Verifiable();
+
+            Task<object> result = _controller.RemoveCustomer("customerId");
+
+            _userManager.VerifyAll();
+            _carManager.VerifyAll();
+
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<BadRequestResult>());
+        }
+
 
         private Mock<UserManager<ApplicationUser>> GetMockUserManager()
         {
