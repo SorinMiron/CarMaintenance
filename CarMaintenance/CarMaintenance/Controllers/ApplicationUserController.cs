@@ -40,7 +40,7 @@ namespace CarMaintenance.Controllers
         //POST to /api/ApplicationUser/Register
         public async Task<object> PostApplicationUser(ApplicationUserModel applicationUserModel)
         {
-           
+
             try
             {
                 if (applicationUserModel == null)
@@ -55,7 +55,7 @@ namespace CarMaintenance.Controllers
                 {
                     throw new ArgumentNullException(nameof(applicationUserModel));
                 }
-                //default role on login: Customer
+                //default role on register: Customer
                 applicationUserModel.Role = "Customer";
                 ApplicationUser applicationUser = new ApplicationUser
                 {
@@ -65,11 +65,14 @@ namespace CarMaintenance.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(applicationUser, applicationUserModel.Password);
-                if (result == null) {
+                if (!result.Succeeded)
+                {
+                    _logger.LogError($"Error on creating customer: {applicationUser.UserName}");
                     throw new Exception($"User {applicationUserModel.UserName} cannot be created.");
                 }
                 IdentityResult addRoleResult = await _userManager.AddToRoleAsync(applicationUser, applicationUserModel.Role);
-                if (addRoleResult.Succeeded) {
+                if (addRoleResult.Succeeded)
+                {
                     _logger.LogInformation($"User {applicationUserModel.UserName} was created successfully.");
                     return Ok(result);
                 }
@@ -88,17 +91,24 @@ namespace CarMaintenance.Controllers
         //POST to /api/ApplicationUser/Login
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
-            if (string.IsNullOrWhiteSpace(loginModel.UserName)) {
-                throw new ArgumentNullException(nameof(loginModel.UserName));
-            }
-            if (string.IsNullOrWhiteSpace(loginModel.Password))
+            try
             {
-                throw new ArgumentNullException(nameof(loginModel.Password));
-            }
+                if (loginModel == null)
+                {
+                    throw new ArgumentNullException(nameof(loginModel));
+                }
+                if (string.IsNullOrWhiteSpace(loginModel.UserName))
+                {
+                    throw new ArgumentNullException(nameof(loginModel.UserName));
+                }
+                if (string.IsNullOrWhiteSpace(loginModel.Password))
+                {
+                    throw new ArgumentNullException(nameof(loginModel.Password));
+                }
 
-            try {
                 ApplicationUser user = await _userManager.FindByNameAsync(loginModel.UserName);
-                if (user == null || !await _userManager.CheckPasswordAsync(user, loginModel.Password)) {
+                if (user == null || !await _userManager.CheckPasswordAsync(user, loginModel.Password))
+                {
                     _logger.LogError($"User {loginModel.UserName} tried to login but fails because username or password is incorrect.");
                     return BadRequest(new { message = "Username or password is incorrect." });
                 }
@@ -106,7 +116,8 @@ namespace CarMaintenance.Controllers
                 //Get the role
                 IList<string> role = await _userManager.GetRolesAsync(user);
                 IdentityOptions _options = new IdentityOptions();
-                var tokenDescriptor = new SecurityTokenDescriptor {
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
                     Subject = new ClaimsIdentity(new[] {
                         new Claim("UserID", user.Id), new Claim(_options.ClaimsIdentity.RoleClaimType, role.FirstOrDefault())
                     }),
@@ -119,8 +130,15 @@ namespace CarMaintenance.Controllers
                 string token = tokenHandler.WriteToken(securityToken);
                 _logger.LogInformation($"User {loginModel.UserName} logged in successfully.");
                 return Ok(new { token, role });
-            } catch (Exception ex) {
-                _logger.LogError(ex, $"Login of {loginModel.UserName} was not be performed successfully.");
+            }
+            catch (ArgumentNullException ex)
+            {
+                _logger.LogError(ex, "Error on login because of null parameters.");
+                return BadRequest(new { message = "Errors occured on log in." });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Login of user {loginModel.UserName} not be performed successfully.");
                 return BadRequest(new { message = "Errors occured on log in." });
             }
 

@@ -14,7 +14,6 @@ D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTes
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\CarMaintenanceUnitTests.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\CarMaintenanceUnitTests.pdb
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Castle.Core.dll
-D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
@@ -188,10 +187,14 @@ D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTes
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\CarMaintenance.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\CarMaintenance.pdb
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.csprojAssemblyReference.cache
-D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.csproj.CoreCompileInputs.cache
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.AssemblyInfoInputs.cache
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.AssemblyInfo.cs
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.csproj.CopyComplete
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.dll
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.pdb
 D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.genruntimeconfig.cache
+D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Facultate\anu3\sem2\IPDP\Car Maintenance\CarMaintenance\CarMaintenanceUnitTests\obj\Debug\netcoreapp3.1\CarMaintenanceUnitTests.csproj.CoreCompileInputs.cache

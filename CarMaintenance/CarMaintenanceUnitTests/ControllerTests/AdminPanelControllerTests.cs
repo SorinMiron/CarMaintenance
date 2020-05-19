@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
 using CarMaintenance.Controllers;
@@ -9,19 +10,20 @@ using CarMaintenance.Models.Car;
 using CarMaintenance.Models.Customer;
 using CarMaintenance.Models.Periodicity;
 using CarMaintenance.Models.User;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 using Moq;
+
 using NUnit.Framework;
 
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    public class ControllerTests
+    class AdminPanelControllerTests
     {
-
         private Mock<UserManager<ApplicationUser>> _userManager;
         private Mock<ICarManager> _carManager;
         private Mock<ILogger<AdminPanelController>> _logger;
@@ -69,7 +71,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
                 LastPti = new Date(2019, 01, 01),
                 LastVig = new Date(2019, 01, 01),
                 LastInsurance = new Date(2019, 01, 01)
-            }; 
+            };
 
             _userManager.Setup(m => m.GetUsersInRoleAsync(It.IsAny<string>())).Returns(Task.FromResult(customers)).Verifiable();
             _carManager.Setup(m => m.GetCarsByUserId(It.IsAny<string>())).Returns(new List<CarDetails> {
@@ -78,7 +80,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
             }).Verifiable();
 
             Task<object> result = _controller.GetCustomers();
-            
+
             _userManager.VerifyAll();
             _carManager.VerifyAll();
             Assert.That(result, Is.Not.Null);
@@ -100,7 +102,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
         public void GetCustomers_ReturnsBadRequest()
         {
             _userManager.Setup(m => m.GetUsersInRoleAsync(It.IsAny<string>())).Throws(new Exception()).Verifiable();
-            
+
             AdminPanelController controller = new AdminPanelController(_userManager.Object, _carManager.Object, _logger.Object);
             Task<object> result = controller.GetCustomers();
 
@@ -114,7 +116,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
         {
             ApplicationUser customerForRemoving = new ApplicationUser { Id = Guid.NewGuid().ToString() };
             _userManager.Setup(m => m.FindByIdAsync(It.IsAny<string>())).Returns(Task.FromResult(customerForRemoving)).Verifiable();
-            _carManager.Setup(m=>m.RemoveCarsByUserId(It.IsAny<string>())).Verifiable();
+            _carManager.Setup(m => m.RemoveCarsByUserId(It.IsAny<string>())).Verifiable();
             _userManager.Setup(m => m.DeleteAsync(It.IsAny<ApplicationUser>())).ReturnsAsync(IdentityResult.Success).Verifiable();
 
             Task<object> result = _controller.RemoveCustomer("customerId");
@@ -133,7 +135,7 @@ namespace CarMaintenanceUnitTests.ControllerTests
 
         [Test]
         public void RemoveCustomer_NullOrWhitespaceCustomerId([Values("", null)] string customerId)
-        { 
+        {
             Task<object> result = _controller.RemoveCustomer(customerId);
 
             Assert.That(result, Is.Not.Null);
