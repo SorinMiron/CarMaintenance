@@ -53,6 +53,13 @@ namespace CarMaintenanceUnitTests.ControllerTests
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Result, Is.TypeOf<CustomerModel>());
         }
+       
+        private Mock<UserManager<ApplicationUser>> GetMockUserManager()
+        {
+            Mock<IUserStore<ApplicationUser>> userStoreMock = new Mock<IUserStore<ApplicationUser>>();
+            return new Mock<UserManager<ApplicationUser>>(
+                userStoreMock.Object, null, null, null, null, null, null, null, null);
+        }
         private void MockUserForController(ref UserProfileController controller)
         {
             var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
@@ -64,14 +71,8 @@ namespace CarMaintenanceUnitTests.ControllerTests
 
             controller.ControllerContext = new ControllerContext()
             {
-                HttpContext = new DefaultHttpContext() { User = user }
+                HttpContext = new DefaultHttpContext { User = user }
             };
-        }
-        private Mock<UserManager<ApplicationUser>> GetMockUserManager()
-        {
-            Mock<IUserStore<ApplicationUser>> userStoreMock = new Mock<IUserStore<ApplicationUser>>();
-            return new Mock<UserManager<ApplicationUser>>(
-                userStoreMock.Object, null, null, null, null, null, null, null, null);
         }
     }
 }

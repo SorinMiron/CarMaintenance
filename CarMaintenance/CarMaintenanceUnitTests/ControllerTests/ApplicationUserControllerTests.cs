@@ -1,9 +1,14 @@
-﻿using System.Threading;
+﻿using System;
+using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading;
 using System.Threading.Tasks;
 
 using CarMaintenance.Controllers;
 using CarMaintenance.Models;
 using CarMaintenance.Models.User;
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -18,17 +23,21 @@ namespace CarMaintenanceUnitTests.ControllerTests
     {
 
         private Mock<UserManager<ApplicationUser>> _userManager;
-        private Mock<IOptions<ApplicationSettings>> _options;
+        private Mock<IOptions<ApplicationSettings>> _appSettings;
         private Mock<ILogger<ApplicationUserController>> _logger;
         private ApplicationUserController _controller;
 
         [SetUp]
         public void SetUp()
         {
-            _options = new Mock<IOptions<ApplicationSettings>>();
+            _appSettings = new Mock<IOptions<ApplicationSettings>>();
+            ApplicationSettings appSettings = new ApplicationSettings { JWT_Secret = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c", Token_Expiration = 30 };
+            _appSettings.Setup(m => m.Value).Returns(appSettings);
+
             _userManager = GetMockUserManager();
             _logger = new Mock<ILogger<ApplicationUserController>>();
-            _controller = new ApplicationUserController(_userManager.Object, _options.Object, _logger.Object);
+            _controller = new ApplicationUserController(_userManager.Object, _appSettings.Object, _logger.Object);
+
         }
 
         [Test]
@@ -140,12 +149,28 @@ namespace CarMaintenanceUnitTests.ControllerTests
         [Test]
         public void Login_NotFoundUser()
         {
+            
+            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).Verifiable();
             Task<IActionResult> result = _controller.Login(new LoginModel
             {
                 UserName = "username",
                 Password = "password"
             });
-            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).ReturnsAsync(default(ApplicationUser)).Verifiable();
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<BadRequestObjectResult>());
+            _userManager.Verify(m => m.FindByNameAsync(It.IsAny<string>()));
+        }
+
+        [Test]
+        public void Login_NotFoundUser_Exception()
+        {
+
+            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).Throws(new Exception()).Verifiable();
+            Task<IActionResult> result = _controller.Login(new LoginModel
+            {
+                UserName = "username",
+                Password = "password"
+            });
             Assert.That(result, Is.Not.Null);
             Assert.That(result.Result, Is.TypeOf<BadRequestObjectResult>());
             _userManager.Verify(m => m.FindByNameAsync(It.IsAny<string>()));
@@ -154,36 +179,46 @@ namespace CarMaintenanceUnitTests.ControllerTests
         [Test]
         public void Login_InvalidPassword()
         {
+            ApplicationUser applicationUser = new ApplicationUser { UserName = "username" };
+            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).ReturnsAsync(applicationUser).Verifiable();
+            _userManager.Setup(m => m.CheckPasswordAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).ReturnsAsync(false).Verifiable();
             Task<IActionResult> result = _controller.Login(new LoginModel
             {
                 UserName = "username",
                 Password = "password"
             });
-            ApplicationUser applicationUser = new ApplicationUser { UserName = "username" };
-            
-            //this mock returns a null user. I investigated a lot but i didn't find a fix for that. Idk why that didn't work
-            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).ReturnsAsync(applicationUser).Verifiable();
-            
-            //_userManager.Setup(m => m.CheckPasswordAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).Returns(Task.FromResult(false)).Verifiable();
-            //Assert.That(result, Is.Not.Null);
-            //Assert.That(result.Result, Is.TypeOf<BadRequestObjectResult>());
-            //_userManager.Verify(m => m.FindByNameAsync(It.IsAny<string>()));
-            //_userManager.Verify(m => m.CheckPasswordAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>()));
+
+            Assert.That(result, Is.Not.Null);
+            Assert.That(result.Result, Is.TypeOf<BadRequestObjectResult>());
+            _userManager.VerifyAll();
         }
+
         [Test]
         public void Login_Success()
         {
+            ApplicationUser applicationUser = new ApplicationUser { UserName = "username", Id="userId" };
+            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).ReturnsAsync(applicationUser).Verifiable();
+            _userManager.Setup(m => m.CheckPasswordAsync(It.IsAny<ApplicationUser>(), It.IsAny<string>())).ReturnsAsync(true).Verifiable();
+            _userManager.Setup(m => m.GetRolesAsync(It.IsAny<ApplicationUser>())).ReturnsAsync(new List<string> {
+                "role"
+            }).Verifiable();
+
             Task<IActionResult> result = _controller.Login(new LoginModel
             {
                 UserName = "username",
                 Password = "password"
             });
-            ApplicationUser applicationUser = new ApplicationUser { UserName = "username" };
 
-            //this mock returns a null user. I investigated a lot but i didn't find a fix for that. Idk why that didn't work
-            _userManager.Setup(m => m.FindByNameAsync(It.IsAny<string>())).ReturnsAsync(applicationUser).Verifiable();
+            _userManager.VerifyAll();
+            _appSettings.VerifyAll();
 
-            //cannot continue testing because user is null
+            Assert.That(result,Is.Not.Null);
+            Assert.That(result.Result,Is.TypeOf<OkObjectResult>());
+
+            OkObjectResult resultObject = result.Result as OkObjectResult;
+            Assert.That(resultObject, Is.Not.Null);
+            Assert.That(resultObject.Value, Is.Not.Null);
+
         }
 
         private Mock<UserManager<ApplicationUser>> GetMockUserManager()
@@ -192,5 +227,6 @@ namespace CarMaintenanceUnitTests.ControllerTests
             return new Mock<UserManager<ApplicationUser>>(
                 userStoreMock.Object, null, null, null, null, null, null, null, null);
         }
+       
     }
 }

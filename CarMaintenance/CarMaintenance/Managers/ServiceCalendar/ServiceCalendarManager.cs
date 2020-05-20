@@ -19,7 +19,6 @@ namespace CarMaintenance.Managers.ServiceCalendar
         {
             try
             {
-
                 List<ServiceCalendarModel> serviceCalendarModels = new List<ServiceCalendarModel>();
                 foreach (CarDetails carDetails in carsDetails)
                 {
