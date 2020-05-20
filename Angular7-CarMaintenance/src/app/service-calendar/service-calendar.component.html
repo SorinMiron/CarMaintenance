@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div id="container" >
+<div id="container" *ngIf="serviceCalendars != null" >
 
     <div  class="card m-5" *ngFor="let serviceCalendar of serviceCalendars" >
         <ul id ="details">

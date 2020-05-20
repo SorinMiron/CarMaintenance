@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
   <div id="name">
-    Welcome<span *ngIf="userDetails.fullName"> {{userDetails.fullName}}</span> !
+    Welcome<span *ngIf="userDetails != null && userDetails.fullName != null"> {{userDetails.fullName}}</span> !
   </div>
 
   <div id="paragraph">
