@@ -1,26 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CarMaintenance.Models.Car
 {
-    public class CarDetailsModel
+    public class CarDetailsModel : CarBase<Date>
     {
         [Required]
         public string Name { get; set; }
         public string Details { get; set; }
         [Required]
         public int Year { get; set; }
-        [Required]
-        public int ActualKilometers { get; set; }
-        [Required]
-        public int LastRevisionKm { get; set; }
-        [Required]
-        public Date LastRevisionDate { get; set; }
-        [Required]
-        public Date LastPti { get; set; }
-        [Required]
-        public Date LastVig { get; set; }
-        [Required]
-        public Date LastInsurance { get; set; }
+       
         public CarDetailsModel()
         {
 

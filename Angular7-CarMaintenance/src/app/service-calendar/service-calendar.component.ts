@@ -18,7 +18,6 @@ export class ServiceCalendarComponent implements OnInit {
       this.service.getCarServiceCalendar().subscribe(
         res => { 
           this.serviceCalendars = this.mapData(res);
-          console.log("get data");
         },
         err => {
           this.toastr.error("Error on getting car calendars.");

@@ -6,30 +6,24 @@ using System.Threading.Tasks;
 
 namespace CarMaintenance.Models.Periodicity
 {
-    public class CarPeriodicityModel
+    public class CarPeriodicityModel : CarPeriodicityBase
     {
         public string CarNameAndYear { get; set; }
         public int CarId { get; set; }
-        public int? RevisionKm { get; set; }
-        public int? RevisionMonths { get; set; }
-        public int? PtiMonths { get; set; }
-        public int? VigMonths { get; set; }
-        public int? InsuranceMonths { get; set; }
 
-        public CarPeriodicityModel()
+        public CarPeriodicityModel() : base()
+        { }
+
+        public CarPeriodicityModel(CarPeriodicityModel carPeriodicityModel) : base(carPeriodicityModel)
         {
 
         }
 
         public CarPeriodicityModel(int carId, string carNameAndYear, int? revisionKm, int? revisionMonths, int? ptiMonths, int? vigMonths, int? insuranceMonths)
+        :base(revisionKm, revisionMonths, ptiMonths, vigMonths, insuranceMonths)
         {
             CarId = carId;
             CarNameAndYear = carNameAndYear;
-            RevisionKm = revisionKm;
-            RevisionMonths = revisionMonths;
-            PtiMonths = ptiMonths;
-            VigMonths = vigMonths;
-            InsuranceMonths = insuranceMonths;
         }
     }
 }

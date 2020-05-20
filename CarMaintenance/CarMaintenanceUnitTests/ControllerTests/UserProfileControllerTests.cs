@@ -18,13 +18,9 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    internal class UserProfileControllerTests
+    internal class UserProfileControllerTests : ControllerTestsShared<UserProfileController>
     {
-        private Mock<UserManager<ApplicationUser>> _userManager;
-
-        private Mock<ILogger<UserProfileController>> _logger;
-        private UserProfileController _controller;
-
+        
         [SetUp]
         public void SetUp()
         {
@@ -54,25 +50,5 @@ namespace CarMaintenanceUnitTests.ControllerTests
             Assert.That(result.Result, Is.TypeOf<CustomerModel>());
         }
        
-        private Mock<UserManager<ApplicationUser>> GetMockUserManager()
-        {
-            Mock<IUserStore<ApplicationUser>> userStoreMock = new Mock<IUserStore<ApplicationUser>>();
-            return new Mock<UserManager<ApplicationUser>>(
-                userStoreMock.Object, null, null, null, null, null, null, null, null);
-        }
-        private void MockUserForController(ref UserProfileController controller)
-        {
-            var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim(ClaimTypes.Name, "example name"),
-                new Claim(ClaimTypes.NameIdentifier, "1"),
-                new Claim("UserID", "guid"),
-            }, "mock"));
-
-            controller.ControllerContext = new ControllerContext()
-            {
-                HttpContext = new DefaultHttpContext { User = user }
-            };
-        }
     }
 }

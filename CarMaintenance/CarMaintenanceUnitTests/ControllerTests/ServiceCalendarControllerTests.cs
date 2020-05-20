@@ -23,14 +23,8 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    internal class ServiceCalendarControllerTests
+    internal class ServiceCalendarControllerTests : ControllerTestsShared<ServiceCalendarController>
     {
-        private Mock<ICarManager> _carManager;
-        private Mock<IServiceCalendarManager> _serviceCalendarManager;
-
-        private Mock<ILogger<ServiceCalendarController>> _logger;
-        private ServiceCalendarController _controller;
-
         [SetUp]
         public void SetUp()
         {
@@ -61,19 +55,5 @@ namespace CarMaintenanceUnitTests.ControllerTests
             _carManager.VerifyAll();
         }
 
-        private void MockUserForController(ref ServiceCalendarController controller)
-        {
-            var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim(ClaimTypes.Name, "example name"),
-                new Claim(ClaimTypes.NameIdentifier, "1"),
-                new Claim("UserID", "guid"),
-            }, "mock"));
-
-            controller.ControllerContext = new ControllerContext()
-            {
-                HttpContext = new DefaultHttpContext() { User = user }
-            };
-        }
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using CarMaintenance.Models.Periodicity;
 namespace CarMaintenance.Models.Car
 {
-    public class CarDetails 
+    public class CarDetails : CarBase<DateTime>
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,17 +17,6 @@ namespace CarMaintenance.Models.Car
         [Required]
         public int Year { get; set; }
         [Required]
-        public int ActualKilometers { get; set; }
-        [Required]
-        public int LastRevisionKm { get; set; }
-        [Required]
-        public DateTime LastRevisionDate { get; set; }
-        [Required]
-        public DateTime LastPti { get; set; }
-        [Required]
-        public DateTime LastVig { get; set; }
-        [Required]
-        public DateTime LastInsurance { get; set; }
         public CarPeriodicity Periodicity { get; set; }
         public CarDetails()
         {

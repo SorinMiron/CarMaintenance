@@ -11,7 +11,7 @@ namespace CarMaintenance.Managers.ServiceCalendar
 {
     public class ServiceCalendarManager : IServiceCalendarManager
     {
-        private ServiceCalendarManager()
+        public ServiceCalendarManager()
         {
 
         }

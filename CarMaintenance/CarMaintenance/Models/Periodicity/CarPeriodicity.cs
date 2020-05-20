@@ -6,35 +6,20 @@ using CarMaintenance.Models.Car;
 
 namespace CarMaintenance.Models.Periodicity
 {
-    public class CarPeriodicity
+    public class CarPeriodicity : CarPeriodicityBase
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int? RevisionKm { get; set; }
-        public int? RevisionMonths { get; set; }
-        public int? PtiMonths { get; set; }
-        public int? VigMonths { get; set; }
-        public int? InsuranceMonths { get; set; }
 
-        public CarPeriodicity() { }
+        public CarPeriodicity() : base() { }
 
-        public CarPeriodicity(int? revisionKm, int? revisionMonths, int? ptiMonths, int? vigMonths, int? insuranceMonths)
+        public CarPeriodicity(int? revisionKm, int? revisionMonths, int? ptiMonths, int? vigMonths, int? insuranceMonths) : base(revisionKm, revisionMonths, ptiMonths, vigMonths, insuranceMonths)
         {
-            RevisionKm = revisionKm;
-            RevisionMonths = revisionMonths;
-            PtiMonths = ptiMonths;
-            VigMonths = vigMonths;
-            InsuranceMonths = insuranceMonths;
         }
 
-        public CarPeriodicity(CarPeriodicityModel carPeriodicityModel)
+        public CarPeriodicity(CarPeriodicityModel carPeriodicityModel) : base(carPeriodicityModel)
         {
-            RevisionKm = carPeriodicityModel.RevisionKm;
-            RevisionMonths = carPeriodicityModel.RevisionMonths;
-            PtiMonths = carPeriodicityModel.PtiMonths;
-            VigMonths = carPeriodicityModel.VigMonths;
-            InsuranceMonths = carPeriodicityModel.InsuranceMonths;
         }
     }
 }

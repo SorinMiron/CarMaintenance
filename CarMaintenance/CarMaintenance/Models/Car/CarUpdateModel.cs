@@ -6,22 +6,10 @@ using System.Threading.Tasks;
 
 namespace CarMaintenance.Models.Car
 {
-    public class CarUpdateModel
+    public class CarUpdateModel : CarBase<DateTime>
     {
         [Required]
         public int CarId { get; set; }
-        [Required]
-        public int ActualKilometers { get; set; }
-        [Required]
-        public int LastRevisionKm { get; set; }
-        [Required]
-        public DateTime LastRevisionDate { get; set; }
-        [Required]
-        public DateTime LastPti { get; set; }
-        [Required]
-        public DateTime LastVig { get; set; }
-        [Required]
-        public DateTime LastInsurance { get; set; }
     }
     
 }

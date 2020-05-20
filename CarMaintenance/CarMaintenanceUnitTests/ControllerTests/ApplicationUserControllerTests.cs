@@ -19,13 +19,8 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    internal class ApplicationUserControllerTests
+    internal class ApplicationUserControllerTests : ControllerTestsShared<ApplicationUserController>
     {
-
-        private Mock<UserManager<ApplicationUser>> _userManager;
-        private Mock<IOptions<ApplicationSettings>> _appSettings;
-        private Mock<ILogger<ApplicationUserController>> _logger;
-        private ApplicationUserController _controller;
 
         [SetUp]
         public void SetUp()
@@ -221,12 +216,5 @@ namespace CarMaintenanceUnitTests.ControllerTests
 
         }
 
-        private Mock<UserManager<ApplicationUser>> GetMockUserManager()
-        {
-            Mock<IUserStore<ApplicationUser>> userStoreMock = new Mock<IUserStore<ApplicationUser>>();
-            return new Mock<UserManager<ApplicationUser>>(
-                userStoreMock.Object, null, null, null, null, null, null, null, null);
-        }
-       
     }
 }

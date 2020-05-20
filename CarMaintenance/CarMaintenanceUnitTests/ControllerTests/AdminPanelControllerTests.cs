@@ -22,13 +22,8 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    internal class AdminPanelControllerTests
+    internal class AdminPanelControllerTests : ControllerTestsShared<AdminPanelController>
     {
-        private Mock<UserManager<ApplicationUser>> _userManager;
-        private Mock<ICarManager> _carManager;
-        private Mock<ILogger<AdminPanelController>> _logger;
-        private AdminPanelController _controller;
-
         [SetUp]
         public void SetUp()
         {
@@ -162,12 +157,5 @@ namespace CarMaintenanceUnitTests.ControllerTests
             Assert.That(result.Result, Is.TypeOf<BadRequestResult>());
         }
 
-
-        private Mock<UserManager<ApplicationUser>> GetMockUserManager()
-        {
-            Mock<IUserStore<ApplicationUser>> userStoreMock = new Mock<IUserStore<ApplicationUser>>();
-            return new Mock<UserManager<ApplicationUser>>(
-                userStoreMock.Object, null, null, null, null, null, null, null, null);
-        }
     }
 }

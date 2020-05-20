@@ -20,12 +20,9 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    internal class CarControllerTests
+    internal class CarControllerTests : ControllerTestsShared<CarController>
     {
-        private Mock<ICarManager> _carManager;
-        private Mock<ILogger<CarController>> _logger;
-        private CarController _controller;
-
+        
         [SetUp]
         public void SetUp()
         {
@@ -134,20 +131,6 @@ namespace CarMaintenanceUnitTests.ControllerTests
             Assert.That(result.Result, Is.TypeOf<IdentityResult>());
             _carManager.VerifyAll();
         }
-
-        private void MockUserForController(ref CarController controller)
-        {
-            var user = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim(ClaimTypes.Name, "example name"),
-                new Claim(ClaimTypes.NameIdentifier, "1"),
-                new Claim("UserID", "guid"),
-            }, "mock"));
-
-            controller.ControllerContext = new ControllerContext()
-            {
-                HttpContext = new DefaultHttpContext() { User = user }
-            };
-        }
+       
     }
 }

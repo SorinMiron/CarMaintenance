@@ -12,7 +12,7 @@ namespace CarMaintenance.Managers.Car
     public class CarManager : ICarManager
     {
         private readonly CarContext _carContext;
-        private CarManager(CarContext carContext)
+        public CarManager(CarContext carContext)
         {
             _carContext = carContext;
         }

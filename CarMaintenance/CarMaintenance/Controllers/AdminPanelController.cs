@@ -37,7 +37,6 @@ namespace CarMaintenance.Controllers
         //get /api/AdminPanel/Customers
         public async Task<object> GetCustomers()
         {
-
             try
             {
                 IList<ApplicationUser> customers = await _userManager.GetUsersInRoleAsync("Customer");
