@@ -48,9 +48,9 @@ namespace CarMaintenance.Controllers
         //post /api/Periodicity/UpdatePeriodicity
         public async Task<object> UpdatePeriodicity(CarPeriodicityModel carPeriodicityModel)
         {
-            _carManager.ValidateCarPeriodicityModel(carPeriodicityModel);
             try
             {
+                _carManager.ValidateCarPeriodicityModel(carPeriodicityModel);
                 string userId = User.Claims.First(c => c.Type == "UserID").Value;
                 object result = await _carManager.UpdateCarPeriodicity(userId, carPeriodicityModel);
                 _logger.LogInformation($"Car with following ID was updated successfully: {carPeriodicityModel.CarId}");

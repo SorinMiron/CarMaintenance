@@ -1,0 +1,11 @@
+2020-05-20 17:31:32.9143||DEBUG|CarMaintenance.Program|Application started. 
+2020-05-20 17:31:37.0023||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\miron\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2020-05-20 17:31:38.4352|1|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:52672/api/values   
+2020-05-20 17:31:39.0289|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-20 17:31:39.0850|3|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Route matched with {action = "Get", controller = "Values", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller CarMaintenance.Controllers.ValuesController (CarMaintenance). 
+2020-05-20 17:31:39.1165|1|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) - Validation state: Valid 
+2020-05-20 17:31:39.1250|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action method CarMaintenance.Controllers.ValuesController.Get (CarMaintenance), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.9129ms. 
+2020-05-20 17:31:39.1445|1|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor|Executing ObjectResult, writing value of type 'System.String[]'. 
+2020-05-20 17:31:39.3190|2|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action CarMaintenance.Controllers.ValuesController.Get (CarMaintenance) in 226.367ms 
+2020-05-20 17:31:39.3190|1|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'CarMaintenance.Controllers.ValuesController.Get (CarMaintenance)' 
+2020-05-20 17:31:39.3265|2|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 892.7276ms 200 application/json; charset=utf-8 
