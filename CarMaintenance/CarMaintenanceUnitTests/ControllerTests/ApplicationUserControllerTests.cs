@@ -14,7 +14,7 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    public class ApplicationUserControllerTests
+    internal class ApplicationUserControllerTests
     {
 
         private Mock<UserManager<ApplicationUser>> _userManager;

@@ -22,7 +22,7 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    class AdminPanelControllerTests
+    internal class AdminPanelControllerTests
     {
         private Mock<UserManager<ApplicationUser>> _userManager;
         private Mock<ICarManager> _carManager;

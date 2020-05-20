@@ -11,6 +11,10 @@ namespace CarMaintenance.Managers.ServiceCalendar
 {
     public class ServiceCalendarManager : IServiceCalendarManager
     {
+        private ServiceCalendarManager()
+        {
+
+        }
         public List<ServiceCalendarModel> GetServiceCalendarModels(List<CarDetails> carsDetails)
         {
             try

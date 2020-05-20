@@ -20,7 +20,7 @@ using NUnit.Framework;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    class CarControllerTests
+    internal class CarControllerTests
     {
         private Mock<ICarManager> _carManager;
         private Mock<ILogger<CarController>> _logger;

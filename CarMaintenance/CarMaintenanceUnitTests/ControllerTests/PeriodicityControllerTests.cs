@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace CarMaintenanceUnitTests.ControllerTests
 {
-    class PeriodicityControllerTests
+    internal class PeriodicityControllerTests
     {
         private Mock<ICarManager> _carManager;
         private Mock<ILogger<PeriodicityController>> _logger;
