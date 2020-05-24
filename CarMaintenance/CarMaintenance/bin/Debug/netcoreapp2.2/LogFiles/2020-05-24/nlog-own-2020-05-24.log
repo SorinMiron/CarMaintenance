@@ -1,0 +1,4 @@
+2020-05-24 16:03:01.0525||DEBUG|CarMaintenance.Program|Application started. |url: |action: 
+2020-05-24 16:07:33.7112||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_admin logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login
+2020-05-24 16:07:36.2619||INFO|CarMaintenance.Controllers.AdminPanelController|Get customers was made successfully. |url: http://localhost/api/AdminPanel/GetCustomers|action: GetCustomers
+2020-05-24 16:07:48.3958||INFO|CarMaintenance.Controllers.ApplicationUserController|User sorin_customer logged in successfully. |url: http://localhost/api/ApplicationUser/Login|action: Login

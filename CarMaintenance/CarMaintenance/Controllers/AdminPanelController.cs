@@ -14,11 +14,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 
-namespace CarMaintenance.Controllers
+namespace CarMaintenance.Controllers 
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AdminPanelController : ControllerBase
+    public class AdminPanelController : ControllerBase, IAdminPanelControllerInterface
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ICarManager _carManager;

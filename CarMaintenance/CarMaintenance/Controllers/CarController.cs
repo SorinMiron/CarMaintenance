@@ -14,7 +14,7 @@ namespace CarMaintenance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CarController : ControllerBase
+    public class CarController : ControllerBase, ICarController
     {
         private readonly ICarManager _carManager;
         private readonly ILogger<CarController> _logger;
@@ -75,10 +75,11 @@ namespace CarMaintenance.Controllers
         {
             try
             {
-                if (id == null || string.IsNullOrWhiteSpace(id.ToString())) {
+                if (id == null || string.IsNullOrWhiteSpace(id.ToString()))
+                {
                     throw new ArgumentNullException(nameof(id));
                 }
-                object result =  await _carManager.RemoveCar(int.Parse(id.ToString()));
+                object result = await _carManager.RemoveCar(int.Parse(id.ToString()));
                 _logger.LogInformation($"Car with following id was deleted: {int.Parse(id.ToString())}");
                 return result;
             }

@@ -21,7 +21,7 @@ namespace CarMaintenance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ApplicationUserController : ControllerBase
+    public class ApplicationUserController : ControllerBase, IApplicationUserController
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationSettings _appSettings;

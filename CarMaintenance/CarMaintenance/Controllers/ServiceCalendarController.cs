@@ -16,7 +16,7 @@ namespace CarMaintenance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ServiceCalendarController : ControllerBase
+    public class ServiceCalendarController : ControllerBase, IServiceCalendarController
     {
 
         private readonly ICarManager _carManager;

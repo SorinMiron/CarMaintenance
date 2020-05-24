@@ -13,7 +13,7 @@ namespace CarMaintenance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PeriodicityController : ControllerBase
+    public class PeriodicityController : ControllerBase, IPeriodicityController
     {
         private readonly ICarManager _carManager;
         private readonly ILogger<PeriodicityController> _logger;
@@ -63,6 +63,4 @@ namespace CarMaintenance.Controllers
             }
         }
     }
-
-
 }

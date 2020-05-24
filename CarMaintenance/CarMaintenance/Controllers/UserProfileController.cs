@@ -19,7 +19,7 @@ namespace CarMaintenance.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserProfileController : ControllerBase
+    public class UserProfileController : ControllerBase, IUserProfileController
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<UserProfileController> _logger;
