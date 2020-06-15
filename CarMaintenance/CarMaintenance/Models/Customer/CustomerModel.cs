@@ -21,7 +21,6 @@ namespace CarMaintenance.Models.Customer
 
         public CustomerModel(string id, string userName, string fullName = null, string email = null, string carList = null)
         {
-            //todo add validations : id and username required
             Id = id;
             UserName = userName;
             FullName = fullName;

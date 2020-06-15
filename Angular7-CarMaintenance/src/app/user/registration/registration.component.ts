@@ -36,7 +36,7 @@ export class RegistrationComponent implements OnInit {
         }
       },
       err => {
-        alert(err);
+        this.toatr.error("Registration failed.")
         console.log(err);
       } 
     )
