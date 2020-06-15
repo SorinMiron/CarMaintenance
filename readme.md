@@ -70,6 +70,7 @@ applicationUserModel.Role = "Admin";
 
 Apoi trebuie adaugate 2 linii in tabela dbo.AspNetUserRoles ca in imaginea de mai jos: 
 ![alt text](https://i.imgur.com/ZFPClBH.png)
+
 10. Rulati solutia in debug( e default setat ).
 Daca s-a deschis o pagina cu url-ul http://localhost:52672/api/values si continutul "["value1","value2"]", atunci solutia a rulat cu succes.
 
