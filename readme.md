@@ -34,27 +34,39 @@ CarMaintenance-development\CarMaintenance-development\CarMaintenance\CarMaintena
 5.Porniti SQL Server Management Studio. Logativa cu credidentialele default( sqlexpress, Windows Authentication ).
 * Daca v-ati logat cu alt server, connection string-ul trebuie modificat ( din appsettings.json ) :
 Connection string-ul default:
-```"IdentityConnection": "Server=localhost\\sqlexpress; Database=UserDB; Trusted_Connection=True; MultipleActiveResultSets=True;"```
+```
+"IdentityConnection": "Server=localhost\\sqlexpress; Database=UserDB; Trusted_Connection=True; MultipleActiveResultSets=True;"
+```
 
 Connection string-ul nou:
-```"IdentityConnection": "Server=SERVERUL_NOU; Database=UserDB; Trusted_Connection=True; MultipleActiveResultSets=True;"```
+```
+"IdentityConnection": "Server=SERVERUL_NOU; Database=UserDB; Trusted_Connection=True; MultipleActiveResultSets=True;"
+```
 
 6.Deschideti Package Manager Console ( View -> Other Windows -> Package Manager Console) si rulati urmatoarele update-uri pentru baza de date:
-```update-database -context AuthenticationContext
-update-database -context CarContext```
+```
+update-database -context AuthenticationContext
+update-database -context CarContext
+```
 
 7.Adaugati backup-ul din GIT pentru baza de date: backup-cm-2020.bak
 *Click dreapta pe UserDB -> Task -> Restore -> Database
 8.Daca s-a adaugat backup-ul, acesta are deja 2 useri creati, credidentialele pentru admin sunt:
-```User: admin
-Parola: adminn```
+```
+User: admin
+Parola: adminn
+```
 Si pentru customer:
-```User: customer
-Parola: customer```
+```
+User: customer
+Parola: customer
+```
 9. Daca nu s-a dorit adaugarea backup-ului, pentru a crea un admin trebuie modificata linia 59 din metoda ```PostApplicationUser``` care se afla in controllerul ```ApplicationUserController```
 
 Initial userii creati sunt customeri. Daca modificam linia cu urmatoare se creeaza admini.
-```applicationUserModel.Role = "Admin";```
+```
+applicationUserModel.Role = "Admin";
+```
 
 Apoi trebuie adaugate 2 linii in tabela dbo.AspNetUserRoles ca in imaginea de mai jos: 
 ![alt text](https://i.imgur.com/ZFPClBH.png)
@@ -64,8 +76,10 @@ Daca s-a deschis o pagina cu url-ul http://localhost:52672/api/values si continu
 #### Frontend(client-side)
 1.Deschideti cu Visual Studio Code folderul Angular7-CarMaintenance
 2.Deschideti un terminal(Terminal -> New Terminal) si rulati urmatoarele comenzi:
-```npm install
-ng serve --o```
+```
+npm install
+ng serve -o
+```
 
 Aplicatia se deschide si va puteti loga ca si customer sau admin daca ati adaugat backup-ul.
 
@@ -90,6 +104,12 @@ Datele disponibile despre fiecare masina care sunt calculate la Calendarul de se
 - ITP
 - asigurare
 - revizie (km+zile)
+
+
+### Tehnologii folosite:
+
+- Asp .NET Core 2.2
+- Angular 7
 
 
 
