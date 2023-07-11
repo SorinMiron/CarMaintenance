@@ -27,7 +27,7 @@
     "bootstrap": "^4.4.1",
     "devextreme": "latest",
     "devextreme-angular": "latest",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.25.3",
     "ngx-toastr": "^12.0.0",
     "rxjs": "^6.5.5",
